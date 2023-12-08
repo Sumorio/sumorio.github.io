@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>‹个人网站搭建›：🌈|Stellar黑白模式切换 - 苏末了</title>
+
+  
+    <meta name="description" content="修改思路 抽离夜间样式 增加CSS文件优先级 网页添加主题按钮  1）抽离夜间样式 前提1：原主题配置文件控制昼夜是通过style.darkmode: false # auto &#x2F; always &#x2F; false来控制stylus生成整个网站main.css； 前提2：主题样式代码中if hexo-config(&#39;style.darkmode&#39;) &#x3D;&#x3D; &#39;always&amp;#39">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🌈|Stellar黑白模式切换">
+<meta property="og:url" content="https://sumorio.com/wiki/Hexo/3.1%E4%B8%BB%E9%A2%98%E9%BB%91%E7%99%BD%E5%88%87%E6%8D%A2.html">
+<meta property="og:site_name" content="苏末了">
+<meta property="og:description" content="修改思路 抽离夜间样式 增加CSS文件优先级 网页添加主题按钮  1）抽离夜间样式 前提1：原主题配置文件控制昼夜是通过style.darkmode: false # auto &#x2F; always &#x2F; false来控制stylus生成整个网站main.css； 前提2：主题样式代码中if hexo-config(&#39;style.darkmode&#39;) &#x3D;&#x3D; &#39;always&amp;#39">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-08T10:07:32.533Z">
+<meta property="article:modified_time" content="2023-12-08T10:07:32.533Z">
+<meta property="article:author" content="Sumor">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" />
+    
+      <script>
+  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.querySelector("html").id = "ZYDark";
+  }
+</script>
+
+    
+      <link rel="stylesheet" href="/custom/css/ZYDark.css">
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+  
+
+
+
+
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%20copy.html"><div class="main" ff="title">‹个人网站搭建›</div><div class="sub normal cap">搭建每个人的独立博客。</div><div class="sub hover cap" style="opacity:0"> Designed by Sumorio。</div></a></div></widget>
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/Hexo/" placeholder="搜索本站"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">前期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%20copy.html#start"><span class="toc-text">🌈|Hexo环境搭建</span></a></div></div><div class="widget-header cap dis-select"><span class="name">中期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/2.Github%E6%89%98%E7%AE%A1%E7%BD%91%E9%A1%B5.html"><span class="toc-text">🌈|Github托管静态页面</span></a></div></div><div class="widget-header cap dis-select"><span class="name">后期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/3.%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96.html"><span class="toc-text">🌈|网页个性化美化</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/Hexo/3.1%E4%B8%BB%E9%A2%98%E9%BB%91%E7%99%BD%E5%88%87%E6%8D%A2.html"><span class="toc-text">🌈|Stellar黑白模式切换</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%80%9D%E8%B7%AF"><span class="toc-text">修改思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%89%E6%8A%BD%E7%A6%BB%E5%A4%9C%E9%97%B4%E6%A0%B7%E5%BC%8F"><span class="toc-text">1）抽离夜间样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%BC%89%E5%A2%9E%E5%8A%A0CSS%E6%96%87%E4%BB%B6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">2）增加CSS文件优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%BC%89%E7%BD%91%E9%A1%B5%E6%B7%BB%E5%8A%A0%E4%B8%BB%E9%A2%98%E6%8C%89%E9%92%AE"><span class="toc-text">3）网页添加主题按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%BC%89%E5%82%A8%E5%AD%98%E4%B8%8E%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-text">4）储存与功能实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%BC%89%E9%BB%91%E5%A4%9C%E9%97%AA%E7%99%BD%E4%BC%98%E5%8C%96"><span class="toc-text">5）黑夜闪白优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="toc-text">样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E5%89%8D%E9%87%8F"><span class="toc-text">提前量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E6%A0%B7%E5%BC%8F%E4%B8%8E%E5%87%BD%E6%95%B0"><span class="toc-text">引入样式与函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E4%B8%BB%E9%85%8D%E7%BD%AE"><span class="toc-text">自定义博主配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-text">感谢</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/4.%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.html"><span class="toc-text">🌈|Github网页绑定域名</span></a></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+  
+
+
+  <article class='md-text content wiki'>
+  <h1 class="article-title"><span>🌈|Stellar黑白模式切换</span></h1>
+  <h2 id="修改思路"><a href="#修改思路" class="headerlink" title="修改思路"></a>修改思路</h2><ol>
+<li>抽离夜间样式</li>
+<li>增加CSS文件优先级</li>
+<li>网页添加主题按钮</li>
+</ol>
+<h3 id="1）抽离夜间样式"><a href="#1）抽离夜间样式" class="headerlink" title="1）抽离夜间样式"></a>1）抽离夜间样式</h3><ul>
+<li>前提1：原主题配置文件控制昼夜是通过<code>style.darkmode: false # auto / always / false</code>来控制stylus生成整个网站<code>main.css；</code></li>
+<li>前提2：主题样式代码中<code>if hexo-config(&#39;style.darkmode&#39;) == &#39;always&#39;</code>包裹的就是夜间主题代码；</li>
+<li>结论：我们把它抽离出一个单独的<code>ZYDark.css</code>文件。</li>
+</ul>
+<h3 id="2）增加CSS文件优先级"><a href="#2）增加CSS文件优先级" class="headerlink" title="2）增加CSS文件优先级"></a>2）增加CSS文件优先级</h3><ul>
+<li>通过给html标签一个ID来取得优先级, 抽离的<code>ZYDark.css</code>都赋予这个ID.<br>比如<code>:root&#123;--site-bg: #1c1e21;&#125;</code>变成<code>#ZYDark:root&#123;--site-bg: #1c1e21;&#125;</code></li>
+</ul>
+<h3 id="3）网页添加主题按钮"><a href="#3）网页添加主题按钮" class="headerlink" title="3）网页添加主题按钮"></a>3）网页添加主题按钮</h3><p>想了很多种方案都达不到主题样式一致原则.</p>
+<p>最后发现stellar左下角页脚部分有7个位置。</p>
+<p>就拿他来当切换按钮吧!</p>
+<h3 id="4）储存与功能实现"><a href="#4）储存与功能实现" class="headerlink" title="4）储存与功能实现"></a>4）储存与功能实现</h3><p>用户变量就扔到<code>localStorage</code>储存,反正不清空浏览器缓存就是永久储存.</p>
+<p>功能实现函数操作全都是一个JS执行, 包括给html标签一个ID.</p>
+<h3 id="5）黑夜闪白优化"><a href="#5）黑夜闪白优化" class="headerlink" title="5）黑夜闪白优化"></a>5）黑夜闪白优化</h3><p>因为一些渲染顺序原因这个js只能放到网页靠末尾地方, 可能不是控制主题功能我还有其它功能方法, 所以结果是黑暗模式下刷新有点闪白色.</p>
+<p>解决办法是在head引入一个提前js,即判断<code>localStorage</code>是黑暗就马上给html加黑色ID, 后续渲染就没问题了!!!</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>复制以下代码并重命名为ZYDark.css，放至本地路径&#x2F;blog&#x2F;source&#x2F;custom&#x2F;css下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#ZYDark:root &#123;</span></span><br><span class="line">  --site-bg: <span class="comment">#1c1e21;</span></span><br><span class="line">  --card: <span class="comment">#373d43;</span></span><br><span class="line">  --block: <span class="comment">#26292c;</span></span><br><span class="line">  --block-border: <span class="comment">#383d42;</span></span><br><span class="line">  --block-hover: <span class="comment">#2f3337;</span></span><br><span class="line">  --text-p0: <span class="comment">#fff;</span></span><br><span class="line">  --text-p1: <span class="comment">#ccc;</span></span><br><span class="line">  --text-p2: <span class="comment">#b3b3b3;</span></span><br><span class="line">  --text-p3: <span class="comment">#858585;</span></span><br><span class="line">  --text-p4: <span class="comment">#707070;</span></span><br><span class="line">  --text-meta: <span class="comment">#4d4d4d;</span></span><br><span class="line">  --text-code: <span class="comment">#ff6333;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@media screen and (<span class="params"><span class="built_in">max</span>-width: 667px</span>) &#123;</span></span><br><span class="line">  <span class="comment">#ZYDark:root &#123;</span></span><br><span class="line">    --site-bg: <span class="comment">#000;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark:root &#123;</span></span><br><span class="line">  --blur-bg: rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .float-panel &#123;</span></span><br><span class="line">  --blur-bg: rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.4</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin.tag &#123;</span></span><br><span class="line">  --theme: <span class="comment">#ff6333;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#3d1e14;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#2f2522;</span></span><br><span class="line">  --theme-border: <span class="comment">#5c2d1f;</span></span><br><span class="line">  --text-p0: <span class="comment">#ffc4b3;</span></span><br><span class="line">  --text-p1: <span class="comment">#dfae9f;</span></span><br><span class="line">  --text-p2: <span class="comment">#f1997e;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;red&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#f44336;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#3d1714;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#2f2322;</span></span><br><span class="line">  --theme-border: <span class="comment">#5c231f;</span></span><br><span class="line">  --text-p0: <span class="comment">#ffb8b3;</span></span><br><span class="line">  --text-p1: <span class="comment">#dfa49f;</span></span><br><span class="line">  --text-p2: <span class="comment">#f1867e;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;orange&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#fa6400;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#3d2514;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#2f2722;</span></span><br><span class="line">  --theme-border: <span class="comment">#5c371f;</span></span><br><span class="line">  --text-p0: <span class="comment">#ffd1b3;</span></span><br><span class="line">  --text-p1: <span class="comment">#dfb99f;</span></span><br><span class="line">  --text-p2: <span class="comment">#f1ac7e;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;yellow&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#ffbd2b;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#3d3014;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#2f2b22;</span></span><br><span class="line">  --theme-border: <span class="comment">#5c491f;</span></span><br><span class="line">  --text-p0: <span class="comment">#ffe7b3;</span></span><br><span class="line">  --text-p1: <span class="comment">#dfcb9f;</span></span><br><span class="line">  --text-p2: <span class="comment">#f1cd7e;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;green&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#3dc550;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#143d1a;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#222f24;</span></span><br><span class="line">  --theme-border: <span class="comment">#1f5c27;</span></span><br><span class="line">  --text-p0: <span class="comment">#b3ffbd;</span></span><br><span class="line">  --text-p1: <span class="comment">#9fdfa8;</span></span><br><span class="line">  --text-p2: <span class="comment">#7ef18e;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;cyan&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#1bcdfc;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#14353d;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#222d2f;</span></span><br><span class="line">  --theme-border: <span class="comment">#1f4f5c;</span></span><br><span class="line">  --text-p0: <span class="comment">#b3efff;</span></span><br><span class="line">  --text-p1: <span class="comment">#9fd2df;</span></span><br><span class="line">  --text-p2: <span class="comment">#7ed9f1;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;blue&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#2196f3;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#142b3d;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#222a2f;</span></span><br><span class="line">  --theme-border: <span class="comment">#1f415c;</span></span><br><span class="line">  --text-p0: <span class="comment">#b3ddff;</span></span><br><span class="line">  --text-p1: <span class="comment">#9fc3df;</span></span><br><span class="line">  --text-p2: <span class="comment">#7ebef1;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;purple&#x27;] &#123;</span></span><br><span class="line">  --theme: <span class="comment">#9c27b0;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#37143d;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#2d222f;</span></span><br><span class="line">  --theme-border: <span class="comment">#531f5c;</span></span><br><span class="line">  --text-p0: <span class="comment">#f4b3ff;</span></span><br><span class="line">  --text-p1: <span class="comment">#d69fdf;</span></span><br><span class="line">  --text-p2: <span class="comment">#e07ef1;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;light&#x27;] &#123;</span></span><br><span class="line">  --theme-border: <span class="comment">#fff;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#e0e0e0;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#fff;</span></span><br><span class="line">  --text-p0: <span class="comment">#000;</span></span><br><span class="line">  --text-p1: <span class="comment">#111;</span></span><br><span class="line">  --text-p2: <span class="comment">#1f1f1f;</span></span><br><span class="line">  --text-p3: <span class="comment">#555;</span></span><br><span class="line">  --text-code: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;dark&#x27;] &#123;</span></span><br><span class="line">  --theme-border: <span class="comment">#000;</span></span><br><span class="line">  --theme-bg1: <span class="comment">#1f1f1f;</span></span><br><span class="line">  --theme-bg2: <span class="comment">#111;</span></span><br><span class="line">  --text-p0: <span class="comment">#fff;</span></span><br><span class="line">  --text-p1: <span class="comment">#fff;</span></span><br><span class="line">  --text-p2: <span class="comment">#e0e0e0;</span></span><br><span class="line">  --text-p3: <span class="comment">#ddd;</span></span><br><span class="line">  --text-code: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;warning&#x27;],</span></span><br><span class="line"><span class="comment">#ZYDark .tag-plugin[color=&#x27;light&#x27;] &#123;</span></span><br><span class="line">  --text-p0: <span class="comment">#000;</span></span><br><span class="line">  --text-p1: <span class="comment">#111;</span></span><br><span class="line">  --text-p2: <span class="comment">#1f1f1f;</span></span><br><span class="line">  --text-p3: <span class="comment">#555;</span></span><br><span class="line">  --text-code: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .social-wrap a.social:hover &#123;</span></span><br><span class="line">  box-shadow: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* waline评论样式 */</span><br><span class="line"><span class="comment">#ZYDark .wl-count&#123;</span></span><br><span class="line">  padding: <span class="number">.375</span>em;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">  font-size: <span class="number">1.25</span>em;</span><br><span class="line">  color: <span class="comment">#fff;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#ZYDark .cmt-body.waline&#123;</span></span><br><span class="line">  --waline-white: <span class="comment">#000;</span></span><br><span class="line">  --waline-light-grey: <span class="comment">#666;</span></span><br><span class="line">  --waline-dark-grey: <span class="comment">#999;</span></span><br><span class="line">  /* 布局颜色 */</span><br><span class="line"></span><br><span class="line">  --waline-color: <span class="comment">#fff;</span></span><br><span class="line">  --waline-bgcolor: var(--block);</span><br><span class="line">  --waline-bgcolor-light: <span class="comment">#272727;</span></span><br><span class="line">  --waline-border-color: <span class="comment">#333;</span></span><br><span class="line">  --waline-disable-bgcolor: <span class="comment">#444;</span></span><br><span class="line">  --waline-disable-color: <span class="comment">#272727;</span></span><br><span class="line">  /* 特殊颜色 */</span><br><span class="line">  --waline-bq-color: <span class="comment">#272727;</span></span><br><span class="line">  /* 其他颜色 */</span><br><span class="line">  --waline-info-bgcolor: <span class="comment">#272727;</span></span><br><span class="line">  --waline-info-color: <span class="comment">#666;</span></span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>复制以下代码并重命名为ZYDark.js，放至本地路径&#x2F;blog&#x2F;source&#x2F;custom&#x2F;js下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 监听系统主题</span><br><span class="line"> * @<span class="built_in">type</span> &#123;MediaQueryList&#125;</span><br><span class="line"> */</span><br><span class="line">var OSTheme = window.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>);</span><br><span class="line">OSTheme.addListener(e =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (window.localStorage.getItem(<span class="string">&#x27;ZYI_Theme_Mode&#x27;</span>) === <span class="string">&#x27;Moss&#x27;</span>) &#123;</span><br><span class="line">        ThemeChange(<span class="string">&#x27;Moss&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">/**</span><br><span class="line"> * 修改博客主题</span><br><span class="line"> * @param theme 亮为light,暗为dark,自动为auto</span><br><span class="line"> * @constructor</span><br><span class="line"> */</span><br><span class="line">const ThemeChange = (theme) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (theme === <span class="string">&#x27;light&#x27;</span> || (theme === <span class="string">&#x27;Moss&#x27;</span> &amp;&amp; !OSTheme.matches)) &#123;</span><br><span class="line">        document.querySelector(<span class="string">&quot;html&quot;</span>).<span class="built_in">id</span> = <span class="string">&quot;ZYLight&quot;</span>;</span><br><span class="line">        document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(6)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(0%)&#x27;</span>;</span><br><span class="line">        document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(5)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(100%)&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        document.querySelector(<span class="string">&quot;html&quot;</span>).<span class="built_in">id</span> = <span class="string">&quot;ZYDark&quot;</span>;</span><br><span class="line">        document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(5)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(0%)&#x27;</span>;</span><br><span class="line">        document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(6)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(100%)&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (theme===<span class="string">&#x27;Moss&#x27;</span>)&#123;document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(7)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(0%)&#x27;</span>;&#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(7)&quot;</span>).style.<span class="built_in">filter</span>= <span class="string">&#x27;grayscale(100%)&#x27;</span>;&#125;</span><br><span class="line">    window.localStorage.setItem(<span class="string">&#x27;ZYI_Theme_Mode&#x27;</span>, theme);</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * 初始化博客主题</span><br><span class="line"> */</span><br><span class="line">switch (window.localStorage.getItem(<span class="string">&#x27;ZYI_Theme_Mode&#x27;</span>)) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;light&#x27;</span>:</span><br><span class="line">        ThemeChange(<span class="string">&#x27;light&#x27;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;dark&#x27;</span>:</span><br><span class="line">        ThemeChange(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    default:</span><br><span class="line">        ThemeChange(<span class="string">&#x27;Moss&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">/**</span><br><span class="line"> * 切换主题模式</span><br><span class="line"> */</span><br><span class="line">document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(5)&quot;</span>).onclick = () =&gt; &#123;</span><br><span class="line">    ThemeChange(<span class="string">&#x27;dark&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(6)&quot;</span>).onclick = () =&gt; &#123;</span><br><span class="line">    ThemeChange(<span class="string">&#x27;light&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">document.querySelector(<span class="string">&quot;#start &gt; aside &gt; footer &gt; div &gt; a:nth-child(7)&quot;</span>).onclick = () =&gt; &#123;</span><br><span class="line">    ThemeChange(<span class="string">&#x27;Moss&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="提前量"><a href="#提前量" class="headerlink" title="提前量"></a>提前量</h3><p>根目录&#x2F;_config.yml</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自定义引入css,js</span></span><br><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - |</span><br><span class="line">      &lt;script&gt;</span><br><span class="line">        <span class="keyword">if</span> (window.localStorage.getItem(<span class="string">&#x27;ZYI_Theme_Mode&#x27;</span>)===<span class="string">&#x27;dark&#x27;</span> || (window.localStorage.getItem(<span class="string">&#x27;ZYI_Theme_Mode&#x27;</span>)===<span class="string">&#x27;Moss&#x27;</span> &amp;&amp; window.matchMedia(<span class="string">&#x27;(prefers-color-scheme: dark)&#x27;</span>).matches))&#123;</span><br><span class="line">            document.querySelector(<span class="string">&quot;html&quot;</span>).<span class="built_in">id</span> = <span class="string">&quot;ZYDark&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="引入样式与函数"><a href="#引入样式与函数" class="headerlink" title="引入样式与函数"></a>引入样式与函数</h3><p>博客目录&#x2F;_config.yml</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自定义引入css,js</span></span><br><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;/custom/css/ZYDark.css&quot;</span>&gt; <span class="comment"># 黑夜样式</span></span><br><span class="line">  script:</span><br><span class="line">    - &lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;/custom/js/ZYDark.js&quot;</span>&gt;&lt;/script&gt; <span class="comment"># 黑夜控制</span></span><br></pre></td></tr></table></figure>
+<h3 id="自定义博主配置"><a href="#自定义博主配置" class="headerlink" title="自定义博主配置"></a>自定义博主配置</h3><ul>
+<li><code>darkmode</code>用<code>false</code>意味对主题而言保持永远白昼(才有了我们的操作空间)</li>
+<li>然后<code>footer.social</code>这部分我对应是567, 懒得改JS的可以前面也加四个社交按钮.</li>
+<li><strong>博客目录&#x2F;_config.stellar.yml</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">style:</span><br><span class="line">  darkmode: false <span class="comment"># auto / always / false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 页尾</span></span><br><span class="line">footer:</span><br><span class="line">  social:</span><br><span class="line">   github:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img src=&quot;https://upyun.thatcdn.cn/public/img/icon/github-logo2.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: https://github.com/ThatCoders</span><br><span class="line">   music:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img src=&quot;https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: https://music<span class="number">.163</span>.com/<span class="comment">#/user/home?id=134968139</span></span><br><span class="line">   bili:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img src=&quot;https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: https://space.bilibili.com/<span class="number">1664687779</span></span><br><span class="line">   card:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img src=&quot;https://upyun.thatcdn.cn/public/img/icon/weChat.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: https://muselink.cc/naive</span><br><span class="line">   Moon:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img id=&quot;ThemeM&quot; src=&quot;https://upyun.thatcdn.cn/public/img/icon/Moon.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: javaScript:void(<span class="string">&#x27;永夜&#x27;</span>);</span><br><span class="line">   Sun:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img id=&quot;ThemeL&quot; src=&quot;https://upyun.thatcdn.cn/public/img/icon/Sun.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: javaScript:void(<span class="string">&#x27;永昼&#x27;</span>);</span><br><span class="line">   AI:</span><br><span class="line">     icon: <span class="string">&#x27;&lt;img id=&quot;ThemeAI&quot; src=&quot;https://upyun.thatcdn.cn/public/img/icon/AI.png&quot;/&gt;&#x27;</span></span><br><span class="line">     url: javaScript:void(<span class="string">&#x27;跟随系统&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><blockquote>
+<p>本文参考<a target="_blank" rel="noopener" href="https://blog.thatcoder.cn/Stellar%E5%8F%AF%E6%8E%A7%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F/">钟意的博客</a>。此文用于记录。在此感谢原作者。</p>
+</blockquote>
+
+  
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/Hexo/3.%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96.html">🌈|网页个性化美化</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/Hexo/4.%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.html">🌈|Github网页绑定域名</a></div></section></div>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<span>
+本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
+使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
+主题创建。
+</span>
+</br>
+</br>
+
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("10/20/2023 00:00:00");
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
+}
+show_runtime();
+</script>
+<p><span id="runtime_span"></span></p>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+  
+    <script type="text/javascript" src="/custom/js/ZYDark.js"></script>
+  
+
+
+  </div>
+
+  <!--动态线条背景-->
+  <script type="text/javascript"
+    color="220,220,220" opacity='0.9' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+
+<!-- hexo injector body_end start -->
+  <style>
+    .highlight {
+      position: relative;
+    }
+    .highlight .code .copy-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 0.5rem;
+      opacity: 0.25;
+      font-weight: 700;
+      color: var(--theme);
+      cursor: pointer;
+      transination: opacity 0.3s;
+    }
+    .highlight .code .copy-btn:hover{
+      color: var(--text-code);
+      opacity: 0.75;
+    }
+    .highlight .code .copy-btn.success {
+      color: var(--swiper-theme-color);
+      opacity: 0.75;
+
+    }
+    
+  </style>
+  <script>
+    const codeElementArr = document.querySelectorAll('.code')
+    codeElementArr.forEach(code => {
+      const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
+      const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
+  
+      // copy btn 
+      const codeCopyBtn = document.createElement('div')
+      codeCopyBtn.classList.add('copy-btn')
+      codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
+      codeCopyBtn.innerText = '复制代码'
+      code.appendChild(codeCopyBtn)
+  
+      codeCopyBtn.addEventListener('click', async () => {
+        const currentCodeElement = code.children[0]?.innerText
+        await copyCode(currentCodeElement)
+
+
+        codeCopyBtn.innerText = '复制成功'
+        codeCopyBtn.classList.add('success')
+
+        setTimeout(() => {
+          codeCopyBtn.innerText = '复制代码'
+          codeCopyBtn.classList.remove('success')
+        },1000)
+      })
+    })
+    
+    async function copyCode(currentCode) {
+      console.log(currentCode)
+      console.log('复制代码')
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(currentCode)
+        } catch (error) {
+          // 未获得用户许可
+          console.error(error)
+        }
+      } else {
+        console.error('当前浏览器不支持此api')
+      }
+    }
+  </script>
+  <!-- hexo injector body_end end --></body>
+</html>
