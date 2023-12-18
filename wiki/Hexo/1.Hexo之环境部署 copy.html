@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="苏末了">
 <meta property="og:description" content="在别人的地盘写博客终究是客，本文教你如何搭建专属自己的博客，实现 Blog 自由。注：本博客基于 windows 环境进行搭建。  一、前提概要Hexo是什么Hexo 是一个快速、简洁且高效的博客框架。Hexo 基于 Node.js 运行，使用  Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 Hexo 安装前提安装 Hexo 相当简单，因为 Hexo 基于 Node.js">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-08T10:02:54.556Z">
-<meta property="article:modified_time" content="2023-12-08T10:02:54.556Z">
+<meta property="article:published_time" content="2023-12-18T07:18:53.566Z">
+<meta property="article:modified_time" content="2023-12-18T07:18:53.566Z">
 <meta property="article:author" content="Sumor">
 <meta name="twitter:card" content="summary">
   
@@ -388,32 +388,25 @@ show_runtime();
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo-qsps-sumorios-projects.vercel.app/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 

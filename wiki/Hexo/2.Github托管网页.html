@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="苏末了">
 <meta property="og:description" content="GiHub Pages 入门——官方文档  一、新建仓库 在 GitHub 任何页面的右上角，选择  ，然后单击“新建存储库”。 创建一个仓库，仓库名和 github 用户名保持一致：用户名.github.io。  二、配置 SSH 密钥只有配置好密钥，才能通过 git 操作实现本地代码与 Github 代码库的同步。  进入最初新建的文件夹 D:&#x2F;Hexo&#x2F;blog 右键打">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-08T10:02:50.091Z">
-<meta property="article:modified_time" content="2023-12-08T10:02:50.091Z">
+<meta property="article:published_time" content="2023-12-18T07:18:57.539Z">
+<meta property="article:modified_time" content="2023-12-18T07:18:57.539Z">
 <meta property="article:author" content="Sumor">
 <meta name="twitter:card" content="summary">
   
@@ -359,32 +359,25 @@ show_runtime();
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo-qsps-sumorios-projects.vercel.app/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 

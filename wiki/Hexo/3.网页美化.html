@@ -31,8 +31,8 @@
 <meta property="og:description" content="Stellar 主题全面的配置文档可参考源码作者：https:&#x2F;&#x2F;xaoxuu.com&#x2F;wiki&#x2F;stellar&#x2F;#start  修改站点信息Stellar 会读取站点根目录_config.yml 文件中的信息来生成网站，直接修改即可： 12345678title: 您的网站名称avatar: 您的头像链接favicon: 您的网站iconsubtitle: 您的网站副标题# 多语言langua">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.c2red.com/img/Staller%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/1697779514185.png">
-<meta property="article:published_time" content="2023-12-16T04:05:51.574Z">
-<meta property="article:modified_time" content="2023-12-16T04:05:51.574Z">
+<meta property="article:published_time" content="2023-12-18T07:19:03.962Z">
+<meta property="article:modified_time" content="2023-12-18T07:19:03.962Z">
 <meta property="article:author" content="Sumor">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Stellar">
@@ -452,32 +452,25 @@ show_runtime();
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo-qsps-sumorios-projects.vercel.app/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
