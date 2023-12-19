@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.20.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>‹个人网站搭建›：🌈|Hexo部署twikoo评论系统|邮件推送versel|被墙解决方案 - 苏末了</title>
+
+  
+    <meta name="description" content="Hexo 部署 twikoo 评论系统，邮件推送 versel，被墙导致无法评论的解决方案。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🌈|Hexo部署twikoo评论系统|邮件推送versel|被墙解决方案">
+<meta property="og:url" content="https://sumorio.com/wiki/Hexo/3.4twikoo%E9%83%A8%E7%BD%B2.html">
+<meta property="og:site_name" content="苏末了">
+<meta property="og:description" content="Hexo 部署 twikoo 评论系统，邮件推送 versel，被墙导致无法评论的解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/dDih1RAsS2cvpg3.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/nxgDCrekU7fSjpa.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/IAW3bc56LsKTkrn.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/8nfysaKSmiPw5HT.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/cMDrEwBfZjk9bI3.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/knUNfsTL7AI8lrp.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/eLyvk8xQKwOCsIU.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/7rlk6GMsBRzuQ3a.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/HOVdPq1LFrheZNo.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/SionGthvZdqjOa5.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/ZI1OKusy5kGd9jc.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/AHb4YjiQfXVsz2t.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/pEaOZoCqms5UXuF.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/POf2veCNIspaij7.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/p8YP2UvLSqX3Gck.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/agWGxcmizjR3FBP.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/vNRFT7lD2HPh49i.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/jnBfEVOxcyeYzlH.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/sQtg1DMxuF53jK9.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/RK15ysP2WBtzawY.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/wXECHos7ku9W5NF.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/ErteBbA3iRkHzXI.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/rPQOG16bdZaiVvC.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/LEgAFNXW95n8ZHU.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/PJNRLQqxi41jZln.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/6PzFyjYoZs7wcnJ.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/CfW18xyU9eEDu27.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/fj4HiFQMKwemAqh.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/3duG2m7o5T6xKy4.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/MyYCRzuIWdAqiro.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/PVx8fF2dwupiUtG.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/19/qcSUxyQVDBAK9eh.png">
+<meta property="article:published_time" content="2023-12-19T04:18:14.139Z">
+<meta property="article:modified_time" content="2023-12-19T04:18:14.139Z">
+<meta property="article:author" content="Sumor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/12/19/dDih1RAsS2cvpg3.png">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" />
+    
+      <script>
+  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.querySelector("html").id = "ZYDark";
+  }
+</script>
+
+    
+      <link rel="stylesheet" href="/custom/css/ZYDark.css">
+    
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='wiki'>
+    
+
+  
+
+
+
+
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%20copy.html"><div class="main" ff="title">‹个人网站搭建›</div><div class="sub normal cap">搭建每个人的独立博客。</div><div class="sub hover cap" style="opacity:0"> Designed by Sumorio。</div></a></div></widget>
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/Hexo/" placeholder="搜索本站"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">前期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%20copy.html#start"><span class="toc-text">🌈|Hexo环境搭建</span></a></div></div><div class="widget-header cap dis-select"><span class="name">中期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/2.Github%E6%89%98%E7%AE%A1%E7%BD%91%E9%A1%B5.html"><span class="toc-text">🌈|Github托管静态页面</span></a></div></div><div class="widget-header cap dis-select"><span class="name">后期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/3.1%E7%BD%91%E9%A1%B5%E7%BE%8E%E5%8C%96.html"><span class="toc-text">🌈|Stellar网页个性化美化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/3.2%E4%B8%BB%E9%A2%98%E9%BB%91%E7%99%BD%E5%88%87%E6%8D%A2.html"><span class="toc-text">🌈|Stellar黑白模式切换</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/3.3%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.html"><span class="toc-text">🌈|Github网页绑定域名</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/Hexo/3.4twikoo%E9%83%A8%E7%BD%B2.html"><span class="toc-text">🌈|Hexo部署twikoo评论系统|邮件推送versel|被墙解决方案</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%EF%BC%89%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">一）配置数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%94%B3%E8%AF%B7-MongoDB-%E8%B4%A6%E5%8F%B7"><span class="toc-text">1.申请 MongoDB 账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA-MongoDB-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">2.创建 MongoDB 数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%EF%BC%89%E9%83%A8%E7%BD%B2%E5%88%B0-Vercel"><span class="toc-text">二）部署到 Vercel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%94%B3%E8%AF%B7%E8%B4%A6%E5%8F%B7"><span class="toc-text">1.申请账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2%E4%BB%93%E5%BA%93"><span class="toc-text">2.部署仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%96%B0%E5%BB%BA%E5%8F%98%E9%87%8F"><span class="toc-text">3.新建变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%86%8D%E6%AC%A1%E9%83%A8%E7%BD%B2"><span class="toc-text">4.再次部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%A3%80%E9%AA%8C%E9%83%A8%E7%BD%B2%E7%BB%93%E6%9E%9C"><span class="toc-text">5.检验部署结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%EF%BC%89%E5%AE%9E%E7%8E%B0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-text">三）实现邮件通知</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%BC%80%E9%80%9APOP3-SMTP-%E6%9C%8D%E5%8A%A1"><span class="toc-text">1.开通POP3&#x2F;SMTP 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%EF%BC%89%E9%85%8D%E7%BD%AE-Twikoo"><span class="toc-text">四）配置 Twikoo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8D%9A%E5%AE%A2%E5%90%AF%E7%94%A8-Twikoo"><span class="toc-text">1.博客启用 Twikoo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%EF%BC%89versel-%E7%89%88%E6%9C%AC%E4%B8%8D%E7%AC%A6%E5%8D%87%E7%BA%A7%E9%85%8D%E7%BD%AE"><span class="toc-text">五）versel 版本不符升级配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%EF%BC%89versel-%E8%A2%AB%E5%A2%99%E6%97%A0%E6%B3%95%E7%95%99%E8%A8%80%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">六）versel 被墙无法留言的问题</span></a></li></ol></div></div></widget>
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+  
+  
+  
+
+
+  <article class='md-text content wiki'>
+  <h1 class="article-title"><span>🌈|Hexo部署twikoo评论系统|邮件推送versel|被墙解决方案</span></h1>
+  <p>Hexo 部署 twikoo 评论系统，邮件推送 versel，被墙导致无法评论的解决方案。</p>
+<span id="more"></span>
+
+<h2 id="一）配置数据库"><a href="#一）配置数据库" class="headerlink" title="一）配置数据库"></a>一）配置数据库</h2><h3 id="1-申请-MongoDB-账号"><a href="#1-申请-MongoDB-账号" class="headerlink" title="1.申请 MongoDB 账号"></a>1.申请 MongoDB 账号</h3><p>进入<a target="_blank" rel="noopener" href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a>注册一个账号。可以使用 github 直接登录。</p>
+<h3 id="2-创建-MongoDB-数据库"><a href="#2-创建-MongoDB-数据库" class="headerlink" title="2.创建 MongoDB 数据库"></a>2.创建 MongoDB 数据库</h3><p><strong>申请完毕后进入界面，选择最右边的免费共享数据库 ➡️aws➡️N.virginia(us-wast-1)➡️create.</strong></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/dDih1RAsS2cvpg3.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/nxgDCrekU7fSjpa.png" fancybox="true"/></div></div>
+
+<p><strong>设置用户名和密码，记住密码，后面需要使用。</strong></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/IAW3bc56LsKTkrn.png" fancybox="true"/></div></div>
+
+<p><strong>ip 设置 0.0.0.0&#x2F;0.</strong></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/8nfysaKSmiPw5HT.png" fancybox="true"/></div></div>
+
+<p><strong>自动跳转至数据库列表首页，点击 connect.</strong></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/cMDrEwBfZjk9bI3.png" fancybox="true"/></div></div>
+
+<p><strong>链接应用。</strong></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/knUNfsTL7AI8lrp.png" fancybox="true"/></div></div>
+
+<p>记住第 3 条的代码，后续部署需要用到，且使用时需要把 password 处替换你之前设置的密码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodb+srv://sumor:&lt;password&gt;@sumor0.kxmeq0a.mongodb.net/?retryWrites=true&amp;w=majority</span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/eLyvk8xQKwOCsIU.png" fancybox="true"/></div></div>
+
+<h2 id="二）部署到-Vercel"><a href="#二）部署到-Vercel" class="headerlink" title="二）部署到 Vercel"></a>二）部署到 Vercel</h2><h3 id="1-申请账号"><a href="#1-申请账号" class="headerlink" title="1.申请账号"></a>1.申请账号</h3><p>申请一个<a target="_blank" rel="noopener" href="https://vercel.com/signup">Vercel</a>账号.</p>
+<h3 id="2-部署仓库"><a href="#2-部署仓库" class="headerlink" title="2.部署仓库"></a>2.部署仓库</h3><p>点击以下链接将 Twikoo 一键部署到 Vercel：起名 twikoo 创建。</p>
+<p><a target="_blank" rel="noopener" href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min">https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min</a></p>
+<blockquote>
+<p>注：如果导入后出现空白界面或部署失败等现象，极大可能是 Twikoo 的仓库地址更换了，可以参考官网获取部署链接：部署仓库<br>点击以下链接将 Twikoo 一键部署到 Vercel：<a target="_blank" rel="noopener" href="https://twikoo.js.org/quick-start.html">https://twikoo.js.org/quick-start.html</a></p>
+</blockquote>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/7rlk6GMsBRzuQ3a.png" fancybox="true"/></div></div>
+
+<p>点击进入创建的任务页面-visit.</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/HOVdPq1LFrheZNo.png" fancybox="true"/></div></div>
+
+<h3 id="3-新建变量"><a href="#3-新建变量" class="headerlink" title="3.新建变量"></a>3.新建变量</h3><p>进入<code>Settings - Environment Variables</code>页面。<br>新建一个 NAME 为<code>MONGODB_URI</code>;VALUE 为你在前面记录到的<code>数据库连接字符串</code>的环境变量-save 保存。</p>
+<p><strong>注意：需要手动输入之前设置的密码，去掉&lt;&gt;，具体如：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodb+srv://ambor0225:123456@cluster0.rx4....</span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/SionGthvZdqjOa5.png" fancybox="true"/></div></div>
+
+<h3 id="4-再次部署"><a href="#4-再次部署" class="headerlink" title="4.再次部署"></a>4.再次部署</h3><p>进入<code>Deployments</code>界面，点击右边的竖三点，点击<code>Redeploy</code>。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/ZI1OKusy5kGd9jc.png" fancybox="true"/></div></div>
+
+<h3 id="5-检验部署结果"><a href="#5-检验部署结果" class="headerlink" title="5.检验部署结果"></a>5.检验部署结果</h3><p>回到<code>Overview</code>，点击 Domains 下方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 等字样。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/AHb4YjiQfXVsz2t.png" fancybox="true"/></div></div>
+
+<blockquote>
+<p><code>Domains下方的链接</code>即为后面需要使用到的环境 id。</p>
+</blockquote>
+<p>至此，Twikoo 评论系统部署完成。</p>
+<h2 id="三）实现邮件通知"><a href="#三）实现邮件通知" class="headerlink" title="三）实现邮件通知"></a>三）实现邮件通知</h2><h3 id="1-开通POP3-SMTP-服务"><a href="#1-开通POP3-SMTP-服务" class="headerlink" title="1.开通POP3&#x2F;SMTP 服务"></a>1.开通<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=POP3&spm=1001.2101.3001.7020">POP3</a>&#x2F;SMTP 服务</h3><blockquote>
+<p>以网易为例，其他邮箱可自行摸索，原理大同小异。</p>
+</blockquote>
+<p>前往你的邮件服务提供商，发短信开启 POP3&#x2F;SMTP 服务-保存最后的授权密码，后面要用。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/pEaOZoCqms5UXuF.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/POf2veCNIspaij7.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/p8YP2UvLSqX3Gck.png" fancybox="true"/></div></div>
+
+<h2 id="四）配置-Twikoo"><a href="#四）配置-Twikoo" class="headerlink" title="四）配置 Twikoo"></a>四）配置 Twikoo</h2><h3 id="1-博客启用-Twikoo"><a href="#1-博客启用-Twikoo" class="headerlink" title="1.博客启用 Twikoo"></a>1.博客启用 Twikoo</h3><blockquote>
+<p>此部分教程以 stellar 主题为例说明，其他主题可参阅对应的使用文档。</p>
+</blockquote>
+<p>配置博客文件<code>_config.stellar.yml</code>，启用 twikoo 评论：（云函数位于 versel，domains 下的小地球后面）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">######## Comments ########</span></span><br><span class="line">comments:</span><br><span class="line">  service: twikoo</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Twikoo</span></span><br><span class="line">  <span class="comment"># https://twikoo.js.org/</span></span><br><span class="line">  twikoo:</span><br><span class="line">    js: https://gcore.jsdelivr.net/npm/twikoo@<span class="number">1.6</span><span class="number">.8</span>/dist/twikoo.<span class="built_in">all</span>.<span class="built_in">min</span>.js <span class="comment"># 建议锁定版本</span></span><br><span class="line">    envId: https://xx.xx.com <span class="comment"># twikoo云函数,</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/agWGxcmizjR3FBP.png" fancybox="true"/></div></div>
+
+<p>重新启动服务，进入博客页面，随意找到一篇文章，查看最下方的评论处，找到评论下方小按钮。点击设置。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/vNRFT7lD2HPh49i.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/jnBfEVOxcyeYzlH.png" fancybox="true"/></div></div>
+
+<p>【配置管理】-邮件通知：大部分不用填写，使用默认即可。下面几个必填。</p>
+<blockquote>
+<p>SENDER_EMAIL: <a href="mailto:&#x73;&#x75;&#109;&#111;&#114;&#105;&#x6f;&#x40;&#49;&#50;&#x36;&#46;&#x63;&#x6f;&#109;">&#x73;&#x75;&#109;&#111;&#114;&#105;&#x6f;&#x40;&#49;&#50;&#x36;&#46;&#x63;&#x6f;&#109;</a><br>SMTP_SERVICE: 126<br>SMTP_PORT: 465<br>SMTP_SECURE: true<br>SMTP_USER: &lt;邮件通知邮箱用户名&gt;(需与 SENDER_EMAIL 一致)<br>SMTP_PASS: (pop 授权码)</p>
+</blockquote>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/sQtg1DMxuF53jK9.png" fancybox="true"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/RK15ysP2WBtzawY.png" fancybox="true"/></div></div>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/wXECHos7ku9W5NF.png" fancybox="true"/></div></div>
+
+<p>其中<code>DEFAULT_GRAVATAR</code>参数可以设置评论默认使用的头像类型，头像区别如下：</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/ErteBbA3iRkHzXI.png" fancybox="true"/></div></div>
+
+<h2 id="五）versel-版本不符升级配置"><a href="#五）versel-版本不符升级配置" class="headerlink" title="五）versel 版本不符升级配置"></a>五）versel 版本不符升级配置</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://twikoo.js.org/update.html">https://twikoo.js.org/update.html</a></p>
+<blockquote>
+<ol>
+<li>进入 <a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Vercel 仪表板</a> - twikoo - &gt; Settings - Git</li>
+<li>点击 Connected Git Repository 下方的仓库地址</li>
+<li>打开 package.json，点击编辑</li>
+<li>将 <code>&quot;twikoo-vercel&quot;: &quot;latest&quot;</code> 其中的 <code>latest</code> 修改为最新版本号。点&gt; 击 Commit changes</li>
+<li>部署会自动触发，可以回到 <a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Vercel 仪表板</a>，查看部署状态</li>
+</ol>
+</blockquote>
+<h2 id="六）versel-被墙无法留言的问题"><a href="#六）versel-被墙无法留言的问题" class="headerlink" title="六）versel 被墙无法留言的问题"></a>六）versel 被墙无法留言的问题</h2><ol>
+<li>登录你的域名解析平台，我这里使用的阿里云-进入【域名解析】工作台-添加域名-twikoo+你的域名-txt 授权校验。</li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/rPQOG16bdZaiVvC.png" fancybox="true"/></div></div>
+
+<ol start="2">
+<li>保存好弹出的验证记录信息，后面要用，先不要点击验证。</li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/LEgAFNXW95n8ZHU.png" fancybox="true"/></div></div>
+
+<ol start="3">
+<li>进入【解析设置】界面，点击进入你的域名后台【添加记录】，将上一步的信息填入对应信息即可。<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/PJNRLQqxi41jZln.png" fancybox="true"/></div></div></li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/6PzFyjYoZs7wcnJ.png" fancybox="true"/></div></div>
+
+<ol start="4">
+<li>返回第 2 步，进行验证。</li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/CfW18xyU9eEDu27.png" fancybox="true"/></div></div>
+
+<ol start="5">
+<li><p>进入新增的域名后台，将二级域名解析到 Vercel，新增两条记录。</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>解析请求来源(isp)</th>
+<th>记录值</th>
+<th>TTL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>twikoo</td>
+<td>CNAME</td>
+<td>默认</td>
+<td>cname.vercel-dns.com</td>
+<td>10 分钟</td>
+</tr>
+<tr>
+<td>@</td>
+<td>A</td>
+<td>默认</td>
+<td>76.76.21.21</td>
+<td>10 分钟</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/fj4HiFQMKwemAqh.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/3duG2m7o5T6xKy4.png" fancybox="true"/></div></div>
+
+<ol start="6">
+<li>Vercel 项目中添加 Domains</li>
+</ol>
+<p>进入【Project Settings】-&gt;【Domains】添加域名即可。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/MyYCRzuIWdAqiro.png" fancybox="true"/></div></div>
+
+<ol start="7">
+<li>进入博客后台，替换主题配置文件的_config.stellar.yml 以下内容中的 envid.</li>
+</ol>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/PVx8fF2dwupiUtG.png" fancybox="true"/></div></div>
+
+<p>最后的最后，要记得重新编译运行查看效果哦~</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/qcSUxyQVDBAK9eh.png" fancybox="true"/></div></div>
+
+  
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/Hexo/3.3%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D.html">🌈|Github网页绑定域名</a></div><div class="item" id="next"></div></section></div>
+
+  
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<span>
+本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
+使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
+主题创建。
+</span>
+</br>
+</br>
+
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("10/20/2023 00:00:00");
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
+}
+show_runtime();
+</script>
+<p><span id="runtime_span"></span></p>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+<!-- inject -->
+
+  
+    <script type="text/javascript" src="/custom/js/ZYDark.js"></script>
+  
+
+
+  </div>
+
+  <!--动态线条背景-->
+  <script type="text/javascript"
+    color="220,220,220" opacity='0.9' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+
+<!-- hexo injector body_end start -->
+  <style>
+    .highlight {
+      position: relative;
+    }
+    .highlight .code .copy-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 0.5rem;
+      opacity: 0.25;
+      font-weight: 700;
+      color: var(--theme);
+      cursor: pointer;
+      transination: opacity 0.3s;
+    }
+    .highlight .code .copy-btn:hover{
+      color: var(--text-code);
+      opacity: 0.75;
+    }
+    .highlight .code .copy-btn.success {
+      color: var(--swiper-theme-color);
+      opacity: 0.75;
+
+    }
+    
+  </style>
+  <script>
+    const codeElementArr = document.querySelectorAll('.code')
+    codeElementArr.forEach(code => {
+      const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
+      const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
+  
+      // copy btn 
+      const codeCopyBtn = document.createElement('div')
+      codeCopyBtn.classList.add('copy-btn')
+      codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
+      codeCopyBtn.innerText = '复制代码'
+      code.appendChild(codeCopyBtn)
+  
+      codeCopyBtn.addEventListener('click', async () => {
+        const currentCodeElement = code.children[0]?.innerText
+        await copyCode(currentCodeElement)
+
+
+        codeCopyBtn.innerText = '复制成功'
+        codeCopyBtn.classList.add('success')
+
+        setTimeout(() => {
+          codeCopyBtn.innerText = '复制代码'
+          codeCopyBtn.classList.remove('success')
+        },1000)
+      })
+    })
+    
+    async function copyCode(currentCode) {
+      console.log(currentCode)
+      console.log('复制代码')
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(currentCode)
+        } catch (error) {
+          // 未获得用户许可
+          console.error(error)
+        }
+      } else {
+        console.error('当前浏览器不支持此api')
+      }
+    }
+  </script>
+  <!-- hexo injector body_end end --></body>
+</html>
