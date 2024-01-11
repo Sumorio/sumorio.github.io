@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0" theme-name="Stellar" theme-version="1.23.0">
+  
+  <meta name="generator" content="Hexo 7.0.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置 - 苏末了</title>
+
+  
+    <meta name="description" content="域名注册，域名解析，Github 绑定多个域名。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置">
+<meta property="og:url" content="https://sumorio.com/posts/304dddc6.html">
+<meta property="og:site_name" content="苏末了">
+<meta property="og:description" content="域名注册，域名解析，Github 绑定多个域名。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154145.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154206.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153533.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110155348.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153634.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153906.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110163043.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164522.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164639.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164922.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165035.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165436.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165655.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165840.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165934.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110170111.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110171230.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153131.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153023.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153621.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111115643.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111155428.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162455.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162646.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163220.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163517.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163553.png">
+<meta property="article:published_time" content="2024-01-11T11:15:31.291Z">
+<meta property="article:modified_time" content="2024-01-11T11:19:11.522Z">
+<meta property="article:author" content="Sumor|苏末了">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="NameSilo">
+<meta property="article:tag" content="CloudFlare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154145.png">
+  
+  
+  
+  <meta name="keywords" content="Github,NameSilo,CloudFlare">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://s2.loli.net/2023/10/20/rfLIRXdAplxjGyU.png">
+  
+
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><script>
+  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.querySelector("html").id = "ZYDark";
+  }
+</script>
+<link rel="stylesheet" href="/custom/css/ZYDark.css">
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2023/10/18/xLbhmXRtuJn8TUM.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">苏末了</div><div class="sub normal cap">⭐穿戴整齐面对疯狂的世界。</div><div class="sub hover cap" style="opacity:0"> 🧡Love and Peace.</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">专栏</a><a class="nav-item" href="/explore/">探索</a><a class="nav-item" href="/about/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header cap dis-select"><span class="name">NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NameSilo-%E6%B3%A8%E5%86%8C%E5%9F%9F%E5%90%8D"><span class="toc-text">1)NameSilo|注册域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-CloudFlare-%E6%89%98%E7%AE%A1%E5%9F%9F%E5%90%8D"><span class="toc-text">2)CloudFlare|托管域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-GithubPages-%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text">3)GithubPages|绑定自定义域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CloudFlare-%E8%AE%BE%E7%BD%AE-DNS-HTTPS"><span class="toc-text">4)CloudFlare|设置 DNS&#x2F;HTTPS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%BC%80%E5%90%AF-Encryption-Full-strict-%E6%A8%A1%E5%BC%8F"><span class="toc-text">5)开启 Encryption Full (strict) 模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%A7%91%E6%99%AE%EF%BC%9ADNS-%E8%AE%B0%E5%BD%95%E7%B1%BB%E5%9E%8B"><span class="toc-text">6)科普：DNS 记录类型</span></a></li></ol></div></div></widget>
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" href="javaScript:void('永夜');" rel="noopener noreferrer"><img class="lazy" id="ThemeM" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/></a><a class="social" href="javaScript:void('永昼');" rel="noopener noreferrer"><img class="lazy" id="ThemeL" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" href="javaScript:void('跟随系统');" rel="noopener noreferrer"><img class="lazy" id="ThemeAI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/AI.png"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/">技术向</a></div><div id="post-meta"><span class="author">发布于</span>
+    <span class="created"><time datetime="2024-01-11T11:15:31.291Z">2024-01-11</time></span>
+    
+    <span class="updated">，更新于&nbsp;<time datetime="2024-01-11T11:19:11.522Z">2024-01-11</time></span>
+    </div></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</span></h1>
+<p>域名注册，域名解析，Github 绑定多个域名。</p>
+<span id="more"></span>
+
+<p>域名注册：<a target="_blank" rel="noopener" href="https://www.namesilo.com/">www.namesilo.com</a></p>
+<p>域名解析：<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">www.cloudflare.com</a></p>
+<h2 id="1-NameSilo-注册域名"><a href="#1-NameSilo-注册域名" class="headerlink" title="1)NameSilo|注册域名"></a>1)NameSilo|注册域名</h2><ol>
+<li><p>注册账号并登录<a href="www.namesilo.com">namesilo</a></p>
+</li>
+<li><p>输入自己心仪的域名，加入购物车。</p>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154145.png" alt="img"></p>
+<ol start="3">
+<li>右上角进入购物车，点击<code>view cart</code>；google 搜索”namesilo 优惠码“，找到并输入至<code>promotion code</code>中。地址可以随意填写，如果有需要，可以进入<a target="_blank" rel="noopener" href="https://www.dizhishengcheng.com/">地址生成网</a>随意生成并填入。结账方式可以选择【支付宝】。值得注意的是，该网页偶尔可能访问缓慢，不要着急，慢慢来。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154206.png" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153533.png" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110155348.png" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153634.png" alt="img"></p>
+<ol start="4">
+<li>支付宝付款成功后，一分钟左右，跳转到后台页面，可以看到<code>dashboard</code>中的<code>Active domains</code>新增了一个账号。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153906.png" alt="img"></p>
+<h2 id="2-CloudFlare-托管域名"><a href="#2-CloudFlare-托管域名" class="headerlink" title="2)CloudFlare|托管域名"></a>2)CloudFlare|托管域名</h2><ol>
+<li><p>注册账号并登录<a href="http://www.cloudflare.com](https://www.cloudflare.com)">www.cloudflare.com](https://www.cloudflare.com)</a></p>
+</li>
+<li><p>将上文新注册的域名填写到 cloudflare 中.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110163043.png" alt="image-20240110163041918"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164522.png" alt="img"></p>
+</li>
+<li><p>选择 free,continue,continue；来到更改服务器页面，复制红框中的 nameservers 地址到 namesilo 的域名设置中。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164639.png" alt="image-20240110164642160"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164922.png" alt="image-20240110164920781"></p>
+</li>
+<li><p>点击返回到 Namesilo 网站进行域名设置：<a target="_blank" rel="noopener" href="https://www.namesilo.com/account_domains.php">域名设置网址</a>,点击图中的金币按钮，如果没有这个按钮，可以等待大概 20 分钟后，新账号系统可能正在审核分配资源。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165035.png" alt="image-20240110165033223"></p>
+</li>
+<li><p>删除原始配置，将第 3 步 cloudflare 中的 namesevers 粘贴并提交。</p>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165436.png" alt="image-20240110165434344"></p>
+<ol start="6">
+<li><p>显示 active ，表示域名已经成功托管到 cloudflare 平台进行管理。以后关于域名的设置都交给 cloudflare，可以不用登录 namesilo 了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165655.png" alt="image-20240110165654631"></p>
+</li>
+<li><p>回到 cloudflare 平台，继续操作。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165840.png" alt="image-20240110165839335"></p>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165934.png" alt="image-20240110165933532"></p>
+<ol start="8">
+<li><p>回到 cloudflare 首页，查看域名更新状态，pending 为正在等待。一般审核的时间 2 分钟~24 小时不等，需要耐心等待。我大概等待 3 分钟后，域名生效为 active.</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110170111.png" alt="image-20240110170111370"></p>
+</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110171230.png" alt="image-20240110171228928"></p>
+<h2 id="3-GithubPages-绑定自定义域名"><a href="#3-GithubPages-绑定自定义域名" class="headerlink" title="3)GithubPages|绑定自定义域名"></a>3)GithubPages|绑定自定义域名</h2><p>登录 github 新建一个仓库，如果是第一次搭建 github pages 网页，命名一定要是<code>&lt;username&gt;.github.io</code>这种形式，username 就是自己<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=github&spm=1001.2101.3001.7020">github</a>账号的用户名（比如仓库名为 sumorio.github.io)，分支是 main 主分支。因为这是我的第二个网页，所以名称随意起，我这里仓库名为<code>Blog-Stellar</code>.</p>
+<p>如图，新建好仓库后，进入 settings，page，选择分支并把注册好的域名填入，保存。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153131.png" alt="image-20240111110605523"></p>
+<p>保存之后 github 会<code>自动</code>的在仓库 CODE 根目录里生成一个<code>CNAME</code>文件，里面存储着域名配置信息。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153023.png" alt="image-20240111153022503"></p>
+<p>设置后继续返回 cloudflare 进行后续设置。</p>
+<h2 id="4-CloudFlare-设置-DNS-HTTPS"><a href="#4-CloudFlare-设置-DNS-HTTPS" class="headerlink" title="4)CloudFlare|设置 DNS&#x2F;HTTPS"></a>4)CloudFlare|设置 DNS&#x2F;HTTPS</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153621.png" alt="image-20240111153621507"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111115643.png" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111155428.png" alt="image-20240111155427669"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162455.png" alt="image-20240111162453188"></p>
+<p>以上设置完成，此刻可以通过域名进入网站。</p>
+<p><strong>关于 Github Pages 设置中不能开启 <code>Enforce HTTPS</code>，勾选框一直无法点击的问题。大概率是 Cloudflare 的代理状态的造成的，解决方案如下<code>开启Encryption Full (strict) 严格模式</code>。</strong></p>
+<h2 id="5-开启-Encryption-Full-strict-模式"><a href="#5-开启-Encryption-Full-strict-模式" class="headerlink" title="5)开启 Encryption Full (strict) 模式"></a>5)开启 Encryption Full (strict) 模式</h2><p>Full (strict) 模式与 Full 模式的区别在于: Full (strict) 模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非 Full 模式使用的无需验证的自签名证书。</p>
+<p>GitHub Pages 可以通过开启 <code>Enforce HTTPS</code> 来获取免费的可信证书，满足开启 Full (strict) 模式的条件。</p>
+<ol>
+<li><p>在 Cloudflare 的 DNS 设置中把 Proxy status 全部设置为 <code>DNS Only</code> 状态，即灰色的云朵。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162646.png" alt="image-20240111162644688"></p>
+</li>
+<li><p>回到 Pages 设置，刷新一下，删除域名 Remove，重新填写，再 save，就可以勾选 <code>Enforce HTTPS</code> 了</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163220.png" alt="image-20240111163216691"></p>
+</li>
+<li><p>GitHub 会自动申请 SSL 证书，有了这个证书才能够在 Cloudflare 开启 Full (strict) 模式</p>
+</li>
+<li><p>等待 Pages 的 HTTPS 生效后，回到 Cloudflare，把刚才修改的 Proxy status 全部恢复为 <code>Proxied</code> 状态，即橙色的云朵。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163517.png" alt="image-20240111163517090"></p>
+</li>
+<li><p>到 <code>SSL/TLS</code> 设置中，将 Encryption Mode 设置为 <code>Full (strict)</code></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163553.png" alt="image-20240111163552369"></p>
+</li>
+</ol>
+<h2 id="6-科普：DNS-记录类型"><a href="#6-科普：DNS-记录类型" class="headerlink" title="6)科普：DNS 记录类型"></a>6)科普：DNS 记录类型</h2><p><strong>A 记录</strong></p>
+<p>A 记录 (Address record) 是用来指定主机名（或域名）对应的 IP 地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器 (web server) 上。同时也可以设置域名的子域名。它会传回一个 32 位元的 IPv4 地址。</p>
+<p><strong>AAAA 记录</strong></p>
+<p>AAAA 记录 (AAAA record) 是用来将域名解析到 IPv6 地址的 DNS 记录。用户可以将一个域名解析到 IPv6 地址上，也可以将子域名解析到 IPv6 地址上。它会传回一个 128 位元的 IPv6 地址。</p>
+<p><strong>CNAME 记录</strong></p>
+<p>CNAME 记录 (Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到 CNAME 记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p>
+<p><strong>NS 记录</strong></p>
+<p>NS (Name Server) 记录是域名服务器记录，用来指定该域名由哪个 DNS 服务器来进行解析。如果需要把子域名交给其他 DNS 服务商解析，就需要添加 NS 记录。</p>
+<p><strong>MX 记录</strong></p>
+<p>MX (mail exchanger) 记录用于指定负责处理发往收件人域名的邮件服务器。</p>
+<p><strong>TXT 记录</strong></p>
+<p>TXT 记录一般指为某个主机名或域名设置的说明。</p>
+<p><strong>TTL</strong></p>
+<p>TTL (Time To Live) 表示解析记录在 DNS 服务器中的缓存时间，长度为秒。当本地 DNS 服务器收到某一域名的解析请求时，需要向该域名指定的权威 DNS 服务器发送解析请求获取解析记录。获得的解析记录会在本地 DNS 服务器中保存一段时间。在这段时间内，如果本地 DNS 服务器再次收到该域名的解析请求，将不再向权威 DNS 服务器发送解析请求，而是直接返回保存在本地 DNS 服务器中的解析记录。</p>
+
+
+
+<div class="article-footer reveal fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">非商业性使用-国际署名</a> 许可协议，转载请说明。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://sumorio.com/posts/304dddc6.html" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/posts/304dddc6.html&title=NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置 - 苏末了&summary=域名注册，域名解析，Github 绑定多个域名。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/80c07e4dbb303.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/8411ed322ced6.svg"/></a></div>
+        
+      </div>
+    </section>
+    </div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/dc6b3388.html">Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\posts\80489cb4.html" title="敢说你会Github搜索？神仙搜索技巧"><span class="title">敢说你会Github搜索？神仙搜索技巧</span><span class="excerpt">Github 搜索技巧。</span></a><a class="item" href="\posts\dc6b3388.html" title="Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub"><span class="title">Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</span><span class="excerpt">学习 Git 的过程中，发现有关 VSCode 使用 GIT 的教学并不多，特详细梳理本文档，致力于学习记录以及学习分享。</span></a><a class="item" href="\posts\e4bf97d7.html" title="精选|ChatGPTPlugin16个插件推荐"><span class="title">精选|ChatGPTPlugin16个插件推荐</span><span class="excerpt">16 个强的离谱的 ChatGPT 插件，制作网页，语言教师，工作秘书，视频音频解读，文章归纳总结！</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<span>
+本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
+使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
+主题创建。
+</span>
+</br>
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("10/20/2023 00:00:00");
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
+}
+show_runtime();
+</script>
+<span id="runtime_span"></span>
+</br>
+<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    
+<script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.23.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied","toast":"复制成功"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+
+
+
+<!-- inject -->
+<script type="text/javascript" src="/custom/js/ZYDark.js"></script>
+
+  </div>
+  <!--动态线条背景-->
+  <script type="text/javascript"
+  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  </script>
+
+<!-- hexo injector body_end start -->
+  <style>
+    .highlight {
+      position: relative;
+    }
+    .highlight .code .copy-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 0.5rem;
+      opacity: 0.25;
+      font-weight: 700;
+      color: var(--theme);
+      cursor: pointer;
+      transination: opacity 0.3s;
+    }
+    .highlight .code .copy-btn:hover{
+      color: var(--text-code);
+      opacity: 0.75;
+    }
+    .highlight .code .copy-btn.success {
+      color: var(--swiper-theme-color);
+      opacity: 0.75;
+
+    }
+    
+  </style>
+  <script>
+    const codeElementArr = document.querySelectorAll('.code')
+    codeElementArr.forEach(code => {
+      const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
+      const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
+  
+      // copy btn 
+      const codeCopyBtn = document.createElement('div')
+      codeCopyBtn.classList.add('copy-btn')
+      codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
+      codeCopyBtn.innerText = '复制代码'
+      code.appendChild(codeCopyBtn)
+  
+      codeCopyBtn.addEventListener('click', async () => {
+        const currentCodeElement = code.children[0]?.innerText
+        await copyCode(currentCodeElement)
+
+
+        codeCopyBtn.innerText = '复制成功'
+        codeCopyBtn.classList.add('success')
+
+        setTimeout(() => {
+          codeCopyBtn.innerText = '复制代码'
+          codeCopyBtn.classList.remove('success')
+        },1000)
+      })
+    })
+    
+    async function copyCode(currentCode) {
+      console.log(currentCode)
+      console.log('复制代码')
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(currentCode)
+        } catch (error) {
+          // 未获得用户许可
+          console.error(error)
+        }
+      } else {
+        console.error('当前浏览器不支持此api')
+      }
+    }
+  </script>
+  <!-- hexo injector body_end end --></body>
+</html>
