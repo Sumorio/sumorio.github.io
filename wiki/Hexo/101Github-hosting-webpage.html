@@ -87,6 +87,8 @@
 
 <widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header cap dis-select"><span class="name">🏳️‍🌈项目前期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html#start"><span class="toc-text">Hexo环境搭建</span></a></div></div><div class="widget-header cap dis-select"><span class="name">🏳️‍🌈项目中期</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/Hexo/101Github-hosting-webpage.html"><span class="toc-text">Github托管静态页面</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">一、新建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE-SSH-%E5%AF%86%E9%92%A5"><span class="toc-text">二、配置 SSH 密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81GitHub-%E6%96%B0%E5%A2%9E-SSH"><span class="toc-text">三、GitHub 新增 SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">四、修改配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%9B%B4%E6%96%B0%E6%8F%90%E4%BA%A4"><span class="toc-text">五、更新提交</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/102Domain-Name.html"><span class="toc-text">Github网页绑定域名</span></a></div></div><div class="widget-header cap dis-select"><span class="name">🏳️‍🌈项目后期</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/201Webpage-beautification.html"><span class="toc-text">Stellar主题美化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/202Theme-black-white-switch.html"><span class="toc-text">Stellar主题黑白模式切换</span></a></div></div><div class="widget-header cap dis-select"><span class="name">🏳️‍🌈其他配置</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/301Twikoo-deployment.html"><span class="toc-text">Hexo部署twikoo评论系统 | 邮件推送versel | 被墙解决方案</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/302Dynamic-friend-chain.html"><span class="toc-text">部署Stellar动态友链</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/Hexo/303filesystem-sidebar.html"><span class="toc-text">Stellar文档系统 | 侧边栏设置</span></a></div></div></widget>
 
+<widget class="widget-wrapper timeline"><div class="widget-header cap theme dis-select"><span class="name">主题更新</span></div><div class="widget-body fs14"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.xaox.cc/repos/xaoxuu/hexo-theme-stellar/releases?per_page=1" user="xaoxuu"></div></div></widget>
+
 
 </div>
 
@@ -375,7 +377,7 @@ show_runtime();
   }
 
   // stellar js
-  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js"});
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js","marked":"/js/plugins/marked.js"});
 
   stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
   // optional plugins
@@ -383,7 +385,7 @@ show_runtime();
     stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
   }
   if ('true' == 'true') {
-    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
   }
   if ('' == 'true') {
     stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
@@ -392,7 +394,7 @@ show_runtime();
     stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".fancybox img"});
   }
   if ('false' == 'true') {
     stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
@@ -441,11 +443,6 @@ show_runtime();
 <script type="text/javascript" src="/custom/js/ZYDark.js"></script>
 
   </div>
-  <!--动态线条背景-->
-  <script type="text/javascript"
-  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-  </script>
-
 <!-- hexo injector body_end start -->
   <style>
     .highlight {
