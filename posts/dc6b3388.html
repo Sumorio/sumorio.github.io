@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang='zh-CN'>
 
+<!DOCTYPE html><html lang="zh-CN">
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0" theme-name="Stellar" theme-version="1.23.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2" theme-name="Stellar" theme-version="1.26.2">
   
-  <meta name="generator" content="Hexo 7.0.0">
+  <meta name="generator" content="Hexo 7.1.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
   <meta name="renderer" content="webkit">
@@ -80,6 +79,11 @@
   
 
   
+  
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+
+
   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><script>
   if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
       document.querySelector("html").id = "ZYDark";
@@ -87,48 +91,39 @@
 </script>
 <link rel="stylesheet" href="/custom/css/ZYDark.css">
 </head>
-
 <body>
-  
 
 
 
-
-  <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
-    
-
-  
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2023/10/18/xLbhmXRtuJn8TUM.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">苏末了</div><div class="sub normal cap">⭐穿戴整齐面对疯狂的世界。</div><div class="sub hover cap" style="opacity:0"> 🧡Love and Peace.</div></a></div>
-
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">专栏</a><a class="nav-item" href="/explore/">探索</a><a class="nav-item" href="/about/">更多</a></nav>
-</header>
+<div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container sidebar-blur">
 
 
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2023/10/20/ElRxPhMCVgyNSBA.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">苏末了</div><div class="sub normal cap">⭐穿戴整齐面对疯狂的世界。</div><div class="sub hover cap" style="opacity:0"> 🧡Love and Peace.</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" class="icon search-icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="更多" href="/about/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header cap dis-select"><span class="name">Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-Git-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">一.Git 基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git"><span class="toc-text">1. Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GitHub"><span class="toc-text">2. GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git-%E4%B8%8E-GitHub-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">3. Git 与 GitHub 的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git-%E5%92%8C-GitHub-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">4.Git 和 GitHub 的工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-vsCode-%E4%BD%BF%E7%94%A8-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-text">二.vsCode 使用 Git 版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-1-%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%8A%E4%BC%A0%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-text">案例 1.本地库上传远程库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-2-%E5%A4%9A%E4%BA%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81"><span class="toc-text">案例 2.多人跨平台处理冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-3-%E5%A4%84%E7%90%86%E5%88%86%E6%94%AF"><span class="toc-text">案例 3.处理分支</span></a></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">🥝 本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-Git-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">一.Git 基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git"><span class="toc-text">1. Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GitHub"><span class="toc-text">2. GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git-%E4%B8%8E-GitHub-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">3. Git 与 GitHub 的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git-%E5%92%8C-GitHub-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">4.Git 和 GitHub 的工作流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-vsCode-%E4%BD%BF%E7%94%A8-Git-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-text">二.vsCode 使用 Git 版本控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-1-%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%8A%E4%BC%A0%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-text">案例 1.本地库上传远程库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-2-%E5%A4%9A%E4%BA%BA%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81"><span class="toc-text">案例 2.多人跨平台处理冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-3-%E5%A4%84%E7%90%86%E5%88%86%E6%94%AF"><span class="toc-text">案例 3.处理分支</span></a></li></ol></li></ol></div></div></widget>
 
 
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" href="javaScript:void('永夜');" rel="noopener noreferrer"><img class="lazy" id="ThemeM" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/></a><a class="social" href="javaScript:void('永昼');" rel="noopener noreferrer"><img class="lazy" id="ThemeL" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" href="javaScript:void('跟随系统');" rel="noopener noreferrer"><img class="lazy" id="ThemeAI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/AI.png"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
 
-    </aside>
-    <div class='l_main'>
-      
 
-      
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/">技术向</a></div><div id="post-meta"><span class="author">本文由 <a href="/author/Sumor/index.html">苏末了</a> 发布于</span>
-    <span class="created"><time datetime="2024-01-02T07:19:40.311Z">2024-01-02</time></span>
-    
-    <span class="updated">，更新于&nbsp;<time datetime="2024-01-13T14:03:13.073Z">2024-01-13</time></span>
-    </div></div></div>
 
-<article class='md-text content post'>
-<h1 class="article-title"><span>Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</span></h1>
-<h2 id="一-Git-基础知识"><a href="#一-Git-基础知识" class="headerlink" title="一.Git 基础知识"></a>一.Git 基础知识</h2><h3 id="1-Git"><a href="#1-Git" class="headerlink" title="1. Git"></a><strong>1. Git</strong></h3><p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于有效地跟踪和管理源代码历史。它允许多人协作，同时保持代码历史的完整性和一致性。Git 的核心概念包括提交（commit）、分支（branch）、合并（merge）和冲突解决（conflict resolution）。</p>
+
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/">技术向</a></div>
+<div id="post-meta"><span class="author">本文由 <a href="/author/Sumor/index.html">苏末了</a> 发布于：</span><span class="created"><time datetime="2024-01-02T07:19:40.311Z">2024-01-02</time></span><span class="updated">，更新于：<time datetime="2024-01-13T14:03:13.073Z">2024-01-13</time></span></div></div>
+</div>
+<article class="md-text content"><h1 class="article-title"><span>Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</span></h1><h2 id="一-Git-基础知识"><a href="#一-Git-基础知识" class="headerlink" title="一.Git 基础知识"></a>一.Git 基础知识</h2><h3 id="1-Git"><a href="#1-Git" class="headerlink" title="1. Git"></a><strong>1. Git</strong></h3><p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于有效地跟踪和管理源代码历史。它允许多人协作，同时保持代码历史的完整性和一致性。Git 的核心概念包括提交（commit）、分支（branch）、合并（merge）和冲突解决（conflict resolution）。</p>
 <h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2. GitHub"></a><strong>2. GitHub</strong></h3><p>GitHub 是一个基于 Web 的平台，提供 Git 仓库的托管服务，并增加了协作功能。它使得代码共享、协作和版本控制更加容易，特别是在团队项目中。GitHub 的特色功能包括 Pull Requests、Issues、GitHub Actions 等。</p>
 <h3 id="3-Git-与-GitHub-的关系"><a href="#3-Git-与-GitHub-的关系" class="headerlink" title="3. Git 与 GitHub 的关系"></a><strong>3. Git 与 GitHub 的关系</strong></h3><p><strong>Git 是版本控制系统的核心，而 GitHub 是在此基础上构建的服务平台。</strong></p>
 <p><strong>Git 是版本控制工具，相当于存档记录器</strong>。可以在电脑不联网的情况下，在本地电脑直接使用。它可以更好的帮助你管理程序，记录提交的历史内容，历史更改记录，当你误删误操作时，及时修复还原。</p>
@@ -244,9 +239,7 @@
 </ol>
 <p>–没写完，待补充-。</p>
 
-
-
-<div class="article-footer reveal fs14">
+<div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
       <div class="body"><p>本文遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">非商业性使用-国际署名</a> 许可协议，转载请说明。</p>
@@ -257,7 +250,7 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://sumorio.com/posts/dc6b3388.html" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/posts/dc6b3388.html&title=Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub - 苏末了&pics=https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/universe.jpg&summary=一.Git 基础知识1. GitGit 是一个开源的分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于有效地跟踪和管理源代码历史。它允许多人协作，同时保持代码历史的完整性和一致性。Git 的核心概念包括提..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/80c07e4dbb303.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/8411ed322ced6.svg"/></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/b32ef3da1162a.svg"/></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/posts/dc6b3388.html&title=Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub - 苏末了&pics=https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/universe.jpg&summary=一.Git 基础知识1. GitGit 是一个开源的分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于有效地跟踪和管理源代码历史。它允许多人协作，同时保持代码历史的完整性和一致性。Git 的核心概念包括提..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://sumorio.com/posts/dc6b3388.html"/>
@@ -266,36 +259,31 @@
       </div>
     </section>
     </div>
-
 </article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/304dddc6.html">NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/edeb1358.html">轻松搭建图床：三种免费方法教程</a></div></section></div>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/posts/304dddc6.html">NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/posts/edeb1358.html">轻松搭建图床：三种免费方法教程</a></div></section></div>
-
-
-<div class="related-wrap reveal" id="related-posts">
+<div class="related-wrap" id="related-posts">
     <section class='header'>
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="\posts\80489cb4.html" title="敢说你会Github搜索？神仙搜索技巧"><span class="title">敢说你会Github搜索？神仙搜索技巧</span></a><a class="item" href="\posts\304dddc6.html" title="NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置"><span class="title">NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</span></a><a class="item" href="\posts\e4bf97d7.html" title="精选| ChatGPTPlugin16个插件推荐"><span class="title">精选| ChatGPTPlugin16个插件推荐</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="\posts\80489cb4.html" title="敢说你会Github搜索？神仙搜索技巧"><span class="title">敢说你会Github搜索？神仙搜索技巧</span></a><a class="item" href="\posts\304dddc6.html" title="NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置"><span class="title">NameSilo+CloudFlare域名注册|域名解析|GithubPages自定义域名设置</span></a><a class="item" href="\posts\e4bf97d7.html" title="精选| ChatGPTPlugin16个插件推荐"><span class="title">精选| ChatGPTPlugin16个插件推荐</span></a><a class="item" href="\posts\90d32f8e.html" title="让微软Copilot变聪明的3个指令"><span class="title">让微软Copilot变聪明的3个指令</span></a></div></section></div>
 
 
-
-  <div class='related-wrap md-text reveal' id="comments">
+  <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
       快来参与讨论吧
     </section>
     <section class='body cmt-body twikoo'>
       
 
-<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+<div id="twikoo_container"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
     </section>
   </div>
 
 
 
-      
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<footer class="page-footer fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
 使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
@@ -324,17 +312,12 @@ show_runtime();
 </br>
 </center>
 </div></footer>
-
-      <div class='float-panel mobile-only blur' style='display:none'>
+<div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
-    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+    <svg t="1705412886951" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8331" width="200" height="200"><path d="M638.72 970.666667h-256c-118.186667 0-198.272-25.002667-251.946667-78.72S52.053333 758.186667 52.053333 640V384c0-118.186667 25.002667-198.272 78.72-251.946667S264.533333 53.333333 382.72 53.333333h256c118.186667 0 198.272 25.002667 251.946667 78.72S969.386667 265.813333 969.386667 384v256c0 118.186667-25.002667 198.272-78.72 251.946667S756.906667 970.666667 638.72 970.666667z m-256-853.333334c-100.096 0-165.802667 19.2-206.72 59.946667S116.053333 283.904 116.053333 384v256c0 100.096 19.072 165.802667 59.946667 206.72S282.624 906.666667 382.72 906.666667h256c100.096 0 165.802667-19.072 206.72-59.946667S905.386667 740.096 905.386667 640V384c0-100.096-19.072-165.802667-59.946667-206.72S738.816 117.333333 638.72 117.333333z" p-id="8332"></path><path d="M638.72 970.666667a32 32 0 0 1-32-32V85.333333a32 32 0 0 1 32-32 32 32 0 0 1 32 32v853.333334a32 32 0 0 1-32 32zM340.053333 653.226667a31.914667 31.914667 0 0 1-22.613333-9.386667 32 32 0 0 1 0-45.269333L404.053333 512 317.44 425.386667a32 32 0 0 1 0-45.226667 32 32 0 0 1 45.226667 0l109.226666 109.226667a32 32 0 0 1 0 45.269333L362.666667 643.84a31.914667 31.914667 0 0 1-22.613334 9.386667z" p-id="8333"></path></svg>
   </button>
 </div>
-
-    </div>
-  </div>
-  <div class='scripts'>
-    
+<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
 <script type="text/javascript">
   const stellar = {
     // 懒加载 css https://github.com/filamentgroup/loadCSS
@@ -430,8 +413,8 @@ show_runtime();
       }
     }
   };
-  stellar.version = '1.23.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0';
+  stellar.version = '1.26.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -469,13 +452,13 @@ show_runtime();
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
   }
   if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"16px","duration":500,"interval":100,"scale":1});
   }
   if ('true' == 'true') {
-    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".fancybox img"});
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":".fancybox img"});
   }
   if ('false' == 'true') {
     stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
@@ -517,19 +500,18 @@ show_runtime();
 
 
 
+  
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+
+
+
 
 
 
 <!-- inject -->
 <script type="text/javascript" src="/custom/js/ZYDark.js"></script>
-
-  </div>
-  <!--动态线条背景-->
-  <script type="text/javascript"
-  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-  </script>
-
-<!-- hexo injector body_end start -->
+</div><!-- hexo injector body_end start -->
   <style>
     .highlight {
       position: relative;
@@ -599,5 +581,4 @@ show_runtime();
       }
     }
   </script>
-  <!-- hexo injector body_end end --></body>
-</html>
+  <!-- hexo injector body_end end --></body></html>

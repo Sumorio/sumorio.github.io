@@ -1,0 +1,805 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2" theme-name="Stellar" theme-version="1.26.2">
+  
+  <meta name="generator" content="Hexo 7.1.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>前端：HTML4基础知识 - 苏末了</title>
+
+  
+    <meta name="description" content="HTML 简介开发者文档W3C 官网： www.w3c.orgW3School： www.w3school.com.cnMDN： developer.mozilla.org —— 平时用的最多。 什么是 HTML全称：HyperText Markup Language（超文本标记语言）。超文本：是一种组织信息的方式，通过超链接将不同空间的文字，图片等各种信息组合到一起。标记：文本要变成超文本，就需">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTML4基础知识">
+<meta property="og:url" content="https://sumorio.com/wiki/FrontEnd/HTML1.html">
+<meta property="og:site_name" content="苏末了">
+<meta property="og:description" content="HTML 简介开发者文档W3C 官网： www.w3c.orgW3School： www.w3school.com.cnMDN： developer.mozilla.org —— 平时用的最多。 什么是 HTML全称：HyperText Markup Language（超文本标记语言）。超文本：是一种组织信息的方式，通过超链接将不同空间的文字，图片等各种信息组合到一起。标记：文本要变成超文本，就需">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118151805.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118110908.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118144034.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118144843.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118151238.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118152909.png">
+<meta property="article:published_time" content="2024-01-19T03:13:00.773Z">
+<meta property="article:modified_time" content="2024-01-19T03:13:00.773Z">
+<meta property="article:author" content="Sumor|苏末了">
+<meta property="article:tag" content="个人博客">
+<meta property="article:tag" content="技术博客">
+<meta property="article:tag" content="苏末了">
+<meta property="article:tag" content="sumor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118151805.png">
+  
+  
+  
+  <meta name="keywords" content="个人博客,技术博客,苏末了,sumor">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://s2.loli.net/2023/10/20/rfLIRXdAplxjGyU.png">
+  
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+
+
+  <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><script>
+  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.querySelector("html").id = "ZYDark";
+  }
+</script>
+<link rel="stylesheet" href="/custom/css/ZYDark.css">
+</head>
+<body>
+
+
+
+<div class="l_body content tech" id="start" layout="wiki" ><aside class="l_left"><div class="sidebar-container sidebar-blur">
+
+
+<header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/-online-payment.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></div><a class="title" href="/wiki/FrontEnd/HTML0.html"><div class="main" ff="title">前端</div><div class="sub normal cap">🚀 掌握前端，开启数字创造之旅！</div><div class="sub hover cap" style="opacity:0"> 🚀 Designed by Sumorio。</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" class="icon search-icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" data-filter="/wiki/FrontEnd/" placeholder="在 前端 中搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item active" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="更多" href="/about/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
+<div class="widgets">
+
+<widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">📌HTML基础入门</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML0.html#start"><span class="toc-text">前置基础知识</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/FrontEnd/HTML1.html"><span class="toc-text">HTML4基础知识</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E7%AE%80%E4%BB%8B"><span class="toc-text">HTML 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%80%85%E6%96%87%E6%A1%A3"><span class="toc-text">开发者文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-HTML"><span class="toc-text">什么是 HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E5%9B%BD%E9%99%85%E7%BB%84%E7%BB%87"><span class="toc-text">相关国际组织</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E5%85%A5%E9%97%A8"><span class="toc-text">HTML 入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E6%A0%87%E7%AD%BE"><span class="toc-text">HTML 标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7"><span class="toc-text">HTML 标签属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">HTML 基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E6%B3%A8%E9%87%8A"><span class="toc-text">HTML 注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E6%96%87%E6%A1%A3%E5%A3%B0%E6%98%8E"><span class="toc-text">HTML 文档声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="toc-text">HTML 字符编码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-%E5%9F%BA%E7%A1%80"><span class="toc-text">HTML 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE"><span class="toc-text">排版标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-text">语义化标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0-%E4%B8%8E-%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="toc-text">块级元素 与 行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="toc-text">文本标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE"><span class="toc-text">图片标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%B7%B3%E8%BD%AC%E5%88%B0%E9%A1%B5%E9%9D%A2"><span class="toc-text">1. 跳转到页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%96%87%E4%BB%B6"><span class="toc-text">2. 跳转到文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%B7%B3%E8%BD%AC%E5%88%B0%E9%94%9A%E7%82%B9"><span class="toc-text">3. 跳转到锚点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%94%A4%E8%B5%B7%E6%8C%87%E5%AE%9A%E5%BA%94%E7%94%A8"><span class="toc-text">4. 唤起指定应用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">1. 基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="toc-text">2. 常用属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%B7%A8%E8%A1%8C%E8%B7%A8%E5%88%97%EF%BC%88%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC%EF%BC%89"><span class="toc-text">3. 跨行跨列（合并单元格）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE%E8%A1%A5%E5%85%85"><span class="toc-text">常用标签补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-text">表单</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-text">基本结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6"><span class="toc-text">常用表单控件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%9A"><span class="toc-text">①文本输入框：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E6%A1%86"><span class="toc-text">② 密码输入框</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-%E5%8D%95%E9%80%89%E6%A1%86"><span class="toc-text">③ 单选框</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-%E5%A4%8D%E9%80%89%E6%A1%86"><span class="toc-text">④ 复选框</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5-%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE"><span class="toc-text">⑥ 提交按钮</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5-%E6%8F%90%E4%BA%A4%E6%8C%89%E9%92%AE-1"><span class="toc-text">⑥ 提交按钮</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A6-%E9%87%8D%E7%BD%AE%E6%8C%89%E9%92%AE"><span class="toc-text">⑦ 重置按钮</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A7-%E6%99%AE%E9%80%9A%E6%8C%89%E9%92%AE"><span class="toc-text">⑧ 普通按钮</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A8%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="toc-text">⑨文本域</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A9-%E4%B8%8B%E6%8B%89%E6%A1%86"><span class="toc-text">⑩ 下拉框</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6-%E5%89%8D%E7%AB%AF%E4%B8%8D%E5%8F%AF%E6%94%B9"><span class="toc-text">禁用表单控件(前端不可改)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#label-%E6%A0%87%E7%AD%BE"><span class="toc-text">label 标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fieldset-%E4%B8%8E-legend-%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">fieldset 与 legend 的使用（了解）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6%E6%A0%87%E7%AD%BE"><span class="toc-text">框架标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E5%AE%9E%E4%BD%93"><span class="toc-text">HTML实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7"><span class="toc-text">HTML全局属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#meta-%E5%85%83%E4%BF%A1%E6%81%AF"><span class="toc-text">meta 元信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%82%B9%E8%AE%B0%E5%BF%86"><span class="toc-text">重点记忆</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML2.html"><span class="toc-text">HTML5 基础知识</span></a></div></div><div class="widget-header dis-select"><span class="name">📌CSS入门到精通</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/CSS.html"><span class="toc-text">CSS基础教学</span></a></div></div><div class="widget-header dis-select"><span class="name">📌JavaScript实践</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></div></widget>
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" href="javaScript:void('永夜');" rel="noopener noreferrer"><img class="lazy" id="ThemeM" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/></a><a class="social" href="javaScript:void('永昼');" rel="noopener noreferrer"><img class="lazy" id="ThemeL" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" href="javaScript:void('跟随系统');" rel="noopener noreferrer"><img class="lazy" id="ThemeAI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/AI.png"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/FrontEnd/HTML0.html">前端</a></div>
+<div id="post-meta"><span class="author">更新于：</span><time datetime="2024-01-19T03:13:00.773Z">2024-01-19</time></span></div></div>
+
+  <div class="right ghrepo stellar-ghinfo-api" api="https://api.github.com/repos/Sumorio/sumorio.github.io">
+    <a class="repo-link bold" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
+      <span type="text">Sumorio/sumorio.github.io</span>
+    </a>
+    <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/stargazers">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+      <span type="text" id="stargazers_count">0</span><span>stars</span>
+    </a>
+    <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/forks">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg>
+      <span type="text" id="forks_count">0</span><span>forks</span>
+    </a>
+  </div>
+  </div>
+<article class="md-text content"><h1 class="article-title"><span>HTML4基础知识</span></h1><h2 id="HTML-简介"><a href="#HTML-简介" class="headerlink" title="HTML 简介"></a>HTML 简介</h2><h3 id="开发者文档"><a href="#开发者文档" class="headerlink" title="开发者文档"></a>开发者文档</h3><p><strong>W3C 官网</strong>： <a href="www.w3c.org">www.w3c.org</a><br><strong>W3School</strong>： <a href="www.w3school.com.cn">www.w3school.com.cn</a><br><strong>MDN</strong>： <a href="developer.mozilla.org">developer.mozilla.org</a> —— 平时用的最多。</p>
+<h3 id="什么是-HTML"><a href="#什么是-HTML" class="headerlink" title="什么是 HTML"></a>什么是 HTML</h3><p>全称：HyperText Markup Language（超文本标记语言）。<br><strong>超文本</strong>：是一种组织信息的方式，通过超链接将不同空间的文字，图片等各种信息组合到一起。<br><strong>标记</strong>：文本要变成超文本，就需要用到各种特定的标记符号。<br><strong>语言</strong>：每一个标记的写法、使用规则，组成了一个标记语言。</p>
+<h3 id="相关国际组织"><a href="#相关国际组织" class="headerlink" title="相关国际组织"></a>相关国际组织</h3><ul>
+<li><strong>IETF</strong>：Internet Engineering Task Force（国际互联网工程任务组），成立于 1985 年底，是一个权威<br>的互联网技术标准化组织，主要负责互联网相关技术规范的研发和制定，当前绝大多数国际互联网<br>技术标准均出自 IETF。官网： <a target="_blank" rel="noopener" href="https://www.ietf.org/">https://www.ietf.org</a></li>
+<li><strong>W3C</strong>：World Wide Web Consortium（万维网联盟），创建于 1994 年，是目前 Web 技术领域，最具影<br>响力的技术标准机构。共计发布了 200 多项技术标准和实施指南，对互联网技术的发展和应用起到<br>了基础性和根本性的支撑作用，官网： <a target="_blank" rel="noopener" href="https://www.w3.org/">https://www.w3.org</a></li>
+<li><strong>WHATWF</strong>：Web Hypertext Application Technology Working Group（网页超文本应用技术工作小组）成立<br>于 2004 年，是一个以推动网络 HTML 5 标准为目的而成立的组织。由 Opera、Mozilla 基金会、苹果，<br>等这些浏览器厂商组成。官网： <a target="_blank" rel="noopener" href="https://whatwg.org/">https://whatwg.org/</a></li>
+</ul>
+<h2 id="HTML-入门"><a href="#HTML-入门" class="headerlink" title="HTML 入门"></a>HTML 入门</h2><h3 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h3><ol>
+<li><p><strong>标签 又称 元素</strong>，是 HTML 的<strong>基本组成单位</strong>。</p>
+</li>
+<li><p>标签分为：<strong>双标签</strong> 与 <strong>单标签</strong> （绝大多数都是双标签）。</p>
+</li>
+<li><p>标签名不区分大小写，但推荐小写，因为小写更规范。</p>
+</li>
+<li><p>双标签：<code>&lt;起始标签&gt;标签体&lt;/结束标签&gt;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;marquee&gt;标签&lt;/marquee&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>单标签：<code>&lt;起始名/&gt;标签体</code> （&#x2F;斜杠可以省略）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input&gt;</span><br><span class="line">&lt;br/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>标签之间的关系：并列关系、嵌套关系，可以使用 tab 键进行缩进：</p>
+</li>
+</ol>
+<h3 id="HTML-标签属性"><a href="#HTML-标签属性" class="headerlink" title="HTML 标签属性"></a>HTML 标签属性</h3><ol>
+<li><p>用于给标签提供 <strong>附加信息</strong>。</p>
+</li>
+<li><p>可以写在：起始标签 或 单标签中，形式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;标签名 属性名1=‘属性值1’ 属性名2=‘属性值2’&gt;</span><br><span class="line"></span><br><span class="line">&lt;marquee loop=&quot;1&quot; bgcolor=&quot;orange&quot;&gt; sumorio的标签测试 &lt;/marquee&gt; </span><br><span class="line">#循环次数：1次，背景：橘色</span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;password&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有些特殊的属性，没有属性名，只有属性值，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input disabled&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>双引号，也可以写成单引号，甚至不写都行，但还是推荐写双引号。</p>
+</li>
+<li><p>标签中不要出现同名属性，否则后写的会失效，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; type=&quot;password&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="HTML-基本结构"><a href="#HTML-基本结构" class="headerlink" title="HTML 基本结构"></a>HTML 基本结构</h3><p>1.在网页中，查看网页代码可以点击鼠标右键，选择“检查”。</p>
+<p>2.【检查】 和 【查看网页源代码】的区别：</p>
+<blockquote>
+<p>【查看网页源代码】看到的是：程序员编写的源代码。<br>【检查】看到的是：经过浏览器 “处理” 后的源代码。<br>备注：日常开发中，【检查】用的最多。</p>
+</blockquote>
+<ol start="3">
+<li>网页的 基本结构 如下：</li>
+</ol>
+<blockquote>
+<p>想要呈现在网页中的内容写在 <code>body</code> 标签中。<br><code>head</code> 标签中的内容不会出现在网页中。<br><code>head</code> 标签中的 title 标签可以指定网页的标题。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;网页标题&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		...</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTML-注释"><a href="#HTML-注释" class="headerlink" title="HTML 注释"></a>HTML 注释</h3><ol>
+<li>特点：注释的内容会被浏览器所忽略，不会呈现到页面中，但源代码中依然可见。</li>
+<li>作用：对代码进行解释和说明。</li>
+<li>写法：<code>&lt;!-- 注释 --&gt;</code></li>
+<li>注释不可以嵌套。</li>
+</ol>
+<h3 id="HTML-文档声明"><a href="#HTML-文档声明" class="headerlink" title="HTML 文档声明"></a>HTML 文档声明</h3><ol>
+<li>作用：告诉浏览器当前网页的版本。</li>
+<li>写法：请参考官网：<a target="_blank" rel="noopener" href="https://www.w3.org/QA/2002/04/valid-dtd-list.html">W3C</a></li>
+<li>注意：文档声明，必须在网页的第一行，且在 html 标签的外侧。</li>
+<li>Html类型的文件，在VsCode 中输入<code>!</code> ，随后回车即可快速生成标准结构。</li>
+</ol>
+<h3 id="HTML-字符编码"><a href="#HTML-字符编码" class="headerlink" title="HTML 字符编码"></a>HTML 字符编码</h3><ol>
+<li><p>计算机对数据的操作：<br>存储时，对数据进行：编码。<br>读取时，对数据进行：解码。</p>
+</li>
+<li><p>编码、解码，会遵循一定的规范 —— 字符集。</p>
+</li>
+<li><p>字符集有很多中，常见有：</p>
+</li>
+</ol>
+<blockquote>
+<ol>
+<li><strong>ASCII</strong> ：<strong>大写字母、小写字母、数字、一些符号</strong>，共计 128 个。</li>
+<li><strong>ISO 8859-1</strong> ：在 ASCII 基础上，扩充了一些<strong>希腊字符</strong>等，共计是 256 个。</li>
+<li><strong>GB2312</strong> ：继续扩充，收录了 6763 个<strong>常用汉字</strong>、682 个字符。</li>
+<li><strong>GBK</strong> ：收录了的<strong>汉字和符号</strong>达到 20000+ ，支持繁体中文。</li>
+<li><strong>UTF-8</strong> ：包含<strong>世界上所有语言的：所有文字与符号</strong>。—— 很常用。</li>
+</ol>
+</blockquote>
+<ol start="4">
+<li><p>平时编写代码时，<strong>统一采用 UTF-8 编码</strong>（最稳妥）。</p>
+</li>
+<li><p>为了让浏览器在渲染 html 文件时，不犯错误，可以通过 meta 标签配合 charset 属性指<br>定字符编码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;/&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="HTML-基础"><a href="#HTML-基础" class="headerlink" title="HTML 基础"></a>HTML 基础</h2><h3 id="排版标签"><a href="#排版标签" class="headerlink" title="排版标签"></a>排版标签</h3><table>
+<thead>
+<tr>
+<th align="center">标签名</th>
+<th align="center">标签含义</th>
+<th align="center">单 &#x2F; 双 标签</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">h1~h6</td>
+<td align="center">标题</td>
+<td align="center">双</td>
+</tr>
+<tr>
+<td align="center">p</td>
+<td align="center">段落</td>
+<td align="center">双</td>
+</tr>
+<tr>
+<td align="center">div</td>
+<td align="center">块级元素，用于布局，无实际意义</td>
+<td align="center">双</td>
+</tr>
+</tbody></table>
+<ol>
+<li>h1 最好写一个， h2~h6 能适当多写。</li>
+<li>h1~h6 不能互相嵌套，例如： h1 标签中最好不要写 h2 标签。</li>
+<li><strong>p 标签很特殊！它里面不能有： h1~h6 、p 、div 。</strong></li>
+</ol>
+<h3 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h3><p>概念：用特定的标签，去表达特定的含义。<br>原则：标签的默认效果不重要（后期可以通过 CSS 随便控制效果），<strong>语义最重要！</strong><br>举例：对于 h1 标签，效果是文字很大（不重要），语义是网页主要内容（很重要）。<br>优势：</p>
+<blockquote>
+<ol>
+<li>代码结构清晰可读性强。</li>
+<li>有利于 SEO（搜索引擎优化）。</li>
+<li>方便设备解析（如屏幕阅读器、盲人阅读器等）。</li>
+</ol>
+</blockquote>
+<h3 id="块级元素-与-行内元素"><a href="#块级元素-与-行内元素" class="headerlink" title="块级元素 与 行内元素"></a>块级元素 与 行内元素</h3><ol>
+<li><strong>块级元素：独占一行</strong>（排版标签都是块级元素）。</li>
+<li><strong>行内元素：不独占一行</strong></li>
+<li>使用原则：</li>
+</ol>
+<blockquote>
+<ol>
+<li><p><strong>块级元素 中能写 行内元素 和 块级元素。</strong></p>
+</li>
+<li><p><strong>行内元素 中能写 行内元素，但不能写 块级元素。</strong></p>
+</li>
+<li><p>一些特殊的规则：</p>
+<ul>
+<li><p><strong>h1~h6 不能互相嵌套。</strong></p>
+</li>
+<li><p><strong>p 中不要写块级元素。</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h3 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h3><ol>
+<li>用<strong>于包裹：词汇、短语等</strong>。通常写在排版标签里面。</li>
+<li>相比排版标签更宏观（大段的文字），文本标签一般用于更微观（词汇、短语）。</li>
+<li>文本标签通常都是行内元素，除了blockquote 与 address 是块级元素。</li>
+</ol>
+<blockquote>
+<ol>
+<li><strong>em</strong>：要着重阅读的内容</li>
+<li><strong>strong</strong>：十分重要的内容（语气比em要强） </li>
+<li><strong>span</strong>：没有语义，用于包裹短语的通用容器。（div 可看作是大包装袋， span 是小包装袋。）</li>
+<li><strong>sub &#x2F; sup</strong> ：上下角标</li>
+</ol>
+</blockquote>
+<h3 id="图片标签"><a href="#图片标签" class="headerlink" title="图片标签"></a>图片标签</h3><p><strong>img 图片：</strong></p>
+<blockquote>
+<ul>
+<li>src ：图片路径—— 图片的具体位置</li>
+<li>alt ：图片描述（搜索引擎增加曝光率，图片无法显示是使用，盲人阅读器会使用alt进行提示）</li>
+<li>width ：图片宽度，单位是像素</li>
+<li>height：图片高度， 单位是像素</li>
+</ul>
+</blockquote>
+<p><strong>常见图片格式：</strong></p>
+<ol>
+<li>jpg：有损压缩，颜色丰富，占用空间小。适用于对细节没要求的场景，宣传图等。</li>
+<li>png：无损压缩。支持透明背景，颜色丰富，注重细节。适用于要求高质量细节场景，公司logo等。</li>
+<li>bmp：无损压缩，占用空间极大，细节优秀。大型游戏场景等，网页较少使用。</li>
+<li>gif：仅支持256种颜色，支持简单透明背景，支持动图。</li>
+<li>webp：谷歌推出，专门用于网页呈现图片。兼容性可能差点</li>
+<li>base64：一串特殊文本，需要通过浏览器打开，传统看图应用大概率打不开。可以直接作为img和src属性的值且不受文件位置的影响。适用于小图片，或者和网页一起加载的图片。</li>
+</ol>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p><strong>a 超链接：</strong></p>
+<blockquote>
+<ul>
+<li><p>href ： 指定要跳转到的具体目标。</p>
+</li>
+<li><p>target ： 控制跳转时如何打开页面，常用值如下:</p>
+<ul>
+<li><p>_self ：在本窗口打开。</p>
+</li>
+<li><p>_blank ：在新窗口打开。</p>
+</li>
+</ul>
+</li>
+<li><p>id ： 元素的唯一 标识，可用于设置锚点。</p>
+</li>
+<li><p>name ： 元素的名字，写在a 标签中，也能设置<strong>锚点</strong>。</p>
+<p><em><strong>name 和id 都是区分大小写的，id 最好不要数字开头。</strong></em></p>
+</li>
+</ul>
+</blockquote>
+<h4 id="1-跳转到页面"><a href="#1-跳转到页面" class="headerlink" title="1. 跳转到页面"></a><strong>1. 跳转到页面</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转其他网页 --&gt;</span><br><span class="line">&lt;a href=&quot;https://www.sumorio.com/&quot; target=&quot;_blank&quot;&gt;去苏末了的主页&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 跳转本地网页 --&gt;</span><br><span class="line">&lt;a href=&quot;./10_HTML排版标签.html&quot; target=&quot;_self&quot;&gt;去看排版标签&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意点：</p>
+<ul>
+<li><p>代码中的多个空格、多个回车，都会被浏览器解析成一个空格！</p>
+</li>
+<li><p><strong>虽然a 是行内元素，但a 元素可以包裹除它自身外的任何元素！</strong></p>
+</li>
+</ul>
+<h4 id="2-跳转到文件"><a href="#2-跳转到文件" class="headerlink" title="2. 跳转到文件"></a><strong>2. 跳转到文件</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 浏览器能直接打开的文件 --&gt;</span><br><span class="line">&lt;a href=&quot;./resource/自拍.jpg&quot;&gt;看自拍&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;./resource/电影.mp4&quot;&gt;看电影&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;./resource/图片.gif&quot;&gt;看图片&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;./resource/看文件.pdf&quot;&gt;看文件&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 浏览器不能打开的文件，会自动触发下载 --&gt;</span><br><span class="line">&lt;a href=&quot;./resource/内部资源.zip&quot;&gt;内部资源&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 强制触发下载 --&gt;</span><br><span class="line">&lt;a href=&quot;./resource/电影.mp4&quot; download=&quot;电影片段.mp4&quot;&gt;下载电影&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-跳转到锚点"><a href="#3-跳转到锚点" class="headerlink" title="3. 跳转到锚点"></a>3. 跳转到锚点</h4><p><strong>什么是锚点？—— 网页中的一个标记点。</strong></p>
+<p>具体使用方式：设置锚点的时候不用写#，在href中跳转时需要写#。id是通用属性，可以和任意标签搭配使用用作锚点，但是name只能和a标签配合才是锚点性质。</p>
+<ul>
+<li><strong>第一步：设置锚点</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 第一种方式：a标签配合name属性 --&gt;</span><br><span class="line">&lt;a name=&quot;test1&quot;&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 第二种方式：其他标签配合id属性 --&gt;</span><br><span class="line">&lt;h2 id=&quot;test2&quot;&gt;我是一个位置&lt;/h2&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意点：</strong></p>
+<ol>
+<li>具有 <code>href </code>属性的<code> a</code> 标签是超链接，具有<code> name</code> 属性的<code>a</code>标签是锚点。</li>
+<li><code>name </code>和<code>id </code>都是区分大小写的，且<code>id </code>最好别是数字开头。</li>
+</ol>
+<ul>
+<li><strong>第二步：跳转锚点</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转到test1锚点--&gt;</span><br><span class="line">&lt;a href=&quot;#test1&quot;&gt;去test1锚点&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 跳到本页面顶部 --&gt;</span><br><span class="line">&lt;a href=&quot;#&quot;&gt;回到顶部&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 跳转到其他页面锚点 --&gt;</span><br><span class="line">&lt;a href=&quot;demo.html#test1&quot;&gt;去demo.html页面的test1锚点&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 刷新本页面 --&gt;</span><br><span class="line">&lt;a href=&quot;&quot;&gt;刷新本页面&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 执行一段js,如果还不知道执行什么，可以留空，javascript:; --&gt;</span><br><span class="line">&lt;a href=&quot;javascript:alert(1);&quot;&gt;点我弹窗&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-唤起指定应用"><a href="#4-唤起指定应用" class="headerlink" title="4. 唤起指定应用"></a>4. 唤起指定应用</h4><p>通过a 标签，可以唤起设备应用程序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 唤起设备拨号 --&gt;</span><br><span class="line">&lt;a href=&quot;tel:10010&quot;&gt;电话联系&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 唤起设备发送邮件 --&gt;</span><br><span class="line">&lt;a href=&quot;mailto:10010@qq.com&quot;&gt;邮件联系&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 唤起设备发送短信 --&gt;</span><br><span class="line">&lt;a href=&quot;sms:10086&quot;&gt;短信联系&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol>
+<li>有序列表ordered list：有顺序或侧重顺序的列表。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;要把大象放冰箱总共分几步&lt;/h2&gt;</span><br><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;把冰箱门打开&lt;/li&gt; # list item =li</span><br><span class="line">    &lt;li&gt;把大象放进去&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;把冰箱门关上&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>无序列表unordered list：无顺序或不侧重顺序的列表。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;我想去的几个城市&lt;/h2&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;成都&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;上海&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;西安&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;武汉&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>列表嵌套：列表中的某项内容，又包含一个列表。 li 标签最好写在 ul 或 ol 中，不要单独使用。</p>
+</li>
+<li><p>自定义列表definition list：</p>
+<ul>
+<li>一个包含<strong>术语名称</strong>以及<strong>术语描述</strong>的列表。</li>
+<li>一个dl 就是一个自定义列表，一个dt 就是一个术语名称，一个dd 就是术语描述（可以有多个）。</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;如何高效的学习？&lt;/h2&gt;</span><br><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;做好笔记&lt;/dt&gt; # defination title</span><br><span class="line">    &lt;dd&gt;笔记是我们以后复习的一个抓手&lt;/dd&gt; # defination description </span><br><span class="line">    &lt;dd&gt;笔记可以是电子版，也可以是纸质版&lt;/dd&gt;</span><br><span class="line">    &lt;dt&gt;多加练习&lt;/dt&gt;</span><br><span class="line">    &lt;dd&gt;只有敲出来的代码，才是自己的&lt;/dd&gt;</span><br><span class="line">    &lt;dt&gt;别怕出错&lt;/dt&gt;</span><br><span class="line">    &lt;dd&gt;错很正常，改正后并记住，就是经验&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="1-基本结构"><a href="#1-基本结构" class="headerlink" title="1. 基本结构"></a>1. <strong>基本结构</strong></h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118151805.png" alt="img"></p>
+<ol>
+<li><p>一个完整的表格table有四部分：表格标题caption、表格头部thead、表格主体tbody、表格脚注tfoot。</p>
+</li>
+<li><p>表格涉及到的标签：</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>table ：表格</li>
+<li>caption ：表格标题</li>
+<li>thead ：表格头部</li>
+<li>tbody ：表格主体</li>
+<li>tfoot ：表格注脚(可选)</li>
+<li>tr ：每一行(table row)</li>
+<li>th&#x2F;td ：每一个单元格（表格头部用th-thead ，表格主体&#x2F;表格脚注用： td-tdata ）</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#先给出框架caption,thead,tbody,tfood四部分;再分别看每个部分的行数；最后补充每行数据。（不容易乱）</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;table border=&quot;5&quot;&gt;</span><br><span class="line">        &lt;caption&gt;学生信息表&lt;/caption&gt;</span><br><span class="line">        &lt;thead&gt;</span><br><span class="line">          &lt;tr&gt;</span><br><span class="line">            &lt;th&gt;姓名&lt;/th&gt;</span><br><span class="line">            &lt;th&gt;年龄&lt;/th&gt;</span><br><span class="line">          &lt;/tr&gt;</span><br><span class="line">        &lt;/thead&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">          &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;张三&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;15&lt;/td&gt;</span><br><span class="line">          &lt;/tr&gt;</span><br><span class="line">          &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;李四&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;16&lt;/td&gt;</span><br><span class="line">          &lt;/tr&gt;</span><br><span class="line">        &lt;/tbody&gt;</span><br><span class="line">        &lt;tfoot&gt;</span><br><span class="line">          &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;31&lt;/td&gt;</span><br><span class="line">          &lt;/tr&gt;</span><br><span class="line">        &lt;/tfoot&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-常用属性"><a href="#2-常用属性" class="headerlink" title="2. 常用属性"></a>2. 常用属性</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118110908.png" alt="image-20240118110905149"></p>
+<p><strong>注意点：</strong></p>
+<ol>
+<li><table> 元素的border 属性可以控制表格边框，但border 值的大小，并不控制单元格
+边框的宽度，
+只能控制表格最外侧边框的宽度，这个问题如何解决？—— 后期靠CSS 控制。</li>
+<li>默认情况下，每列的宽度，得看这一列单元格最长的那个文字。</li>
+<li>给某个th 或td 设置了宽度之后，他们所在的那一列的宽度就确定了。</li>
+<li>给某个th 或td 设置了高度之后，他们所在的那一行的高度就确定了。</li>
+</ol>
+<h4 id="3-跨行跨列（合并单元格）"><a href="#3-跨行跨列（合并单元格）" class="headerlink" title="3. 跨行跨列（合并单元格）"></a>3. 跨行跨列（合并单元格）</h4><ol>
+<li>rowspan ：指定要跨的行数。</li>
+<li>colspan ：指定要跨的列数。</li>
+</ol>
+<h3 id="常用标签补充"><a href="#常用标签补充" class="headerlink" title="常用标签补充"></a>常用标签补充</h3><ol>
+<li>br 换行。单( 不要用br增加文本行间隔，应该用<code>&lt;p&gt;</code>想要增加间距最好用css )</li>
+<li>hr 分隔。单( 想要增加分割使用hr,想要分割线使用css )</li>
+<li>pre 按原文显示。双（一般用于在页面中嵌入大段代码）</li>
+</ol>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><p>概念：一个包含交互的区域，用于收集用户提供的数据。</p>
+<h4 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118144034.png" alt="image-20240118115417761"></p>
+<p>示例代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;https://www.baidu.com/s&quot; target=&quot;_blank&quot; method=&quot;get&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; name=&quot;wd&quot;&gt;</span><br><span class="line">    &lt;button&gt;去搜索&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="常用表单控件"><a href="#常用表单控件" class="headerlink" title="常用表单控件"></a>常用表单控件</h4><h5 id="①文本输入框："><a href="#①文本输入框：" class="headerlink" title="①文本输入框："></a>①文本输入框：</h5><p><code>&lt;input type=&quot;text&quot;&gt;</code></p>
+<p><strong>常用属性如下：</strong><br>name 属性：数据的名称。<br>value 属性：输入框的默认输入值。<br>maxlength 属性：输入框最大可输入长度。</p>
+<h5 id="②-密码输入框"><a href="#②-密码输入框" class="headerlink" title="② 密码输入框"></a>② 密码输入框</h5><p><code>&lt;input type=&quot;password&quot;&gt;</code></p>
+<p><strong>常用属性如下：</strong></p>
+<p>name 属性：数据的名称。<br>value 属性：输入框的默认输入值（一般不用，无意义）。<br>maxlength 属性：输入框最大可输入长度。</p>
+<h5 id="③-单选框"><a href="#③-单选框" class="headerlink" title="③ 单选框"></a>③ 单选框</h5><p><code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot;&gt;</code>女<br><code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot;&gt;</code>男</p>
+<p><strong>常用属性如下：</strong><br>name 属性：数据的名称，注意：想要单选效果，多个radio 的 name 属性值要保持一致。<br>value 属性：提交的数据值。<br>checked 属性：让该单选按钮默认选中。</p>
+<h5 id="④-复选框"><a href="#④-复选框" class="headerlink" title="④ 复选框"></a>④ 复选框</h5><p><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;smoke&quot;&gt;</code>抽烟<br><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;drink&quot;&gt;</code>喝酒<br><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;perm&quot;&gt;</code>烫头</p>
+<p><strong>常用属性如下：</strong><br>name 属性：数据的名称。<br>value 属性：提交的数据值。<br>checked 属性：让该复选框默认选中。</p>
+<h5 id="⑥-提交按钮"><a href="#⑥-提交按钮" class="headerlink" title="⑥ 提交按钮"></a>⑥ 提交按钮</h5><p><code>&lt;input type=&quot;hidden&quot; name=&quot;tag&quot; value=&quot;100&quot;&gt;</code></p>
+<p>用户不可见的一个输入区域，作用是： 提交表单的时候，携带一些固定的数据。<br>name 属性：指定数据的名称。<br>value 属性：指定的是真正提交的数据。</p>
+<h5 id="⑥-提交按钮-1"><a href="#⑥-提交按钮-1" class="headerlink" title="⑥ 提交按钮"></a>⑥ 提交按钮</h5><p><code>&lt;input type=&quot;submit&quot; value=&quot;点我提交表单&quot;&gt;</code><br><code>&lt;button&gt; 点我提交表单&lt;/button&gt;</code></p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>button 标签 type 属性的默认值是 submit 。</li>
+<li>button 不要指定name 属性</li>
+<li>input 标签编写的按钮，使用value 属性指定按钮文字。</li>
+</ol>
+<h5 id="⑦-重置按钮"><a href="#⑦-重置按钮" class="headerlink" title="⑦ 重置按钮"></a>⑦ 重置按钮</h5><p><code>&lt;input type=&quot;reset&quot; value=&quot;点我重置&quot;&gt;</code><br><code>&lt;button type=&quot;reset&quot;&gt;点我重置&lt;/button&gt;</code></p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>button 不要指定name 属性</li>
+<li>input 标签编写的按钮，使用value 属性指定按钮文字。</li>
+</ol>
+<h5 id="⑧-普通按钮"><a href="#⑧-普通按钮" class="headerlink" title="⑧ 普通按钮"></a>⑧ 普通按钮</h5><p><code>&lt;input type=&quot;button&quot; value=&quot;普通按钮&quot;&gt;</code><br><code>&lt;button type=&quot;button&quot;&gt;普通按钮&lt;/button&gt;</code></p>
+<p><strong>注意：</strong></p>
+<p>普通按钮的type 值为button ，若不写type 值是submit 会引起表单的提交。</p>
+<p>确认按钮可以有button和input的两种写法，submit作为按钮的时候不要写name带值，</p>
+<h5 id="⑨文本域"><a href="#⑨文本域" class="headerlink" title="⑨文本域"></a>⑨文本域</h5><p><code>&lt;textarea name=&quot;msg&quot; rows=&quot;22&quot; cols=&quot;3&quot;&gt;我是文本域&lt;/textarea&gt;</code></p>
+<p><strong>常用属性如下：</strong></p>
+<ol>
+<li>rows 属性：指定默认显示的行数，会影响文本域的高度。</li>
+<li>cols 属性：指定默认显示的列数，会影响文本域的宽度。</li>
+<li>不能编写type 属性，其他属性，与普通文本输入框一致。</li>
+</ol>
+<h5 id="⑩-下拉框"><a href="#⑩-下拉框" class="headerlink" title="⑩ 下拉框"></a>⑩ 下拉框</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select name=&quot;from&quot;&gt;</span><br><span class="line">    &lt;option value=&quot;黑&quot;&gt;黑龙江&lt;/option&gt;</span><br><span class="line">    &lt;option value=&quot;辽&quot;&gt;辽宁&lt;/option&gt;</span><br><span class="line">    &lt;option value=&quot;吉&quot;&gt;吉林&lt;/option&gt;</span><br><span class="line">    &lt;option value=&quot;粤&quot; selected&gt;广东&lt;/option&gt; #被选中，selected</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>常用属性及注意事项：</strong></p>
+<ol>
+<li>name 属性：指定数据的名称。</li>
+<li>option 标签设置value 属性， 如果没有value 属性，提交的数据是option 中间的文<br> 字；如果设置了value 属性，提交的数据就是value 的值（建议设置 value 属性）</li>
+<li>option 标签设置了 selected 属性，表示默认选中。</li>
+</ol>
+<h4 id="禁用表单控件-前端不可改"><a href="#禁用表单控件-前端不可改" class="headerlink" title="禁用表单控件(前端不可改)"></a>禁用表单控件(前端不可改)</h4><p>给表单控件的标签设置 disabled 既可禁用表单控件。</p>
+<p>input 、textarea 、button 、select 、option 都可以设置 disabled 属性</p>
+<h4 id="label-标签"><a href="#label-标签" class="headerlink" title="label 标签"></a>label 标签</h4><p>label 标签可与表单控件相关联，关联之后点击文字，与之对应的表单控件就会获取焦点。<br>两种与label 关联方式如下：</p>
+<ol>
+<li>让label 标签的for 属性的值等于表单控件的id 。</li>
+<li>把表单控件套在 label 标签的里面。</li>
+</ol>
+<h4 id="fieldset-与-legend-的使用（了解）"><a href="#fieldset-与-legend-的使用（了解）" class="headerlink" title="fieldset 与 legend 的使用（了解）"></a>fieldset 与 legend 的使用（了解）</h4><p>fieldset 可以为表单控件分组、legend 标签是分组的标题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldset&gt;</span><br><span class="line">    &lt;legend&gt;主要信息&lt;/legend&gt;</span><br><span class="line">    &lt;label for=&quot;zhanghu&quot;&gt;账户：&lt;/label&gt;</span><br><span class="line">    &lt;input id=&quot;zhanghu&quot; type=&quot;text&quot; name=&quot;account&quot; maxlength=&quot;10&quot;&gt;&lt;br&gt;</span><br><span class="line">    &lt;label&gt;</span><br><span class="line">        密码：</span><br><span class="line">        &lt;input id=&quot;mima&quot; type=&quot;password&quot; name=&quot;pwd&quot; maxlength=&quot;6&quot;&gt;</span><br><span class="line">    &lt;/label&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    性别：</span><br><span class="line">    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot; id=&quot;nan&quot;&gt;</span><br><span class="line">    &lt;label for=&quot;nan&quot;&gt;男&lt;/label&gt;</span><br><span class="line">    &lt;label&gt;</span><br><span class="line">        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot; id=&quot;nv&quot;&gt;女</span><br><span class="line">    &lt;/label&gt;</span><br><span class="line">    &lt;/fieldset&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="框架标签"><a href="#框架标签" class="headerlink" title="框架标签"></a>框架标签</h3><p><strong>iframe框架（在网页中生成有一个框架方块，可嵌入其他文件）</strong></p>
+<ul>
+<li>name ：框架名字，可以与 target 属性配合。</li>
+<li>width ： 框架的宽。</li>
+<li>height ： 框架的高度。</li>
+<li>frameborder ：是否显示边框，值：0或者1。</li>
+</ul>
+<p><strong>iframe 标签的实际应用：</strong></p>
+<ol>
+<li><strong>在网页中嵌入广告。</strong></li>
+<li>与超链接或表单的 target 配合，展示不同的内容。</li>
+</ol>
+<h3 id="HTML实体"><a href="#HTML实体" class="headerlink" title="HTML实体"></a>HTML实体</h3><p>在HTML 中我们可以用一种<strong>特殊的形式</strong>的内容，来表示<strong>某个符号</strong>，这种特殊形式的内容，就是HTML 实<br>体。比如小于号 &lt; 用于定义 HTML 标签的开始。如果我们希望浏览器正确地显示这些字符，我们必须<br>在HTML 源码中插入字符实体。</p>
+<blockquote>
+<p>字符实体由三部分组成：一个&amp; 和 一个实体名称（或者一个# 和 一个实体编号），最后加上一<br>个分号; 。</p>
+</blockquote>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118144843.png" alt="img"></p>
+<h3 id="HTML全局属性"><a href="#HTML全局属性" class="headerlink" title="HTML全局属性"></a>HTML全局属性</h3><p><strong>常用的全局属性：</strong></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118151238.png" alt="image-20240118151237316"></p>
+<h3 id="meta-元信息"><a href="#meta-元信息" class="headerlink" title="meta 元信息"></a>meta 元信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt; </span><br><span class="line">#配置字符编码</span><br><span class="line"></span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt; </span><br><span class="line">#针对IE 浏览器的兼容性配置。</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; </span><br><span class="line">#针对移动端的配置</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;keywords&quot; content=&quot;8-12个以英文逗号隔开的单词/词语&quot;&gt;</span><br><span class="line">#配置网页关键字</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;description&quot; content=&quot;80字以内的一段话，与网站内容相关&quot;&gt; </span><br><span class="line">#配置网页描述信息</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;robots&quot; content=&quot;此处可选值见下表&quot;&gt; </span><br><span class="line">#针对搜索引擎爬虫配置</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;author&quot; content=&quot;tony&quot;&gt;</span><br><span class="line">#配置网页作者</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;generator&quot; content=&quot;Visual Studio Code&quot;&gt;</span><br><span class="line">#配置网页生成工具</span><br><span class="line"></span><br><span class="line">&lt;meta name=&quot;copyright&quot; content=&quot;2023-2027©版权所有&quot;&gt; </span><br><span class="line">#配置定义网页版权信息</span><br><span class="line"></span><br><span class="line">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10;url=http://www.baidu.com&quot;&gt;</span><br><span class="line">#配置网页自动刷新</span><br></pre></td></tr></table></figure>
+
+<h2 id="重点记忆"><a href="#重点记忆" class="headerlink" title="重点记忆"></a>重点记忆</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118152909.png" alt="image-20240118152904221"></p>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/HTML0.html">前置基础知识</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/HTML2.html">HTML5 基础知识</a></div></section></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </section>
+  </div>
+
+
+
+<footer class="page-footer fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<span>
+本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
+使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
+主题创建。
+</span>
+</br>
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("10/20/2023 00:00:00");
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    runtime_span.innerHTML = "🐸本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒🐸"
+}
+show_runtime();
+</script>
+<span id="runtime_span"></span>
+</br>
+</center>
+</div></footer>
+<div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg t="1705412886951" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8331" width="200" height="200"><path d="M638.72 970.666667h-256c-118.186667 0-198.272-25.002667-251.946667-78.72S52.053333 758.186667 52.053333 640V384c0-118.186667 25.002667-198.272 78.72-251.946667S264.533333 53.333333 382.72 53.333333h256c118.186667 0 198.272 25.002667 251.946667 78.72S969.386667 265.813333 969.386667 384v256c0 118.186667-25.002667 198.272-78.72 251.946667S756.906667 970.666667 638.72 970.666667z m-256-853.333334c-100.096 0-165.802667 19.2-206.72 59.946667S116.053333 283.904 116.053333 384v256c0 100.096 19.072 165.802667 59.946667 206.72S282.624 906.666667 382.72 906.666667h256c100.096 0 165.802667-19.072 206.72-59.946667S905.386667 740.096 905.386667 640V384c0-100.096-19.072-165.802667-59.946667-206.72S738.816 117.333333 638.72 117.333333z" p-id="8332"></path><path d="M638.72 970.666667a32 32 0 0 1-32-32V85.333333a32 32 0 0 1 32-32 32 32 0 0 1 32 32v853.333334a32 32 0 0 1-32 32zM340.053333 653.226667a31.914667 31.914667 0 0 1-22.613333-9.386667 32 32 0 0 1 0-45.269333L404.053333 512 317.44 425.386667a32 32 0 0 1 0-45.226667 32 32 0 0 1 45.226667 0l109.226666 109.226667a32 32 0 0 1 0 45.269333L362.666667 643.84a31.914667 31.914667 0 0 1-22.613334 9.386667z" p-id="8333"></path></svg>
+  </button>
+</div>
+<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
+<script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.26.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js","marked":"/js/plugins/marked.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"16px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":".fancybox img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied","toast":"复制成功"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+  
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+<!-- inject -->
+<script type="text/javascript" src="/custom/js/ZYDark.js"></script>
+</div><!-- hexo injector body_end start -->
+  <style>
+    .highlight {
+      position: relative;
+    }
+    .highlight .code .copy-btn{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 4px 0.5rem;
+      opacity: 0.25;
+      font-weight: 700;
+      color: var(--theme);
+      cursor: pointer;
+      transination: opacity 0.3s;
+    }
+    .highlight .code .copy-btn:hover{
+      color: var(--text-code);
+      opacity: 0.75;
+    }
+    .highlight .code .copy-btn.success {
+      color: var(--swiper-theme-color);
+      opacity: 0.75;
+
+    }
+    
+  </style>
+  <script>
+    const codeElementArr = document.querySelectorAll('.code')
+    codeElementArr.forEach(code => {
+      const codeBeforeWidth = window.getComputedStyle(code, '::before').width.split('px')[0]
+      const codeBeforePadding = window.getComputedStyle(code, '::before').padding.split(' ').pop().split('px')[0]
+  
+      // copy btn 
+      const codeCopyBtn = document.createElement('div')
+      codeCopyBtn.classList.add('copy-btn')
+      codeCopyBtn.style.right = Number(codeBeforeWidth) + Number(codeBeforePadding) * 2 + 'px'
+      codeCopyBtn.innerText = '复制代码'
+      code.appendChild(codeCopyBtn)
+  
+      codeCopyBtn.addEventListener('click', async () => {
+        const currentCodeElement = code.children[0]?.innerText
+        await copyCode(currentCodeElement)
+
+
+        codeCopyBtn.innerText = '复制成功'
+        codeCopyBtn.classList.add('success')
+
+        setTimeout(() => {
+          codeCopyBtn.innerText = '复制代码'
+          codeCopyBtn.classList.remove('success')
+        },1000)
+      })
+    })
+    
+    async function copyCode(currentCode) {
+      console.log(currentCode)
+      console.log('复制代码')
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(currentCode)
+        } catch (error) {
+          // 未获得用户许可
+          console.error(error)
+        }
+      } else {
+        console.error('当前浏览器不支持此api')
+      }
+    }
+  </script>
+  <!-- hexo injector body_end end --></body></html>

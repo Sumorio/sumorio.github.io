@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang='zh-CN'>
 
+<!DOCTYPE html><html lang="zh-CN">
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0" theme-name="Stellar" theme-version="1.23.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2" theme-name="Stellar" theme-version="1.26.2">
   
-  <meta name="generator" content="Hexo 7.0.0">
+  <meta name="generator" content="Hexo 7.1.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
   <meta name="renderer" content="webkit">
@@ -20,21 +19,25 @@
   <title>前端：CSS基础教学 - 苏末了</title>
 
   
-    <meta name="description" content="😊 开发中，请等待。">
+    <meta name="description" content="一、CSS基础1.CSS简介CSS 的全称为：层叠样式表 ( Cascading Style Sheets ) 。CSS 也是一种标记语言，用于给 HTML 结构设置样式，例如：文字大小、颜色、元素宽高等等。  简单理解： CSS 可以美化 HTML , 让 HTML 更漂亮。核心思想： HTML 搭建结构， CSS 添加样式，实现了：结构与样式的分离。  2.CSS的编写位置2.1 行内样式写在">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CSS基础教学">
 <meta property="og:url" content="https://sumorio.com/wiki/FrontEnd/CSS.html">
 <meta property="og:site_name" content="苏末了">
-<meta property="og:description" content="😊 开发中，请等待。">
+<meta property="og:description" content="一、CSS基础1.CSS简介CSS 的全称为：层叠样式表 ( Cascading Style Sheets ) 。CSS 也是一种标记语言，用于给 HTML 结构设置样式，例如：文字大小、颜色、元素宽高等等。  简单理解： CSS 可以美化 HTML , 让 HTML 更漂亮。核心思想： HTML 搭建结构， CSS 添加样式，实现了：结构与样式的分离。  2.CSS的编写位置2.1 行内样式写在">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-03T09:33:24.695Z">
-<meta property="article:modified_time" content="2024-01-03T09:33:24.695Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240119111746.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118171809.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240119115146.png">
+<meta property="article:published_time" content="2024-01-22T03:25:30.439Z">
+<meta property="article:modified_time" content="2024-01-22T03:25:30.439Z">
 <meta property="article:author" content="Sumor|苏末了">
 <meta property="article:tag" content="个人博客">
 <meta property="article:tag" content="技术博客">
 <meta property="article:tag" content="苏末了">
 <meta property="article:tag" content="sumor">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240119111746.png">
   
   
   
@@ -56,6 +59,11 @@
   
 
   
+  
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+
+
   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><script>
   if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
       document.querySelector("html").id = "ZYDark";
@@ -63,109 +71,365 @@
 </script>
 <link rel="stylesheet" href="/custom/css/ZYDark.css">
 </head>
-
 <body>
-  
 
 
 
-
-  <div class='l_body' id='start'>
-    <aside class='l_left' layout='wiki'>
-    
-
-  
+<div class="l_body content tech" id="start" layout="wiki" ><aside class="l_left"><div class="sidebar-container sidebar-blur">
 
 
+<header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/-online-payment.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></div><a class="title" href="/wiki/FrontEnd/HTML0.html"><div class="main" ff="title">前端</div><div class="sub normal cap">🚀 掌握前端，开启数字创造之旅！</div><div class="sub hover cap" style="opacity:0"> 🚀 Designed by Sumorio。</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" class="icon search-icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" data-filter="/wiki/FrontEnd/" placeholder="在 前端 中搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
 
-<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1.2em" height="1.2em" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有项目</a><a class="title" href="/wiki/FrontEnd/HTML.html"><div class="main" ff="title">前端</div><div class="sub normal cap">🚀 掌握前端，开启数字创造之旅！</div><div class="sub hover cap" style="opacity:0"> 🚀 Designed by Sumorio。</div></a></div></widget>
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/FrontEnd/" placeholder="搜索本站"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+<nav class="menu dis-select"><a class="nav-item" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item active" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="更多" href="/about/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
+<div class="widgets">
 
-
-<widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header cap dis-select"><span class="name">📌HTML基础入门</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML.html#start"><span class="toc-text">HTML基础教学</span></a></div></div><div class="widget-header cap dis-select"><span class="name">📌CSS入门到精通</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/FrontEnd/CSS.html"><span class="toc-text">CSS基础教学</span></a></div></div><div class="widget-header cap dis-select"><span class="name">📌JavaScript实践</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">📌HTML基础入门</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML0.html#start"><span class="toc-text">前置基础知识</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML1.html"><span class="toc-text">HTML4基础知识</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML2.html"><span class="toc-text">HTML5 基础知识</span></a></div></div><div class="widget-header dis-select"><span class="name">📌CSS入门到精通</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/FrontEnd/CSS.html"><span class="toc-text">CSS基础教学</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81CSS%E5%9F%BA%E7%A1%80"><span class="toc-text">一、CSS基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS%E7%AE%80%E4%BB%8B"><span class="toc-text">1.CSS简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS%E7%9A%84%E7%BC%96%E5%86%99%E4%BD%8D%E7%BD%AE"><span class="toc-text">2.CSS的编写位置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F"><span class="toc-text">2.1 行内样式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F"><span class="toc-text">2.2 内部样式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F"><span class="toc-text">2.3 外部样式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%A0%B7%E5%BC%8F%E8%A1%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">3. 样式表的优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-CSS%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-text">4. CSS语法规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CSS%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="toc-text">5.CSS代码风格</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">二、CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.CSS基本选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E9%80%9A%E9%85%8D%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.1 通配选择器 |*</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-%E5%85%83%E7%B4%A0%E5%90%8D"><span class="toc-text">1.2 元素选择器 |元素名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.3 类选择器 |.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-ID%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.4 ID选择器 |#</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="toc-text">1.5 基本选择器总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2. CSS复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.1 交集选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.2 并集选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-HTML%E5%85%83%E7%B4%A0%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">2.3 HTML元素间的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8-%E7%A9%BA%E6%A0%BC"><span class="toc-text">2.4 后代选择器 |空格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.5 子代选择器 |&gt;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.6 兄弟选择器 |+ &#x2F; ~</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-7-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.7 属性选择器 |[]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-8-%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.8 伪类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-9-%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.9 伪元素选择器</span></a></li></ol></li></ol></li></ol></div></div><div class="widget-header dis-select"><span class="name">📌JavaScript实践</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></div></widget>
 
 
 </div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" href="javaScript:void('永夜');" rel="noopener noreferrer"><img class="lazy" id="ThemeM" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/></a><a class="social" href="javaScript:void('永昼');" rel="noopener noreferrer"><img class="lazy" id="ThemeL" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" href="javaScript:void('跟随系统');" rel="noopener noreferrer"><img class="lazy" id="ThemeAI" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/AI.png"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
 
 
-    </aside>
-    <div class='l_main'>
-      
 
-      
 
-  
-  
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/FrontEnd/HTML.html">前端</a></div><div id="post-meta">
-    <span>更新于&nbsp;<time datetime="2024-01-03T09:33:24.695Z">2024-01-03</time></span>
-    </div></div>
-      <div class="right ghrepo stellar-ghinfo-api" api="https://api.github.com/repos/Sumorio/sumorio.github.io">
-        <a class="repo-link bold" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io">
-          <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
-          <span type="text">Sumorio/sumorio.github.io</span>
-        </a>
-        <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/stargazers">
-          <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
-          <span type="text" id="stargazers_count">0</span><span>stars</span>
-        </a>
-        <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/forks">
-          <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg>
-          <span type="text" id="forks_count">0</span><span>forks</span>
-        </a>
-      </div>
-      </div>
 
-  <article class='md-text content wiki'>
-  <h1 class="article-title"><span>CSS基础教学</span></h1>
-  <p>😊 开发中，请等待。</p>
+<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/FrontEnd/HTML0.html">前端</a></div>
+<div id="post-meta"><span class="author">更新于：</span><time datetime="2024-01-22T03:25:30.439Z">2024-01-22</time></span></div></div>
 
-  
-  
-<div class="article-footer reveal fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">非商业性使用-国际署名</a> 许可协议，转载请说明。</p>
-</div>
-    </section>
-    
-    <section id="share">
-      <div class="header"><span>分享文章</span></div>
-      <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://sumorio.com/wiki/FrontEnd/CSS.html" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/wiki/FrontEnd/CSS.html&title=CSS基础教学 - 苏末了&summary=😊 开发中，请等待。
-"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/80c07e4dbb303.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/8411ed322ced6.svg"/></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/social/b32ef3da1162a.svg"/></a></div>
-        
-        <div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0">
-          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://sumorio.com/wiki/FrontEnd/CSS.html"/>
-        </div>
-        
-      </div>
-    </section>
-    </div>
+  <div class="right ghrepo stellar-ghinfo-api" api="https://api.github.com/repos/Sumorio/sumorio.github.io">
+    <a class="repo-link bold" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
+      <span type="text">Sumorio/sumorio.github.io</span>
+    </a>
+    <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/stargazers">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+      <span type="text" id="stargazers_count">0</span><span>stars</span>
+    </a>
+    <a class="repo-link" target="_blank" rel="noopener" href="https://github.com/Sumorio/sumorio.github.io/forks">
+      <svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="user-select:none;overflow:visible"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg>
+      <span type="text" id="forks_count">0</span><span>forks</span>
+    </a>
+  </div>
+  </div>
+<article class="md-text content"><h1 class="article-title"><span>CSS基础教学</span></h1><h2 id="一、CSS基础"><a href="#一、CSS基础" class="headerlink" title="一、CSS基础"></a>一、CSS基础</h2><h3 id="1-CSS简介"><a href="#1-CSS简介" class="headerlink" title="1.CSS简介"></a>1.CSS简介</h3><p>CSS 的全称为：层叠样式表 ( Cascading Style Sheets ) 。<br>CSS 也是一种标记语言，用于给 HTML 结构设置样式，例如：文字大小、颜色、元素宽高等等。</p>
+<blockquote>
+<p>简单理解： CSS 可以美化 HTML , 让 HTML 更漂亮。<br>核心思想： HTML 搭建结构， CSS 添加样式，实现了：结构与样式的分离。</p>
+</blockquote>
+<h3 id="2-CSS的编写位置"><a href="#2-CSS的编写位置" class="headerlink" title="2.CSS的编写位置"></a>2.CSS的编写位置</h3><h4 id="2-1-行内样式"><a href="#2-1-行内样式" class="headerlink" title="2.1 行内样式"></a>2.1 行内样式</h4><p><strong>写在标签的 <code>&lt;style&gt;</code>属性中</strong>，（又称：内联样式）。</p>
+<p>语法：<code>&lt;h1 style=&quot;color:red;font-size:60px;&quot;&gt;苏末了&lt;/h1&gt;</code></p>
+<p>注意：</p>
+<blockquote>
+<ul>
+<li><strong>style 属性</strong>的值不能随便写，写要符合 CSS 语法规范，是 名:值;  <strong>键值对的形式</strong>。</li>
+<li>行内样式表，只能控制当前标签的样式，对其他标签无效。</li>
+</ul>
+</blockquote>
+<p>问题：书写繁琐、样式不能复用、并且没有体现出：结构与样式分离 的思想，不推荐大量使用，只<br>有对当前元素添加简单样式时，才偶尔使用。</p>
+<h4 id="2-2-内部样式"><a href="#2-2-内部样式" class="headerlink" title="2.2 内部样式"></a>2.2 内部样式</h4><p>写在html 页面内部，将所有的 CSS 代码提取出来，单独放在 <code>&lt;style&gt;</code> 标签中。</p>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    h1 &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    font-size: 40px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
-  </article>
-  
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/HTML.html">HTML基础教学</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/JavaScript.html">JavaScript基础教学</a></div></section></div>
+<p>注意：</p>
+<blockquote>
+<ul>
+<li>style可以放在html文档的任何地方，一般放head.</li>
+<li>此种写法：样式可以复用、代码结构清晰。</li>
+</ul>
+</blockquote>
+<p>问题：</p>
+<ol>
+<li>并没有实现：结构与样式完全分离。</li>
+<li>多个HTML 页面无法复用样式。</li>
+</ol>
+<h4 id="2-3-外部样式"><a href="#2-3-外部样式" class="headerlink" title="2.3 外部样式"></a>2.3 外部样式</h4><p><strong>写在单独的.css 文件中，随后在 HTML 文件中引入使用。</strong><br>语法：</p>
+<ol>
+<li>新建一个扩展名为 .css 的样式文件，把所有CSS 代码都放入此文件中。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    color: red;</span><br><span class="line">    font-size: 40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  
+<ol start="2">
+<li>在 HTML 文件中引入 .css 文件。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./xxx.css&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-  <div class='related-wrap md-text reveal' id="comments">
+<p>注意：</p>
+<blockquote>
+<ul>
+<li><link> 标签要写在<head> 标签中。</li>
+<li><link> 标签属性说明：
+  - href ：引入的文档来自于哪里。
+  - rel ：( relation ：关系）说明引入的文档与当前文档之间的关系。</li>
+<li>外部样式的优势：样式可以复用、结构清晰、可触发浏览器的缓存机制，提高访问速<br>  度 ，实现了结构与样式的完全分离。</li>
+<li>实际开发中，几乎都使用外部样式，这是<strong>最推荐的使用方式</strong>！</li>
+</ul>
+</blockquote>
+<h3 id="3-样式表的优先级"><a href="#3-样式表的优先级" class="headerlink" title="3. 样式表的优先级"></a>3. 样式表的优先级</h3><blockquote>
+<p>优先级规则：行内样式 &gt; 内部样式 &#x3D; 外部样式</p>
+</blockquote>
+<ol>
+<li>内部样式、外部样式，这二者的优先级相同，且：后面的 会覆盖 前面的（简记：“后来<br> 者居上”）。</li>
+<li>同一个样式表中，优先级也和编写顺序有关，且：后面的 会覆盖 前面的（简记：“后来<br> 者居上”）。</li>
+</ol>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240119111746.png" alt="img"></p>
+<h3 id="4-CSS语法规范"><a href="#4-CSS语法规范" class="headerlink" title="4. CSS语法规范"></a>4. CSS语法规范</h3><p>CSS 语法规范由两部分构成：</p>
+<ul>
+<li>选择器：找到要添加样式的元素。</li>
+<li>声明块：设置具体的样式（声明块是由一个或多个声明组成的），声明的格式为： 属性名: 属性值;</li>
+</ul>
+<blockquote>
+<p>备注1：最后一个声明后的分号理论上能省略，但最好还是写上。<br>备注2：选择器与声明块之间，属性名与属性值之间，均有一个空格，理论上能省略，但最好<br>还是写上。</p>
+</blockquote>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240118171809.png" alt="image-20240118171808611"></p>
+<h3 id="5-CSS代码风格"><a href="#5-CSS代码风格" class="headerlink" title="5.CSS代码风格"></a>5.CSS代码风格</h3><ul>
+<li>展开风格 —— 开发时推荐，便于维护和调试。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;</span><br><span class="line">  color: red;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>紧凑风格 —— 项目上线时推荐，可减小文件体积。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;color:red;font-size:40px;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>项目上线时，我们会通过工具将【展开风格】的代码，变成【紧凑风格】，这样可以减小文<br>件体积，节约网络流量，同时也能让用户打开网页时速度更快。</p>
+<h2 id="二、CSS选择器"><a href="#二、CSS选择器" class="headerlink" title="二、CSS选择器"></a>二、CSS选择器</h2><h3 id="1-CSS基本选择器"><a href="#1-CSS基本选择器" class="headerlink" title="1.CSS基本选择器"></a>1.CSS基本选择器</h3><ol>
+<li><strong>通配选择器</strong> |  * {属性名：属性值}</li>
+<li><strong>元素选择器</strong> | 标签名 {属性名：属性值}</li>
+<li><strong>类选择器</strong> |    .类名 {属性名：属性值}</li>
+<li><strong>id 选择器</strong> |    #id值 {属性名：属性值}</li>
+</ol>
+<h4 id="1-1-通配选择器"><a href="#1-1-通配选择器" class="headerlink" title="1.1 通配选择器 |*"></a>1.1 通配选择器 |*</h4><p>作用：可以选中所有的 HTML 元素。<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  属性名: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* 选中所有元素 */</span><br><span class="line">* &#123;</span><br><span class="line">  color: orange;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-元素选择器-元素名"><a href="#1-2-元素选择器-元素名" class="headerlink" title="1.2 元素选择器 |元素名"></a>1.2 元素选择器 |元素名</h4><p>作用：为页面中 某种元素 统一设置样式。<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">标签名 &#123;</span><br><span class="line">属性名: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/* 选中所有h1元素 */</span><br><span class="line">h1 &#123;</span><br><span class="line">  color: orange;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">&#125;</span><br><span class="line">/* 选中所有p元素 */</span><br><span class="line">p &#123;</span><br><span class="line">  color: blue;</span><br><span class="line">  font-size: 60px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>备注：元素选择器无法实现差异化设置，例如上面的代码中，所有的p 元素效果都一样。</p>
+<h4 id="1-3-类选择器"><a href="#1-3-类选择器" class="headerlink" title="1.3 类选择器 |."></a>1.3 类选择器 |.</h4><p>作用：根据元素的class 值，来选中某些元素。class 翻译过来有：种类、类别的含义，所以class 值，又称：类名。<br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.类名 &#123;</span><br><span class="line">属性名: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* 选中所有class值为speak的元素 */</span><br><span class="line">.speak &#123;</span><br><span class="line">	color: red;	</span><br><span class="line">&#125;</span><br><span class="line">/* 选中所有class值为answer的元素 */</span><br><span class="line">.answer &#123;</span><br><span class="line">	color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>元素的class 属性值不带. 点，但CSS 的类选择器要带. 点。</li>
+<li>class 值，是我们自定义的，按照标准：不要使用纯数字、不要使用中文、尽量使用<br> 英文与数字的组合，若由多个单词组成，使用- 做连接，例如： left-menu ，且命名<br> 要有意义，做到 “见名知意”。</li>
+<li>一个元素不能写多个class 属性，下面是 错误示例：</li>
+</ol>
+<blockquote>
+<p><code>&lt;!-- 该写法错误，元素的属性不能重复，后写的会失效 --&gt; </code></p>
+<p> <code>&lt;h1 class=&quot;speak&quot; class=&quot;big&quot;&gt;你好啊&lt;/h1&gt;</code>   错误❌</p>
+</blockquote>
+<ol start="4">
+<li>一个元素的class 属性，能写多个值，要用空格隔开，例如：</li>
+</ol>
+<blockquote>
+<p> <code>&lt;h1 class=&quot;speak big&quot;&gt;你好啊&lt;/h1&gt;</code>  正确✔️</p>
+<p> 一个元素属于两个分类可以直接写在同一个class中，空格分开即可。</p>
+</blockquote>
+<h4 id="1-4-ID选择器"><a href="#1-4-ID选择器" class="headerlink" title="1.4 ID选择器 |#"></a>1.4 ID选择器 |#</h4><p>作用：根据元素的id 属性值，来<strong>精准的选中某个元素。</strong><br>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#id值 &#123;</span><br><span class="line">	属性名: 属性值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* 选中id值为earthy的那个元素 */</span><br><span class="line">#earthy &#123;</span><br><span class="line">  color: red;</span><br><span class="line">  font-size: 60px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>id 属性值：尽量由字母、数字、下划线( _ )、短杠( - )组成，最好以字母开头、不要包含空格、区分大小写。</li>
+<li>一个元素只能拥有一个id 属性，多个元素的id 属性值不能相同。</li>
+<li>一个元素可以同时拥有id 和class 属性。</li>
+</ol>
+<h4 id="1-5-基本选择器总结"><a href="#1-5-基本选择器总结" class="headerlink" title="1.5 基本选择器总结"></a>1.5 基本选择器总结</h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240119115146.png" alt="img"></p>
+<h3 id="2-CSS复合选择器"><a href="#2-CSS复合选择器" class="headerlink" title="2. CSS复合选择器"></a>2. CSS复合选择器</h3><p><strong>CSS选择器整体分类两大类：</strong></p>
+<p><strong>一、基本选择器：</strong></p>
+<p>①通配选择器<br>②元素选择器<br>③类选择器<br>④ ID 选择器</p>
+<p><strong>二、复合选择器：</strong></p>
+<p>①交集选择器<br>②并集选择器<br>③后代选择器<br>④子元素选择器</p>
+<blockquote>
+<ol>
+<li>复合选择器建立在基本选择器之上，由多个基础选择器，通过不同的方式组合而成。</li>
+<li>复合选择器可以在复杂结构中，快速而准确的选中元素。</li>
+</ol>
+</blockquote>
+<h4 id="2-1-交集选择器"><a href="#2-1-交集选择器" class="headerlink" title="2.1 交集选择器"></a>2.1 交集选择器</h4><p>作用：选中<strong>同时符合多个条件</strong>的元素。<br>交集有并且的含义（通俗理解：即……又…… 的意思），例如：年轻且长得帅。<br>语法：选择器1选择器2选择器3…选择器n {}<br>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* 选中：类名为beauty的p元素，为此种写法用的非常多！！！！ */</span><br><span class="line">p.beauty &#123;</span><br><span class="line">	color: blue;</span><br><span class="line">&#125;</span><br><span class="line">/* 选中：类名包含rich和beauty的元素 */</span><br><span class="line">.rich.beauty &#123;</span><br><span class="line">	color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>有标签名，标签名必须写在前面。</li>
+<li>id 选择器、通配选择器，理论上可以作为交集的条件，但实际应用中几乎不用 —— 因为没<br>有意义。</li>
+<li>交集选择器中不可能出现两个元素选择器，因为一个元素，不可能即是p 元素又是span 元<br>素。</li>
+<li>用的最多的交集选择器是：元素选择器配合类名选择器，例如： p.beauty 。</li>
+</ol>
+<h4 id="2-2-并集选择器"><a href="#2-2-并集选择器" class="headerlink" title="2.2 并集选择器"></a>2.2 并集选择器</h4><p>作用：选中多个选择器对应的元素，又称：分组选择器。</p>
+<p>所谓并集就是或者的含义（通俗理解：要么……要么…… 的意思），例如：给我转10万块钱<br>或者我报警。</p>
+<p>语法：选择器1, 选择器2, 选择器3, … 选择器n {}</p>
+<p>多个选择器通过, 连接，此处, 的含义就是：或。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/* 选中id为peiqi，或类名为rich，或类名为beauty的元素 */</span><br><span class="line">#peiqi,</span><br><span class="line">.rich,</span><br><span class="line">.beauty &#123;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  background-color: skyblue;</span><br><span class="line">  width: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>并集选择器，我们一般竖着写。</li>
+<li>任何形式的选择器，都可以作为并集选择器的一部分 。</li>
+<li>并集选择器，通常用于集体声明，可以缩小样式表体积。</li>
+</ol>
+<h4 id="2-3-HTML元素间的关系"><a href="#2-3-HTML元素间的关系" class="headerlink" title="2.3 HTML元素间的关系"></a>2.3 HTML元素间的关系</h4><p>分为：①父元素、②子元素、③祖先元素、④后代元素、⑤兄弟元素。</p>
+<ol>
+<li>父元素：<strong>直接包裹</strong>某个元素的元素，就是该元素的<strong>父元素</strong>。</li>
+<li>子元素：被<strong>父元素直接包含的元素</strong>（简记：儿子元素）。</li>
+<li>祖先元素：父亲的父亲……，<strong>一直往外找，都是祖先</strong>。</li>
+<li>后代元素：儿子的儿子……，一直往里找，都是后代。</li>
+<li>兄弟元素：具有<strong>相同父元素</strong>的元素，互为<strong>兄弟元素</strong>。</li>
+</ol>
+<h4 id="2-4-后代选择器-空格"><a href="#2-4-后代选择器-空格" class="headerlink" title="2.4 后代选择器 |空格"></a>2.4 后代选择器 |空格</h4><p>作用：<strong>选中指定元素中</strong>，<strong>符合要求的后代元素</strong>。<br>语法：选择器1 选择器2 选择器3 …… 选择器n {} （先写祖先，再写后代）</p>
+<blockquote>
+<p>选择器之间，<strong>用空格隔开</strong>，空格可以理解为：” xxx 中的”，其实就是后代的意思。<br>选择器1234….n ，可以是我们之前学的任何一种选择器。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/* 选中ul中的所有li */</span><br><span class="line">ul li &#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 选中ul中所有li中的a */</span><br><span class="line">ul li a &#123;</span><br><span class="line">	color: orange;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 选中类名class为subject元素中的所有li */</span><br><span class="line">.subject li &#123;</span><br><span class="line">	color: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 选中类名为subject元素中的所有类名为front-end的li */</span><br><span class="line">.subject li.front-end &#123;</span><br><span class="line">	color: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>后代选择器，最终选择的是后代，不选中祖先。</li>
+<li>儿子、孙子、重孙子，都算是后代。</li>
+<li>结构一定要符合之前讲的HTML 嵌套要求，例如：<strong>不能p 中写h1 ~ h6 。</strong></li>
+</ol>
+<h4 id="2-5-子代选择器"><a href="#2-5-子代选择器" class="headerlink" title="2.5 子代选择器 |&gt;"></a>2.5 子代选择器 |&gt;</h4><p>作用：选中指定元素中，符合要求的子元素（儿子元素）。（先写父，再写子）<br>语法：选择器1 &gt; 选择器2 &gt; 选择器3 &gt; …… 选择器n {}</p>
+<blockquote>
+<p>选择器之间，<strong>用&gt; 隔开</strong>， &gt; 可以理解为：” xxx 的子代”，其实就是儿子的意思。<br>选择器1234….n ，可以是我们之前学的任何一种选择器。</p>
+</blockquote>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/* div中的子代a元素 */</span><br><span class="line">div&gt;a &#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* 类名为persons的元素中的子代a元素 */</span><br><span class="line">.persons&gt;a&#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>子代选择器，最终选择的是子代，不是父级。</li>
+<li>子、孙子、重孙子、重重孙子 …… 统称后代！，子就是指儿子。</li>
+</ol>
+<h4 id="2-6-兄弟选择器"><a href="#2-6-兄弟选择器" class="headerlink" title="2.6 兄弟选择器 |+ &#x2F; ~"></a>2.6 兄弟选择器 |+ &#x2F; ~</h4><ol>
+<li><strong>相邻兄弟</strong>选择器：</li>
+</ol>
+<ul>
+<li><p>作用：选中指定元素后，符合条件的<strong>相邻兄弟</strong>元素。</p>
+</li>
+<li><p>语法： 选择器1+选择器2 {} 。</p>
+</li>
+<li><p>示例：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 选中div后相邻的兄弟p元素 */</span><br><span class="line">div+p &#123;</span><br><span class="line">	color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>通用兄弟</strong>选择器：</li>
+</ol>
+<ul>
+<li>作用：选中指定元素后，符合条件的<strong>所有兄弟元素</strong>。（简记：睡在我<strong>下铺的</strong>所有兄弟）</li>
+<li>语法： 选择器1~选择器2 {} 。</li>
+<li>实例:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/* 选中div后的所有的兄弟p元素 */</span><br><span class="line">div~p &#123;</span><br><span class="line">	color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：两种兄弟选择器，选择的是下面的兄弟。</strong></p>
+<h4 id="2-7-属性选择器"><a href="#2-7-属性选择器" class="headerlink" title="2.7 属性选择器 |[]"></a>2.7 属性选择器 |[]</h4><p>作用：选中属性值符合一定要求的元素。<br>语法：</p>
+<ol>
+<li>[属性名] 选中具有某个属性的元素。</li>
+<li>[属性名&#x3D;”值”] 选中包含某个属性，且属性值<strong>等于指定值</strong>的元素。</li>
+<li>[属性名<strong>^</strong>&#x3D;”值”] 选中包含某个属性，且属性值以指定的值<strong>开头</strong>的元素。</li>
+<li>[属性名**$<strong>&#x3D;”值”] 选中包含某个属性，且属性值以指定的值</strong>结尾**的元素。</li>
+<li>[属性名*****&#x3D;“值”] 选择包含某个属性，属性值<strong>包含指定值</strong>的元素.</li>
+</ol>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/* 选中具有title属性的元素 */</span><br><span class="line">div[title]&#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line">/* 选中title属性值为atguigu的元素 */</span><br><span class="line">div[title=&quot;atguigu&quot;]&#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line">/* 选中title属性值以a开头的元素 */</span><br><span class="line">div[title^=&quot;a&quot;]&#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line">/* 选中title属性值以u结尾的元素 */</span><br><span class="line">div[title$=&quot;u&quot;]&#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line">/* 选中title属性值包含g的元素 */</span><br><span class="line">div[title*=&quot;g&quot;]&#123;color:red;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-8-伪类选择器"><a href="#2-8-伪类选择器" class="headerlink" title="2.8 伪类选择器"></a>2.8 伪类选择器</h4><p>作用：选中特殊状态的元素。</p>
+<blockquote>
+<p>如何理解“伪” ? — 虚假的，不是真的。<br>如何理解“伪类”？ — 像类( class )，但不是类，是元素的一种特殊状态。</p>
+</blockquote>
+<p><strong>常用的伪类选择器：</strong><br><strong>一、动态伪类：</strong></p>
+<ol>
+<li>:link 超链接未被访问的状态。</li>
+<li>:visited 超链接访问过的状态。</li>
+<li>:hover 鼠标悬停在元素上的状态。</li>
+<li>:active 元素激活的状态。</li>
+</ol>
+<blockquote>
+<p>什么是激活？—— 按下鼠标不松开。<br>注意点：<strong>遵循LVHA 的顺序，即： link 、visited 、hover 、active 。</strong></p>
+</blockquote>
+<ol start="5">
+<li>:focus 获取焦点的元素。</li>
+</ol>
+<blockquote>
+<p>表单类元素才能使用:focus 伪类。<br>当用户：点击元素、触摸元素、或通过键盘的 “ tab ” 键等方式，选择元素时，就是获<br>得焦点。</p>
+</blockquote>
+<p><strong>二、结构伪类</strong><br><strong>常用的：</strong></p>
+<ol>
+<li>:first-child 所有兄弟元素中的第一个。</li>
+<li>:last-child 所有兄弟元素中的最后一个。</li>
+<li>:nth-child(n) 所有兄弟元素中的第 n 个。</li>
+<li>:first-of-type 所有同类型兄弟元素中的第一个。</li>
+<li>:last-of-type 所有同类型兄弟元素中的最后一个。</li>
+<li>:nth-of-type(n) 所有同类型兄弟元素中的 第n个 。<br> <strong>关于n 的值：</strong></li>
+</ol>
+<ul>
+<li>0 或不写：什么都选不中 —— 几乎不用。</li>
+<li>n ：选中所有子元素 —— 几乎不用。</li>
+<li>1~正无穷的整数 ：选中对应序号的子元素。</li>
+<li>2n 或 even ：选中序号为偶数的子元素。</li>
+<li>2n+1 或 odd ：选中序号为奇数的子元素。</li>
+<li>-n+3 ：选中的是前3 个。<br>  <strong>了解即可：</strong></li>
+</ul>
+<ol>
+<li>:nth-last-child(n) 所有兄弟元素中的倒数第 n 个。</li>
+<li>:nth-last-of-type(n) 所有同类型兄弟元素中的 倒数第n个 。</li>
+<li>:only-child 选择没有兄弟的元素（独生子女）。</li>
+<li>:only-of-type 选择没有同类型兄弟的元素。</li>
+<li>:root 根元素。</li>
+<li>:empty 内容为空元素（空格也算内容）。</li>
+</ol>
+<p><strong>三、否定伪类：</strong><br>:not(选择器) 排除满足括号中条件的元素。<br><strong>四、UI伪类：</strong></p>
+<ol>
+<li>:checked 被选中的复选框或单选按钮。</li>
+<li>:enable 可用的表单元素（没有 disabled 属性）。</li>
+</ol>
+<p>:disabled 不可用的表单元素（有disabled 属性）。<br><strong>五、目标伪类（了解）</strong><br>:target 选中锚点指向的元素。<br><strong>六、语言伪类（了解）</strong><br>:lang() 根据指定的语言选择元素（本质是看lang 属性的值）。</p>
+<h4 id="2-9-伪元素选择器"><a href="#2-9-伪元素选择器" class="headerlink" title="2.9 伪元素选择器"></a>2.9 伪元素选择器</h4><p>作用：选中元素中的一些特殊位置。<br>常用伪元素：</p>
+<ol>
+<li>::first-letter 选中元素中的第一个文字。</li>
+<li>::first-line 选中元素中的第一行文字。</li>
+<li>::selection 选中被鼠标选中的内容。</li>
+<li>::placeholder 选中输入框的提示文字。</li>
+<li>::before 在元素最开始的位置，创建一个子元素（必须用 content 属性指定内容）。</li>
+<li>::after 在元素最后的位置，创建一个子元素（必须用 content 属性指定内容）。</li>
+</ol>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/HTML2.html">HTML5 基础知识</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/JavaScript.html">JavaScript基础教学</a></div></section></div>
+
+
+  <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
       快来参与讨论吧
     </section>
     <section class='body cmt-body twikoo'>
       
 
-<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+<div id="twikoo_container"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
     </section>
   </div>
 
 
 
-
-      
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
+<footer class="page-footer fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
 使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
@@ -194,17 +458,12 @@ show_runtime();
 </br>
 </center>
 </div></footer>
-
-      <div class='float-panel mobile-only blur' style='display:none'>
+<div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
-    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+    <svg t="1705412886951" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8331" width="200" height="200"><path d="M638.72 970.666667h-256c-118.186667 0-198.272-25.002667-251.946667-78.72S52.053333 758.186667 52.053333 640V384c0-118.186667 25.002667-198.272 78.72-251.946667S264.533333 53.333333 382.72 53.333333h256c118.186667 0 198.272 25.002667 251.946667 78.72S969.386667 265.813333 969.386667 384v256c0 118.186667-25.002667 198.272-78.72 251.946667S756.906667 970.666667 638.72 970.666667z m-256-853.333334c-100.096 0-165.802667 19.2-206.72 59.946667S116.053333 283.904 116.053333 384v256c0 100.096 19.072 165.802667 59.946667 206.72S282.624 906.666667 382.72 906.666667h256c100.096 0 165.802667-19.072 206.72-59.946667S905.386667 740.096 905.386667 640V384c0-100.096-19.072-165.802667-59.946667-206.72S738.816 117.333333 638.72 117.333333z" p-id="8332"></path><path d="M638.72 970.666667a32 32 0 0 1-32-32V85.333333a32 32 0 0 1 32-32 32 32 0 0 1 32 32v853.333334a32 32 0 0 1-32 32zM340.053333 653.226667a31.914667 31.914667 0 0 1-22.613333-9.386667 32 32 0 0 1 0-45.269333L404.053333 512 317.44 425.386667a32 32 0 0 1 0-45.226667 32 32 0 0 1 45.226667 0l109.226666 109.226667a32 32 0 0 1 0 45.269333L362.666667 643.84a31.914667 31.914667 0 0 1-22.613334 9.386667z" p-id="8333"></path></svg>
   </button>
 </div>
-
-    </div>
-  </div>
-  <div class='scripts'>
-    
+<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
 <script type="text/javascript">
   const stellar = {
     // 懒加载 css https://github.com/filamentgroup/loadCSS
@@ -300,8 +559,8 @@ show_runtime();
       }
     }
   };
-  stellar.version = '1.23.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.23.0';
+  stellar.version = '1.26.2';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.2';
   stellar.config = {
     date_suffix: {
       just: '刚刚',
@@ -339,13 +598,13 @@ show_runtime();
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
   }
   if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"16px","duration":500,"interval":100,"scale":1});
   }
   if ('true' == 'true') {
-    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
   }
   if ('true' == 'true') {
-    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".fancybox img"});
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":".fancybox img"});
   }
   if ('false' == 'true') {
     stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
@@ -387,19 +646,18 @@ show_runtime();
 
 
 
+  
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+
+
+
 
 
 
 <!-- inject -->
 <script type="text/javascript" src="/custom/js/ZYDark.js"></script>
-
-  </div>
-  <!--动态线条背景-->
-  <script type="text/javascript"
-  color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-  </script>
-
-<!-- hexo injector body_end start -->
+</div><!-- hexo injector body_end start -->
   <style>
     .highlight {
       position: relative;
@@ -469,5 +727,4 @@ show_runtime();
       }
     }
   </script>
-  <!-- hexo injector body_end end --></body>
-</html>
+  <!-- hexo injector body_end end --></body></html>
