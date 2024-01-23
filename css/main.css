@@ -3937,6 +3937,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   height: 48px;
   margin-right: 1rem;
   border-radius: 4px;
+  flex-shrink: 0;
 }
 .logo-wrap a {
   color: inherit;
@@ -4011,7 +4012,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   animation-timing-function: linear;
 }
 .logo-wrap a.title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: inherit;
   line-height: 1.2;
@@ -4598,7 +4599,9 @@ details.toc[open] >div.body section .header+.doc_tree {
   background: var(--alpha50);
 }
 .widget-wrapper.tagcloud .widget-body {
-  margin-top: 0.25rem;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--alpha50);
 }
 .widget-wrapper.tagcloud .widget-body a {
   word-break: break-word;
