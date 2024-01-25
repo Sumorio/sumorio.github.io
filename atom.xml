@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>苏末了</title>
+  
+  <subtitle>⭐穿戴整齐面对疯狂的世界。 | 🧡Love and Peace.</subtitle>
+  <link href="https://sumorio.com/atom.xml" rel="self"/>
+  
+  <link href="https://sumorio.com/"/>
+  <updated>2024-01-25T07:49:41.507Z</updated>
+  <id>https://sumorio.com/</id>
+  
+  <author>
+    <name>Sumor|苏末了</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NameSilo+CloudFlare+GitPages域名注册|解析</title>
+    <link href="https://sumorio.com/posts/304dddc6.html"/>
+    <id>https://sumorio.com/posts/304dddc6.html</id>
+    <published>2024-01-11T11:15:31.291Z</published>
+    <updated>2024-01-25T07:49:41.507Z</updated>
+    
+    <content type="html"><![CDATA[<p>域名注册，域名解析，Github 绑定多个域名。</p><span id="more"></span><p>域名注册：<a href="https://www.namesilo.com/">www.namesilo.com</a></p><p>域名解析：<a href="https://www.cloudflare.com/">www.cloudflare.com</a></p><h2 id="1-NameSilo-注册域名"><a href="#1-NameSilo-注册域名" class="headerlink" title="1)NameSilo|注册域名"></a>1)NameSilo|注册域名</h2><ol><li><p>注册账号并登录<a href="www.namesilo.com">namesilo</a></p></li><li><p>输入自己心仪的域名，加入购物车。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154145.png" alt="img"></p><ol start="3"><li>右上角进入购物车，点击<code>view cart</code>；google 搜索”namesilo 优惠码“，找到并输入至<code>promotion code</code>中。地址可以随意填写，如果有需要，可以进入<a href="https://www.dizhishengcheng.com/">地址生成网</a>随意生成并填入。结账方式可以选择【支付宝】。值得注意的是，该网页偶尔可能访问缓慢，不要着急，慢慢来。</li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110154206.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153533.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110155348.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153634.png" alt="img"></p><ol start="4"><li>支付宝付款成功后，一分钟左右，跳转到后台页面，可以看到<code>dashboard</code>中的<code>Active domains</code>新增了一个账号。</li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110153906.png" alt="img"></p><h2 id="2-CloudFlare-托管域名"><a href="#2-CloudFlare-托管域名" class="headerlink" title="2)CloudFlare|托管域名"></a>2)CloudFlare|托管域名</h2><ol><li><p>注册账号并登录<a href="http://www.cloudflare.com](https://www.cloudflare.com)">www.cloudflare.com](https://www.cloudflare.com)</a></p></li><li><p>将上文新注册的域名填写到 cloudflare 中.</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110163043.png" alt="image-20240110163041918"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164522.png" alt="img"></p></li><li><p>选择 free,continue,continue；来到更改服务器页面，复制红框中的 nameservers 地址到 namesilo 的域名设置中。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164639.png" alt="image-20240110164642160"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110164922.png" alt="image-20240110164920781"></p></li><li><p>点击返回到 Namesilo 网站进行域名设置：<a href="https://www.namesilo.com/account_domains.php">域名设置网址</a>,点击图中的金币按钮，如果没有这个按钮，可以等待大概 20 分钟后，新账号系统可能正在审核分配资源。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165035.png" alt="image-20240110165033223"></p></li><li><p>删除原始配置，将第 3 步 cloudflare 中的 namesevers 粘贴并提交。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165436.png" alt="image-20240110165434344"></p><ol start="6"><li><p>显示 active ，表示域名已经成功托管到 cloudflare 平台进行管理。以后关于域名的设置都交给 cloudflare，可以不用登录 namesilo 了。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165655.png" alt="image-20240110165654631"></p></li><li><p>回到 cloudflare 平台，继续操作。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165840.png" alt="image-20240110165839335"></p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110165934.png" alt="image-20240110165933532"></p><ol start="8"><li><p>回到 cloudflare 首页，查看域名更新状态，pending 为正在等待。一般审核的时间 2 分钟~24 小时不等，需要耐心等待。我大概等待 3 分钟后，域名生效为 active.</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110170111.png" alt="image-20240110170111370"></p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240110171230.png" alt="image-20240110171228928"></p><h2 id="3-GithubPages-绑定自定义域名"><a href="#3-GithubPages-绑定自定义域名" class="headerlink" title="3)GithubPages|绑定自定义域名"></a>3)GithubPages|绑定自定义域名</h2><p>登录 github 新建一个仓库，如果是第一次搭建 github pages 网页，命名一定要是<code>&lt;username&gt;.github.io</code>这种形式，username 就是自己<a href="https://so.csdn.net/so/search?q=github&spm=1001.2101.3001.7020">github</a>账号的用户名（比如仓库名为 sumorio.github.io)，分支是 main 主分支。因为这是我的第二个网页，所以名称随意起，我这里仓库名为<code>Blog-Stellar</code>.</p><p>如图，新建好仓库后，进入 settings，page，选择分支并把注册好的域名填入，保存。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153131.png" alt="image-20240111110605523"></p><p>保存之后 github 会<code>自动</code>的在仓库 CODE 根目录里生成一个<code>CNAME</code>文件，里面存储着域名配置信息。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153023.png" alt="image-20240111153022503"></p><p>设置后继续返回 cloudflare 进行后续设置。</p><h2 id="4-CloudFlare-设置-DNS-HTTPS"><a href="#4-CloudFlare-设置-DNS-HTTPS" class="headerlink" title="4)CloudFlare|设置 DNS&#x2F;HTTPS"></a>4)CloudFlare|设置 DNS&#x2F;HTTPS</h2><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111153621.png" alt="image-20240111153621507"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111115643.png" alt="img"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111155428.png" alt="image-20240111155427669"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162455.png" alt="image-20240111162453188"></p><p>以上设置完成，此刻可以通过域名进入网站。</p><p><strong>关于 Github Pages 设置中不能开启 <code>Enforce HTTPS</code>，勾选框一直无法点击的问题。大概率是 Cloudflare 的代理状态的造成的，解决方案如下<code>开启Encryption Full (strict) 严格模式</code>。</strong></p><h2 id="5-开启-Encryption-Full-strict-模式"><a href="#5-开启-Encryption-Full-strict-模式" class="headerlink" title="5)开启 Encryption Full (strict) 模式"></a>5)开启 Encryption Full (strict) 模式</h2><p>Full (strict) 模式与 Full 模式的区别在于: Full (strict) 模式使用的是由可信 CA 或 Cloudflare Origin CA 签名的有效证书并对每个请求验证证书，而非 Full 模式使用的无需验证的自签名证书。</p><p>GitHub Pages 可以通过开启 <code>Enforce HTTPS</code> 来获取免费的可信证书，满足开启 Full (strict) 模式的条件。</p><ol><li><p>在 Cloudflare 的 DNS 设置中把 Proxy status 全部设置为 <code>DNS Only</code> 状态，即灰色的云朵。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111162646.png" alt="image-20240111162644688"></p></li><li><p>回到 Pages 设置，刷新一下，删除域名 Remove，重新填写，再 save，就可以勾选 <code>Enforce HTTPS</code> 了</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163220.png" alt="image-20240111163216691"></p></li><li><p>GitHub 会自动申请 SSL 证书，有了这个证书才能够在 Cloudflare 开启 Full (strict) 模式</p></li><li><p>等待 Pages 的 HTTPS 生效后，回到 Cloudflare，把刚才修改的 Proxy status 全部恢复为 <code>Proxied</code> 状态，即橙色的云朵。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163517.png" alt="image-20240111163517090"></p></li><li><p>到 <code>SSL/TLS</code> 设置中，将 Encryption Mode 设置为 <code>Full (strict)</code></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240111163553.png" alt="image-20240111163552369"></p></li></ol><h2 id="6-科普：DNS-记录类型"><a href="#6-科普：DNS-记录类型" class="headerlink" title="6)科普：DNS 记录类型"></a>6)科普：DNS 记录类型</h2><p><strong>A 记录</strong></p><p>A 记录 (Address record) 是用来指定主机名（或域名）对应的 IP 地址记录。用户可以将该域名下的网站服务器指向到自己的网页服务器 (web server) 上。同时也可以设置域名的子域名。它会传回一个 32 位元的 IPv4 地址。</p><p><strong>AAAA 记录</strong></p><p>AAAA 记录 (AAAA record) 是用来将域名解析到 IPv6 地址的 DNS 记录。用户可以将一个域名解析到 IPv6 地址上，也可以将子域名解析到 IPv6 地址上。它会传回一个 128 位元的 IPv6 地址。</p><p><strong>CNAME 记录</strong></p><p>CNAME 记录 (Canonical Name Record)，用于将一个域名（同名）映射到另一个域名（真实名称），域名解析服务器遇到 CNAME 记录会以映射到的目标重新开始查询。CNAME 记录可用于 CDN 加速，通过 CDN 加速别名解析网站域名。</p><p><strong>NS 记录</strong></p><p>NS (Name Server) 记录是域名服务器记录，用来指定该域名由哪个 DNS 服务器来进行解析。如果需要把子域名交给其他 DNS 服务商解析，就需要添加 NS 记录。</p><p><strong>MX 记录</strong></p><p>MX (mail exchanger) 记录用于指定负责处理发往收件人域名的邮件服务器。</p><p><strong>TXT 记录</strong></p><p>TXT 记录一般指为某个主机名或域名设置的说明。</p><p><strong>TTL</strong></p><p>TTL (Time To Live) 表示解析记录在 DNS 服务器中的缓存时间，长度为秒。当本地 DNS 服务器收到某一域名的解析请求时，需要向该域名指定的权威 DNS 服务器发送解析请求获取解析记录。获得的解析记录会在本地 DNS 服务器中保存一段时间。在这段时间内，如果本地 DNS 服务器再次收到该域名的解析请求，将不再向权威 DNS 服务器发送解析请求，而是直接返回保存在本地 DNS 服务器中的解析记录。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;域名注册，域名解析，Github 绑定多个域名。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="Github" scheme="https://sumorio.com/tags/Github/"/>
+    
+    <category term="NameSilo" scheme="https://sumorio.com/tags/NameSilo/"/>
+    
+    <category term="CloudFlare" scheme="https://sumorio.com/tags/CloudFlare/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git工作流 | GitHub基本操作 | VS Code里使用Git和关联GitHub</title>
+    <link href="https://sumorio.com/posts/dc6b3388.html"/>
+    <id>https://sumorio.com/posts/dc6b3388.html</id>
+    <published>2024-01-02T07:19:40.311Z</published>
+    <updated>2024-01-25T07:09:57.254Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一-Git-基础知识"><a href="#一-Git-基础知识" class="headerlink" title="一.Git 基础知识"></a>一.Git 基础知识</h2><h3 id="1-Git"><a href="#1-Git" class="headerlink" title="1. Git"></a><strong>1. Git</strong></h3><p>Git 是一个开源的分布式版本控制系统，由 Linus Torvalds 于 2005 年创建，用于有效地跟踪和管理源代码历史。它允许多人协作，同时保持代码历史的完整性和一致性。Git 的核心概念包括提交（commit）、分支（branch）、合并（merge）和冲突解决（conflict resolution）。</p><h3 id="2-GitHub"><a href="#2-GitHub" class="headerlink" title="2. GitHub"></a><strong>2. GitHub</strong></h3><p>GitHub 是一个基于 Web 的平台，提供 Git 仓库的托管服务，并增加了协作功能。它使得代码共享、协作和版本控制更加容易，特别是在团队项目中。GitHub 的特色功能包括 Pull Requests、Issues、GitHub Actions 等。</p><h3 id="3-Git-与-GitHub-的关系"><a href="#3-Git-与-GitHub-的关系" class="headerlink" title="3. Git 与 GitHub 的关系"></a><strong>3. Git 与 GitHub 的关系</strong></h3><p><strong>Git 是版本控制系统的核心，而 GitHub 是在此基础上构建的服务平台。</strong></p><p><strong>Git 是版本控制工具，相当于存档记录器</strong>。可以在电脑不联网的情况下，在本地电脑直接使用。它可以更好的帮助你管理程序，记录提交的历史内容，历史更改记录，当你误删误操作时，及时修复还原。</p><p><strong>GitHub 是代码托管网站，且具有协作和社交网络的功能</strong>。每个程序员都可以将自己写的程序代码托管到 Github 的仓库中，这个仓库可以公开（也称开源）也可以保密。如果公开，所有人都能看到你的代码，他们可以看到你的提交记录，也可以参与到你的代码修改工作中，同你共同完成代码的编写。</p><h3 id="4-Git-和-GitHub-的工作流"><a href="#4-Git-和-GitHub-的工作流" class="headerlink" title="4.Git 和 GitHub 的工作流"></a><strong>4.Git 和 GitHub 的工作流</strong></h3><p><strong>Git 工作流程</strong></p><blockquote><p>几个概念：<br>本地库 Origin：个人终端上的代码文件；<br>工作区 Changes：个人终端上修改代码的工作区；<br>暂存区 Stage Changes：临时代码中转站，待定区；<br>远程库 Remote：存储在 Github 仓库中的代码文件；</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228110148.png" alt="img"><br>✅<strong>完整流程</strong>✅<br>➡️<strong>新项目初始化</strong>：项目初次使用需要建立新的文件夹，并使用 git init 初始化。这会在本地工作区生成一个.git 文件夹。里面存放着是本地库相关的子目录和文件，不要删除，也不要胡乱修改。<br>➡️<strong>增删改写</strong>：在本地库工作，对代码进行增删改等任意操作，此时只要不提交到暂存区都属于【<strong>工作区</strong>】状态，文件属于未跟踪<code>Untracked</code>状态。<br>➡️<strong>添加版本更改记录</strong>：代码完成后，使用<code>git add</code>将文件从【<strong>工作区</strong>】添加到【<strong>暂存区</strong>】临时存储，文件从<code>Untracked</code>状态变为<code>Added</code>状态。<br>➡️<strong>提交更改</strong>：确认暂存区的文档没问题后，使用<code>git commit</code>将【<strong>暂存区</strong>】的更改记录存储到【<strong>本地库</strong>】数据库进行记录。<br>➡️<strong>新建远程库</strong>：新项目需要先在<code>github</code>中新建仓库，这个仓库将来用于存放本地库的内容。<br>➡️<strong>连接远程库</strong>：远程库新建好后，使用<code>git remote</code>进行连接。<br>➡️<strong>推送更改</strong>：本地库的代码确认无误后，使用<code>git push</code>将【<strong>本地库</strong>】最终更改上传到【<strong>远程库</strong>】，让更多人看到你的代码更新。<br>➡️<strong>拉取更改</strong>：如果其他人在【远程库】上传了更改，可以在【<strong>本地库</strong>】使用<code>git pull</code>从【<strong>远程库</strong>】获取最新更改。<br>➡️<strong>克隆仓库</strong>：如果想获取他人的项目，可以使用<code>git clone</code>复制【<strong>远程库</strong>】到【<strong>本地库</strong>】。</p><p><strong>GitHub 工作流程</strong></p><p>➡️<strong>创建仓库</strong>：在 GitHub 上创建新仓库用于项目。<br>➡️<strong>分支管理</strong>：使用分支 Fork 进行特定任务的开发。<br>➡️<strong>合并请求</strong>：通过 Pull Requests 进行代码审查和合并 merge。<br>➡️<strong>Issues 跟踪</strong>：使用 Issues 跟踪任务、增强功能和错误。</p><h2 id="二-vsCode-使用-Git-版本控制"><a href="#二-vsCode-使用-Git-版本控制" class="headerlink" title="二.vsCode 使用 Git 版本控制"></a>二.vsCode 使用 Git 版本控制</h2><p><strong>开始之前，请注意以下几点：</strong></p><ul><li>请确保已安装最新的 VS Code。<a href="https://code.visualstudio.com/">Visual Studio Code</a></li><li>请确保已安装最新版的 Git。<a href="https://git-scm.com/download">https://git-scm.com/download</a> ，并将 git 新增到环境变量中，确保任意路径可以访问。<br>VSCode 集成了 Git 功能且支持基本的 git 命令，使我们能够在开发过程直接提交和获取代码。</li></ul><p><strong>几个名词备注：</strong></p><p>U：Untracked 未追踪<br>A：Added 已添加<br>M：Modified 已更改<br>Changes:工作区<br>Staged Changes:暂存区</p><h3 id="案例-1-本地库上传远程库"><a href="#案例-1-本地库上传远程库" class="headerlink" title="案例 1.本地库上传远程库"></a>案例 1.本地库上传远程库</h3><p>本地电脑任意位置新建文件夹。我这里新建到桌面，命名 Github-test。进入文件夹，右键打开 git bash.</p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/eb5158e044169d110de4080610ad78b.png" alt="img" style="zoom:33%;" /><ol><li><p>git init 初始化文件夹 Github_test</p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/81f94f92bfd2ac7bb883e7bedd196f8.png" alt="img" style="zoom:33%;" /></li><li><p>文件夹 Github_test 中新建 2 个 txt 文件用于测试：hello-1.txt,hello-2.txt,并在 2 个 txt 文档中随意写个单词。</p></li><li><p>打开 vscode,并用 vscode 打开此文件夹。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/1f47ae670fc831e89ea0f16dafac3e2.png" alt="img"></p><ol start="4"><li>最左侧第三个按钮，有蓝色弹窗 2.点开，这里就是 git 的工作区。U 表示两个文件 untracked 未追踪（仅有修改痕迹但是未上传暂存区）</li></ol></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/b03d62a561721ed2e73a8fb58183827.png" alt="b03d62a561721ed2e73a8fb58183827"></p><ol start="5"><li><p>点击文件旁边的+加号按钮，相当于执行 git add 指令，将文件上传到暂存区 Stage changes。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/1391f7011039cd4e000fba608fe9d8a.png" alt="1391f7011039cd4e000fba608fe9d8a"></p></li><li><p>如果想撤销已上传的暂存区文件，可以点击-减号按钮，文件则恢复到工作区(A 变 U)，相当于指令 git reset – 1.txt。如果想更进一步恢复到工作区更改前，可以使用<code>git checkout -- hello-1.txt</code>指令。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/059d0cdeb7d7fd4d6ba1563e879630b.png" alt="059d0cdeb7d7fd4d6ba1563e879630b"></p><ol start="7"><li>给暂存区的文件备注’第一次修改’并点击 commit 提交到本地库。相当于执行<code>git commit -m   &#39;第一次修改&#39; </code>指令。点击后，工作区文件清空，表示工作已完成，暂无修改记录。</li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228162629.png" alt="image-20231228162626344"></p><ol start="8"><li><p>再次对 2 个 txt 文件进行修改。进入到文件中，给 hello-1 和 hello-2 新增一个单词，此时左侧第三个按钮再次弹窗，但是状态是 M（已修改）。我们需要将修改后的代码继续重复<code>git add</code>提交暂存区和<code>git commit</code>提交更改到本地库的动作，对文件更改进行保存。点击加号，新增备注并点击 commit 即可。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/153077690ec7de4e21f5d779164a57f.png" alt="153077690ec7de4e21f5d779164a57f"></p></li><li><p>假设 git commit 提交备注后，我们想要撤回本次操作到<code>git add</code>之前。只需点击三个点，选择<code>commit-undo last commit</code>，相当于指令<code>git reset --soft HEAD~1</code>。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/5f2e884e4459044812d6b6ba498c03d.png" alt="5f2e884e4459044812d6b6ba498c03d"></p></li><li><p>以上操作都可以手动点击操作，也可以使用<code>ctrl+</code> &#96;的快捷键打开 vscode 终端进行操作。终端中可以输入任意 git 指令，git status 可查看目前文件状态，git log 可查看历史操作日志。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/63de926da5a265c8a87075a668c7d9e.png" alt="63de926da5a265c8a87075a668c7d9e"></p></li><li><p>文件存储在本地库后还不够，我们需要上传到 github 远程库。此时先在 github 新建仓库（用于存储本地库的文件），再从本地上传。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/d58a7faf7fc1644927e2fd17a88d1f5.png" alt="d58a7faf7fc1644927e2fd17a88d1f5"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/a8e384b0512dcb16f829978f6d8d9fd.png" alt="a8e384b0512dcb16f829978f6d8d9fd"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/0ee8b9eaba3c78cca89c5ae02e313c0.png" alt="0ee8b9eaba3c78cca89c5ae02e313c0"></p><p>复制红框中第一行代码，在 vscode 终端执行。</p></li><li><p>连接远程库并上传文件。<code>git remote add origin &#39;远程地址&#39;</code>；<code>git push -u origin master</code>;</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/ca698aead29af92cfc5ab9703859be9.png" alt="ca698aead29af92cfc5ab9703859be9"></p><p>此时，远程的 github 库已经拥有本地的文件。</p><ol start="13"><li><p>最后，如果你想直接下载 github 远程库中别人已经写好的代码。本地 Git 使用指令 git clone ‘仓库地址’ 或直接在 github 点击下载。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228165225.png" alt="img"></p></li></ol></li></ol><h3 id="案例-2-多人跨平台处理冲突"><a href="#案例-2-多人跨平台处理冲突" class="headerlink" title="案例 2.多人跨平台处理冲突"></a>案例 2.多人跨平台处理冲突</h3><p>使用 git 的时候，经常会遇到冲突；冲突大概率出现于你和其他人同时下载了相同版本的代码在本地库进行修改的场景，如果其他人比你改的快，且在你之前上传到远程库，此时如果你上传更改就会产生冲突，因为你的版本已经不是最新版的远程库（本地库并不会更新你下载后的远程库的更新）。所以大家在提交代码前，一定要先 pull<strong>拉取远程库的代码</strong>，保证自己本地库目前是最新进度，不然就会造成冲突。</p><p>在本地电脑 clone 两个远程库的文件，分别命名 A 和 B，并对 AB 进行修改上传到远程库，A 先更新代码，B 随后上传，我们来看看冲突发生现场。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228185056.png" alt="image-20231228185055969"></p><ol><li><p>vscode 打开新克隆的文件夹。分别对 AB 的 hello-1.txt 修改，先上传 A 的修改到远程库，使用 git add&#x2F;git commit&#x2F;git push 将文件上传。(见上文)</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228185325.png" alt="image-20231228185324889"></p></li><li><p>A 上传后，再上传 B，看看会发生什么。使用 git add&#x2F;git commit&#x2F;git push 上传到远程。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228190148.png" alt="image-20231228190147751"></p></li><li><p>可以看到 vscode 报错，并返回错误的位置。其中 AceptCurrent Change，是保留你的版本；AcceptIncomingChange 是接收其他人的版本；如果你都想要，可以选择 AcceptBothChanges 然后手动修改。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228190609.png" alt="image-20231228190608612"></p></li><li><p>对冲突进行修改，然后再次 git add&#x2F;git commit&#x2F;git push 查看。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228191814.png" alt="image-20231228191808349"></p></li><li><p>来到 github 查看 push 情况。可以看到修改的流程是 A 先改，B 随后，B 二次修改。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228191946.png" alt="image-20231228191944856"></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228192026.png" alt="image-20231228192020683"></p></li></ol><p>所以为了避免这种情况，我们平时再提交和编写代码前，需要多使用 pull 来拉取远程的最新代码。</p><h3 id="案例-3-处理分支"><a href="#案例-3-处理分支" class="headerlink" title="案例 3.处理分支"></a>案例 3.处理分支</h3><p>案例二的情况导致的结果是，不同的人同时处理相同文件时，很容易产生冲突。所以 branch 应运而生。</p><ol><li><p>本地新建文件夹 github-test3,初始化 git init，新增文件 hello-3.txt，使用 git add&#x2F;git commit 将文件存到本地库等待上传远程库;</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228192643.png" alt="image-20231228192641361"></p></li><li><p>远程新建仓库 test3; git remote 本地连接远程；git push 将本地文件上传到远程。</p></li><li><p>vscode 新建分支起名 new-b.此时已经切换到 new-b 分支，也可以使用指令<code>git checkout -b  new-b</code>来切换。</p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228193814.png" alt="image-20231228193813748"></p></li><li><p>git branch 可以查看本地分支；git branch -a 可以查看本地和远程分支。</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231228194107.png" alt="image-20231228194106666"></p><ol start="5"><li>本地库新建一个文件 hello-4.txt，然后上传分支 new-b。</li><li>master 分支和 new-b 分支都有文件的修改。此时需要 merge.pull request.rebase 的作用，把你的分支，接到主分支后面。先 pull 一次再 rebase.再 push.push 的时候出错。因为你的版本会覆盖历史的版本，强制 push 可以使用 git push -f，不建议在项目用，自己的文件可以。push 后再 merge.</li></ol><p>–没写完，待补充-。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一-Git-基础知识&quot;&gt;&lt;a href=&quot;#一-Git-基础知识&quot; class=&quot;headerlink&quot; title=&quot;一.Git 基础知识&quot;&gt;&lt;/a&gt;一.Git 基础知识&lt;/h2&gt;&lt;h3 id=&quot;1-Git&quot;&gt;&lt;a href=&quot;#1-Git&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="Github" scheme="https://sumorio.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>轻松搭建图床：三种免费方法教程</title>
+    <link href="https://sumorio.com/posts/edeb1358.html"/>
+    <id>https://sumorio.com/posts/edeb1358.html</id>
+    <published>2023-12-21T01:43:54.837Z</published>
+    <updated>2024-01-25T07:09:32.499Z</updated>
+    
+    <content type="html"><![CDATA[<p>在数字时代，图像成为信息传递的重要媒介。对于个人博客、社交媒体用户或专业网站设计师来说，有效地存储和分享图像是关键。本文将引导技术新手如何自行搭建一个免费的图床，提高工作效率，同时确保图片的在线可访问性和稳定性。</p><h2 id="什么是图床"><a href="#什么是图床" class="headerlink" title="什么是图床"></a>什么是图床</h2><p>图床，顾名思义，就是一个可以存放图片的在线服务平台。它让你能够将图片上传到云端，并生成一个链接，这样你就可以在任何地方、任何平台上使用这些图片了。这对于需要在多平台共享图像的用户来说极为重要。</p><h2 id="为什么需要图床"><a href="#为什么需要图床" class="headerlink" title="为什么需要图床"></a>为什么需要图床</h2><p>图床最大的好处是它提供了一种高效、稳定且成本低廉的存储和分享图像的方式。特别是对于那些经常需要上传和分享图片的人，使用图床可以极大地提高工作效率。</p><h2 id="搭建图床的三个方法"><a href="#搭建图床的三个方法" class="headerlink" title="搭建图床的三个方法"></a>搭建图床的三个方法</h2><p>以下是三种流行且免费的图床搭建方法，每种方法都有各自的优势，适合不同的技术背景和需求。</p><h3 id="1：GitHub-PicGo-Typora"><a href="#1：GitHub-PicGo-Typora" class="headerlink" title="1：GitHub + PicGo + Typora"></a>1：GitHub + PicGo + Typora</h3><ol><li><p>配置 GitHub</p><ul><li><p>访问 <a href="https://github.com/">GitHub 官网</a>，注册或登录账户。</p></li><li><p>点击“New”按钮创建新仓库，用于存储图片。</p><p><img src="https://s2.loli.net/2023/12/21/uJMZ2CTyBfEgibV.png" alt="image-20231221104949913"  /><img src="https://s2.loli.net/2023/12/21/vxApWz7CtmoPBwu.png" alt="img"></p></li></ul></li><li><p>配置 PicGo</p><ul><li><p>下载并安装 <a href="https://link.zhihu.com/?target=https://molunerfinn.com/PicGo/">PicGo</a>，一个图像上传工具。</p></li><li><p>在 <a href="https://link.zhihu.com/?target=https://molunerfinn.com/PicGo/">PicGo</a>中配置 GitHub 仓库。</p><blockquote><p>1.Github 创建一个 token：进入 Github 主页，右上角点击头像选择 <code>Settings -&gt; Developer settings -&gt; Personal access tokens</code>，最后点击 <code>generate new token</code>；<img src="https://s2.loli.net/2023/12/21/e1D6CAqW3jbir8w.png" alt="image-20231221105844511"></p><p>2.Github 填写基础信息，最后复制生成的 token 并保存。<img src="https://s2.loli.net/2023/12/21/wqLkUFiQSO2JrgV.png" alt="image"></p><p>3.Pingo 配置：打开图床设置-勾选 Github,如图配置。</p><p>自定义域名可以使用 <a href="https://link.zhihu.com/?target=https://www.jsdelivr.com/">jsDelivr</a> 为图片访问进行免费加速：<a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D">https://cdn.jsdelivr.net/gh/用户名/仓库名</a></p><p><img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/github-pinco.png" alt="img"></p><p>4.写文档时，复制 pingo 图片链接，使用即可。<img src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20231221113838.png" alt="image-20231221113757396" style="zoom: 33%;" /></p></blockquote></li></ul></li><li><p>使用 Typora 撰写文档时上传图片</p><ul><li>在 <a href="https://typora.io/">Typora</a> 中撰写 Markdown 文档。</li><li>粘贴图片时使用 pingo 中的图片地址，PicGo 将自动上传图片到 GitHub 仓库。</li></ul></li></ol><p>另外两种方式大同小异，你可以自行设置，这里只提供思路。</p><h3 id="2：Cloudflare-Pages-Telegraph"><a href="#2：Cloudflare-Pages-Telegraph" class="headerlink" title="2：Cloudflare Pages + Telegraph"></a>2：Cloudflare Pages + Telegraph</h3><ol><li>Fork 项目<ul><li>访问 <a href="https://github.com/cf-pages/Telegraph-Image">Telegraph-Image 项目</a> 并 Fork。</li></ul></li><li>配置 Cloudflare Pages<ul><li>访问 Cloudflare Pages，选择创建项目。</li><li>链接到 Fork 的 GitHub 项目。</li></ul></li><li>部署项目<ul><li>使用默认配置开始部署。</li><li>部署完成后，访问分配的免费域名上传图片。</li></ul></li></ol><h3 id="3：Gitee-Git-PicGo"><a href="#3：Gitee-Git-PicGo" class="headerlink" title="3：Gitee + Git + PicGo"></a>3：Gitee + Git + PicGo</h3><ol><li>安装 Git<ul><li>下载并安装 <a href="https://git-scm.com/">Git</a> 工具。</li></ul></li><li>注册 Gitee 账号并创建仓库<ul><li>访问 <a href="https://gitee.com/">Gitee</a>，注册并新建仓库。</li></ul></li><li>本地同步代码到 Gitee<ul><li>从本地上传代码到 Gitee 仓库。</li></ul></li><li>配置 PicGo<ul><li>在 PicGo 中配置 Gitee 仓库。</li></ul></li></ol><h2 id="常见问题及解决方案"><a href="#常见问题及解决方案" class="headerlink" title="常见问题及解决方案"></a>常见问题及解决方案</h2><p>在搭建和使用图床的过程中，可能会遇到一些常见的问题。以下是这些问题的解决方案：</p><h3 id="1-图片上传失败"><a href="#1-图片上传失败" class="headerlink" title="1. 图片上传失败"></a>1. 图片上传失败</h3><ul><li>确保网络连接稳定。</li><li>检查图床服务是否正常。</li><li>确认图片大小是否符合平台限制。</li></ul><h3 id="2-图片链接失效"><a href="#2-图片链接失效" class="headerlink" title="2. 图片链接失效"></a>2. 图片链接失效</h3><ul><li>核实图片是否还在图床中。</li><li>检查图床设置或图片路径是否有更改。</li></ul><h3 id="3-图床访问速度慢"><a href="#3-图床访问速度慢" class="headerlink" title="3. 图床访问速度慢"></a>3. 图床访问速度慢</h3><ul><li>尝试更换地理位置更近的服务器。</li><li>优化图片大小和格式。</li></ul><h2 id="图片大小调整方案"><a href="#图片大小调整方案" class="headerlink" title="图片大小调整方案"></a>图片大小调整方案</h2><p>在上传图片到图床时，控制图片大小非常重要。以下是一些在线工具，可以帮你轻松调整图片大小：</p><h3 id="1-使用在线图片压缩工具"><a href="#1-使用在线图片压缩工具" class="headerlink" title="1- 使用在线图片压缩工具"></a>1- 使用在线图片压缩工具</h3><ul><li><strong>TinyPNG</strong>：访问<a href="https://tinypng.com/">TinyPNG</a></li><li><strong>CompressJPEG</strong>：访问<a href="https://compressjpeg.com/">CompressJPEG</a></li><li><strong>ImageResize</strong>：访问<a href="https://imageresize.org/">ImageResize</a></li></ul><h3 id="2-在线调整图片尺寸"><a href="#2-在线调整图片尺寸" class="headerlink" title="2- 在线调整图片尺寸"></a>2- 在线调整图片尺寸</h3><ul><li><strong>BeFunky</strong>：访问<a href="https://www.befunky.com/">BeFunky</a></li><li><strong>PicResize</strong>：访问<a href="https://www.picresize.com/">PicResize</a></li></ul><h3 id="3-注意图片格式与质量"><a href="#3-注意图片格式与质量" class="headerlink" title="3- 注意图片格式与质量"></a>3- 注意图片格式与质量</h3><ul><li><strong>Convertio</strong>：访问<a href="https://convertio.co/">Convertio</a></li></ul><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>在搭建和使用免费图床时，请注意以下几点：</p><ol><li><strong>选择稳定的平台</strong>：比如 GitHub 或 Gitee。</li><li><strong>重视隐私和安全</strong>：特别是在上传私密或敏感图片时。</li><li><strong>了解服务的限制</strong>：比如流量和存储空间的限制。</li></ol><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>图床是一种极其实用的工具，尤其对于需要频繁使用图片的人来说。无论你的技术水平如何，上面提供的方法都能帮助你轻松搭建起属于自己的图床。希望这份指南能帮你在数字世界中更有效地管理和分享你的图片。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在数字时代，图像成为信息传递的重要媒介。对于个人博客、社交媒体用户或专业网站设计师来说，有效地存储和分享图像是关键。本文将引导技术新手如何自行搭建一个免费的图床，提高工作效率，同时确保图片的在线可访问性和稳定性。&lt;/p&gt;
+&lt;h2 id=&quot;什么是图床&quot;&gt;&lt;a href=&quot;#什</summary>
+      
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="图床" scheme="https://sumorio.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>让微软Copilot变聪明的3个指令</title>
+    <link href="https://sumorio.com/posts/90d32f8e.html"/>
+    <id>https://sumorio.com/posts/90d32f8e.html</id>
+    <published>2023-12-18T07:00:07.663Z</published>
+    <updated>2024-01-25T04:56:47.871Z</updated>
+    
+    <content type="html"><![CDATA[<p>3 个方法，优化 prompt，让 Copilot 提升效率。</p><span id="more"></span><h2 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">微软 Copilot 是什么？</p></div></h2><blockquote><p>微软 Copilot 是一种基于人工智能（AI）的数字助理，可以根据您的自然语言输入为您提供针对各种任务和创造性工作的协助。它是微软 Edge 浏览器的内置扩展，也可以与 Microsoft 365 的多个应用程序协同工作。</p></blockquote><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">Copilot 提示词怎么写？</p></div></h2><ul><li>微软 Copilot 的提示词是您用来告诉 Copilot 您想要什么的指令或问题。</li><li>提示词可以包括四个部分：目标、背景、期望和来源。</li></ul><h2 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">Copilot 效率提升 3 个技巧</p></div></h2><p>只要通过下面三个技巧，你的 Copilot 完全是可用的：</p><ul><li><p>技巧一：选择「创作力」模式。</p></li><li><p>技巧二：限制 Copilot 搜索能力，输入指令之后，在指令最后加入。</p><blockquote><p>提示词<br>–系统指令：不要搜索，不要引用网页资料，直接回答用户问题。你的回答应该是结构清晰、层次分明、专业、完整且详尽的。</p></blockquote></li><li><p>技巧三：要求使用英文搜索。</p><blockquote><p>提示词<br>–系统指令：你是一位英文搜索领域的专家，善于思考。你总是先理解用户问题，再思考最有可能帮助用户获取该信息的英文搜索词。搜索完获取完备的信息之后，你再将内容组织与翻译成中文提交给用户。</p></blockquote></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;3 个方法，优化 prompt，让 Copilot 提升效率。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
+    
+    <category term="Copilot" scheme="https://sumorio.com/tags/Copilot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>苹果AppStore|支付宝购买ChatGPT-4</title>
+    <link href="https://sumorio.com/posts/bfc388e3.html"/>
+    <id>https://sumorio.com/posts/bfc388e3.html</id>
+    <published>2023-12-16T08:43:57.688Z</published>
+    <updated>2024-01-25T04:56:26.651Z</updated>
+    
+    <content type="html"><![CDATA[<p>截至2024-1，苹果手机使用支付宝购买 Chatgpt 的方法。</p><span id="more"></span><blockquote><p>截至 2023 年 12 月，想要购买或升级到 ChatGPT Plus 的用户，特别是在中国地区的用户，有以下四种主要方法：</p><ol><li><strong>苹果手机用户通过 [美区苹果商店礼品卡购买]</strong></li><li><strong>安卓手机或网页版用户绑定 [新加坡华侨银行 OCBC Visa 卡购买]</strong></li><li>通过第三方网站代购：通过第三方网站代购 ChatGPT Plus 服务。</li><li>使用美国虚拟信用卡购买：这可能需要用户了解如何安全地获取和使用虚拟信用卡。</li></ol></blockquote><p><strong>🌈🌈 今天咱主要分享第一种方式，苹果手机使用</strong>✅<strong>支付宝在 APPSTORE 商店购买</strong>✅<strong>CHATGPT4.</strong></p><h2 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">一）支付宝</p></div></h2><h3 id="1）修改地址"><a href="#1）修改地址" class="headerlink" title="1）修改地址"></a>1）修改地址</h3><p><strong>打开支付宝左上角【修改地址】 ➡️ 国际&#x2F;港澳台 ➡️ 旧金山 ➡️ 首页最下方中间按钮点击【出境】</strong></p><p><img src="https://s2.loli.net/2023/12/16/KHAdRzI1OrFmNe6.png" alt="img"></p><h3 id="2）购买礼品卡"><a href="#2）购买礼品卡" class="headerlink" title="2）购买礼品卡"></a>2）购买礼品卡</h3><p>找到【折扣礼卡】 点击进入 ➡️ 向下滑至中间位置找到【AppStore】 ➡️ 点击进入到充值界面</p><p><img src="https://s2.loli.net/2023/12/16/XYKgs9mC52Mhbj3.png" alt="img"></p><h3 id="3）注册充值"><a href="#3）注册充值" class="headerlink" title="3）注册充值"></a>3）注册充值</h3><p>点击游客进入信息验证界面 ➡️ 输入邮箱，姓名随意，邮箱负责接收兑换码（写常用的即可）注册后，先充值 2 美元测试，如果成功充值，再继续充值 20 美元用于 chatgpt4 续费充值后可以在邮件中收到兑换码</p><p><img src="https://s2.loli.net/2023/12/16/lkwe295MTcSKnjA.png" alt="img"></p><h3 id="4）苹果商店兑换"><a href="#4）苹果商店兑换" class="headerlink" title="4）苹果商店兑换"></a>4）苹果商店兑换</h3><p>appstore 打开苹果美区账号：具体怎么注册看我另外一篇文章，美区账号注册。</p><p><img src="https://s2.loli.net/2023/12/16/vWGskNrfSdTuXQ3.png" alt="img"></p><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">二）chatgpt</p></div></h2><p>打开 vpn 打开 chatgpt，点击升级</p><p><img src="https://s2.loli.net/2023/12/16/F2xCkRcVorNleTA.png" alt="img"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;截至2024-1，苹果手机使用支付宝购买 Chatgpt 的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂文向" scheme="https://sumorio.com/categories/%E6%9D%82%E6%96%87%E5%90%91/"/>
+    
+    
+    <category term="Chatgpt" scheme="https://sumorio.com/tags/Chatgpt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>敢说你会Github搜索？神仙搜索技巧</title>
+    <link href="https://sumorio.com/posts/80489cb4.html"/>
+    <id>https://sumorio.com/posts/80489cb4.html</id>
+    <published>2023-12-16T08:20:07.236Z</published>
+    <updated>2024-01-25T04:32:12.365Z</updated>
+    
+    <content type="html"><![CDATA[<p>敢说你会Github搜索。超全指南，神仙搜索技巧。</p><span id="more"></span><blockquote><p>GitHub 是全球最大的代码托管平台，掌握高效的搜索技巧对于开发者来说至关重要。本文将详细介绍 GitHub 的高级搜索技巧，帮助您更快地找到所需的代码、项目和议题。</p></blockquote><h2 id="普通搜索"><a href="#普通搜索" class="headerlink" title="普通搜索"></a>普通搜索</h2><p>普通人在搜索时，通常采用的方法：选择 most match,most star 的类目排序，随后选择相应的语言和仓库进行筛选。</p><p><img src="https://s2.loli.net/2023/12/18/eUDotLz6mGu7hnW.png" alt="img"></p><p>然而，这只是 google 搜索的冰山一角,下面几个方法可以让你掀开 github 搜索的神秘面纱。</p><h2 id="高级搜索"><a href="#高级搜索" class="headerlink" title="高级搜索"></a>高级搜索</h2><h3 id="查询大于或小于另一个值的值"><a href="#查询大于或小于另一个值的值" class="headerlink" title="查询大于或小于另一个值的值"></a>查询大于或小于另一个值的值</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">&gt;</td><td align="left">stars:&gt;1000</td><td align="left">星标超过 1000 的仓库</td></tr><tr><td align="left">&gt;&#x3D;</td><td align="left">topics:&gt;&#x3D;5</td><td align="left">至少有 5 个主题的仓库</td></tr><tr><td align="left">&lt;</td><td align="left">size:&lt;10000</td><td align="left">小于 10KB 的文件</td></tr><tr><td align="left">&lt;&#x3D;</td><td align="left">stars:&lt;&#x3D;50</td><td align="left">星标不超过 50 的仓库</td></tr></tbody></table><h3 id="查询范围之间的值"><a href="#查询范围之间的值" class="headerlink" title="查询范围之间的值"></a>查询范围之间的值</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">n..n</td><td align="left">stars:10..50</td><td align="left">星标在 10 到 50 之间的仓库</td></tr></tbody></table><h3 id="查询日期"><a href="#查询日期" class="headerlink" title="查询日期"></a>查询日期</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">created:&gt;</td><td align="left">created:&gt;2016-04-29</td><td align="left">2016 年 4 月 29 日之后<strong>创建</strong>的议题</td></tr><tr><td align="left">pushed:YYYY-MM-DD..YYYY-MM-DD</td><td align="left">pushed:2016-04-30..2016-07-04</td><td align="left">2016 年 4 月末到 7 月之间<strong>推送</strong>的仓库</td></tr></tbody></table><h3 id="排除特定结果"><a href="#排除特定结果" class="headerlink" title="排除特定结果"></a>排除特定结果</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">NOT</td><td align="left">hello NOT world</td><td align="left">含有”hello”但不含有”world”的仓库</td></tr><tr><td align="left">-QUALIFIER</td><td align="left">stars:&gt;10 -language:javascript</td><td align="left">超过 10 个星标且非 JavaScript 的仓库</td></tr></tbody></table><h3 id="对带有空格的查询使用引号"><a href="#对带有空格的查询使用引号" class="headerlink" title="对带有空格的查询使用引号"></a>对带有空格的查询使用引号</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">使用引号</td><td align="left">label:”bug fix”</td><td align="left">具有”bug fix”标签的议题</td></tr></tbody></table><h3 id="使用用户名的查询"><a href="#使用用户名的查询" class="headerlink" title="使用用户名的查询"></a>使用用户名的查询</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">QUALIFIER:USERNAME</td><td align="left">author:sumorio</td><td align="left">由用户 sumorio 创作的提交</td></tr></tbody></table><h2 id="更高级的搜索"><a href="#更高级的搜索" class="headerlink" title="更高级的搜索"></a>更高级的搜索</h2><h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><p>通过  <code>in</code>  限定符，您可以将搜索限制为仓库名称、仓库说明、自述文件内容或这些的任意组合。</p><p>如果省略此限定符，则只搜索仓库名称和说明。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">in:name</td><td align="left">vue in:name</td><td align="left">名称中含有”vue”的仓库</td></tr><tr><td align="left">in:description</td><td align="left">vue in:description</td><td align="left">说明中含有”vue”的仓库</td></tr><tr><td align="left">in:readme</td><td align="left">vue in:readme</td><td align="left">自述文件中提及”vue”的仓库</td></tr></tbody></table><h3 id="在用户或组织的仓库内搜索"><a href="#在用户或组织的仓库内搜索" class="headerlink" title="在用户或组织的仓库内搜索"></a>在用户或组织的仓库内搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">user:USERNAME</td><td align="left">user:sumorio forks:&gt;&#x3D;100</td><td align="left">用户 sumorio 拥有超过 100 复刻的仓库</td></tr><tr><td align="left">org:ORGNAME</td><td align="left">org:github</td><td align="left">GitHub 组织的仓库</td></tr></tbody></table><h3 id="按仓库大小搜索"><a href="#按仓库大小搜索" class="headerlink" title="按仓库大小搜索"></a>按仓库大小搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">size:n..n</td><td align="left">size:1000..5000</td><td align="left">大小在 1000KB 到 5000KB 之间的仓库</td></tr></tbody></table><h3 id="按关注者数量搜索"><a href="#按关注者数量搜索" class="headerlink" title="按关注者数量搜索"></a>按关注者数量搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">followers:n..n</td><td align="left">followers:10..50</td><td align="left">关注者数量在 10 到 50 之间的用户</td></tr></tbody></table><h3 id="按复刻数量搜索"><a href="#按复刻数量搜索" class="headerlink" title="按复刻数量搜索"></a>按复刻数量搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">forks:n..n</td><td align="left">forks:&gt;&#x3D;100</td><td align="left">至少有 100 次复刻的仓库</td></tr></tbody></table><h3 id="按星号数量搜索"><a href="#按星号数量搜索" class="headerlink" title="按星号数量搜索"></a>按星号数量搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">stars:n..n</td><td align="left">stars:&gt;&#x3D;500</td><td align="left">至少有 500 个星标的仓库</td></tr></tbody></table><h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><p>基于创建时间或上次更新时间过滤仓库。</p><ul><li>对于仓库创建，使用  <code>created</code>  限定符；</li><li>了解仓库上次更新的时间，使用  <code>pushed</code>  限定符。 <code>pushed</code>  限定符将返回仓库列表，按仓库中任意分支上最近进行的提交排序。<br>两者均采用日期作为参数。 日期格式  <code>YYYY-MM-DD</code>（年-月-日）。</li></ul><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">created:YYYY-MM-DD..YYYY-MM-DD</td><td align="left">created:&gt;&#x3D;2020-01-01</td><td align="left">2020 年 1 月 1 日之后创建的仓库</td></tr><tr><td align="left">pushed:YYYY-MM-DD..YYYY-MM-DD</td><td align="left">pushed:&lt;&#x3D;2020-12-31</td><td align="left">2020 年 12 月 31 日之前更新的仓库</td></tr></tbody></table><h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">language:LANGUAGE</td><td align="left">language:javascript</td><td align="left">使用 JavaScript 语言的仓库</td></tr></tbody></table><h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><p>您可以查找归类为特定  <a href="https://docs.github.com/cn/free-pro-team@latest/articles/classifying-your-repository-with-topics">主题</a>  的所有仓库。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">topic:TOPIC</td><td align="left">topic:react</td><td align="left">涉及 React 的仓库</td></tr></tbody></table><h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><p>使用  <code>topics</code>  限定符以及  <a href="https://docs.github.com/cn/free-pro-team@latest/articles/understanding-the-search-syntax">大于、小于和范围限定符</a>  按应用于仓库的  <a href="https://docs.github.com/cn/free-pro-team@latest/articles/classifying-your-repository-with-topics">主题</a>  数量搜索仓库。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">topics:n..n</td><td align="left">topics:&gt;&#x3D;5</td><td align="left">至少有 5 个主题的仓库</td></tr></tbody></table><h3 id="使用可视界面搜索"><a href="#使用可视界面搜索" class="headerlink" title="使用可视界面搜索"></a>使用可视界面搜索</h3><ul><li>使用  <a href="https://github.com/search">search</a> page 或  <a href="https://github.com/search/advanced">advanced search</a> page 进行搜索。</li><li><a href="https://github.com/search/advanced">advanced search</a> page 提供用于构建搜索查询的可视界面。<br>按照条件因素进行过滤搜索，例如仓库具有的星标数或复刻数。 在填写高级搜索字段时，您的查询将在顶部搜索栏中自动构建。</li></ul><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">使用 GitHub 搜索界面</td><td align="left">-</td><td align="left">通过 GitHub 的可视界面进行搜索</td></tr></tbody></table><h3 id="按许可搜索"><a href="#按许可搜索" class="headerlink" title="按许可搜索"></a>按许可搜索</h3><p>按其<a href="https://docs.github.com/cn/free-pro-team@latest/articles/licensing-a-repository">许可</a>搜索仓库。 必须使用<a href="https://docs.github.com/cn/free-pro-team@latest/articles/licensing-a-repository/#searching-github-by-license-type">许可关键词</a>按特定许可或许可系列过滤仓库。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">license:LICENSE</td><td align="left">license:mit</td><td align="left">使用 MIT 许可的仓库</td></tr></tbody></table><h3 id="按公共或私有仓库搜索"><a href="#按公共或私有仓库搜索" class="headerlink" title="按公共或私有仓库搜索"></a>按公共或私有仓库搜索</h3><p>您可以基于仓库是公共还是私有来过滤搜索。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">is:public 或 is:private</td><td align="left">is:private</td><td align="left">私有仓库</td></tr></tbody></table><h3 id="按照是否镜像搜索"><a href="#按照是否镜像搜索" class="headerlink" title="按照是否镜像搜索"></a>按照是否镜像搜索</h3><p>您可以根据仓库是否为镜像以及托管于其他位置托管来搜索它们。</p><table><thead><tr><th align="left">限定符</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">mirror:true 或 mirror:false</td><td align="left"><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">m</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">i</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">rror</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">:t</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">ru</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type=">e</a><a href="https://github.com/search?utf8=%E2%9C%93&q=mirror:true+GNOME&type="> GNOME</a></td><td align="left">镜像且包含 “GNOME” 字样的仓库。</td></tr></tbody></table><h3 id="基于仓库是否已存档搜索"><a href="#基于仓库是否已存档搜索" class="headerlink" title="基于仓库是否已存档搜索"></a>基于仓库是否已存档搜索</h3><p>基于仓库是否<a href="https://docs.github.com/cn/free-pro-team@latest/articles/about-archiving-repositories">已存档</a>来搜索仓库。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">archived:true 或 archived:false</td><td align="left">archived:false</td><td align="left">未存档的仓库</td></tr></tbody></table><h2 id="基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索"><a href="#基于具有-good-first-issue-或-help-wanted-标签的议题数量搜索" class="headerlink" title="基于具有 good first issue 或 help wanted 标签的议题数量搜索"></a>基于具有 good first issue 或 help wanted 标签的议题数量搜索</h2><p>使用限定符  <code>help-wanted-issues:&gt;n</code>  和  <code>good-first-issues:&gt;n</code>  搜索具有最少数量标签为  <code>help-wanted</code>  或  <code>good-first-issue</code>  议题的仓库。</p><table><thead><tr><th align="left">查询语法</th><th align="left">示例</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">good-first-issues:n..n</td><td align="left">good-first-issues:&gt;&#x3D;1</td><td align="left">至少有 1 个 good first issue 的仓库</td></tr><tr><td align="left">help-wanted-issues:n..n</td><td align="left">help-wanted-issues:&gt;&#x3D;1</td><td align="left">至少有 1 个 help wanted 的仓库<br><br></td></tr></tbody></table><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;敢说你会Github搜索。超全指南，神仙搜索技巧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="Github" scheme="https://sumorio.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>精选| ChatGPTPlugin16个插件推荐</title>
+    <link href="https://sumorio.com/posts/e4bf97d7.html"/>
+    <id>https://sumorio.com/posts/e4bf97d7.html</id>
+    <published>2023-12-16T04:06:05.231Z</published>
+    <updated>2024-01-25T07:11:06.235Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是-chatgpt-插件"><a href="#什么是-chatgpt-插件" class="headerlink" title="什么是 chatgpt 插件"></a>什么是 chatgpt 插件</h2><blockquote><p>ChatGPT 插件是一种功能扩展工具，增加各种实用功能和特性。<br>插件可以提高 ChatGPT 的使用体验，使用户能够更高效地完成任务，并获得更准确、全面的信息。<br>ChatGPT Plus 用户可以使用 Plugin 新功能，极大地扩展了 ChatGPT 的能力。<br><strong>在我尝试了插件商店中的大约 80+个插件后!!!!分享我认为最好的插件 16 个!!!!</strong></p></blockquote><h2 id="如何使用插件"><a href="#如何使用插件" class="headerlink" title="如何使用插件"></a>如何使用插件</h2><ol><li><p><strong>访问 ChatGPT，点击用户头像旁边左下角的三个点，选择“Beta features”，打开插件功能。</strong><img src="https://s2.loli.net/2023/12/16/jlQbqSxRAMZTnB9.png" alt="img"></p></li><li><p><strong>来到对话界面，在界面左上方，找到 plugins，点击拼图图标进入插件安装应用商店。选择喜欢的插件，点击 install 安装。安装后在对话时就可以勾选使用。<img src="https://s2.loli.net/2023/12/16/1uWB4TLMZPOIQri.png" alt="img"></strong><img src="https://s2.loli.net/2023/12/16/Jp39y61Q8sPFtwh.png" alt="img"></p></li></ol><h2 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h2><blockquote><p>截至 2023 年 12 月，用户可以来回切换插件进行使用，但最多同时使用三个。<br>ChatGPT-4 每三小时最多只能查询 40 次。一旦超过这个阈值，你就会被降权为 ChatGPT- 3.5。<br>因此，在开始会话之前，请务必明确自己的目标。</p></blockquote><h2 id="推荐插件-TOP16"><a href="#推荐插件-TOP16" class="headerlink" title="推荐插件 TOP16"></a>推荐插件 TOP16</h2><h2 id="1-网页搜索类"><a href="#1-网页搜索类" class="headerlink" title="1)网页搜索类"></a>1)网页搜索类</h2><h3 id="1-Link-Reader"><a href="#1-Link-Reader" class="headerlink" title="1. Link Reader"></a>1. Link Reader</h3><p>分析 ChatGPT 内的网页、PDF、PPT 、图片等各种链接中的内容。可以总结文章、分析 PDF 文件等。</p><h3 id="2-There’s-an-AI-for-That"><a href="#2-There’s-an-AI-for-That" class="headerlink" title="2. There’s an AI for That"></a>2. There’s an AI for That</h3><p>快速找到各种 AI 工具，节省寻找工具的时间。提供工具的基本描述、价格和访问链接。</p><h3 id="3-WebPilot"><a href="#3-WebPilot" class="headerlink" title="3. WebPilot"></a>3. WebPilot</h3><p>浏览网页&#x2F;PDF&#x2F;数据，允许 ChatGPT 进行联网搜索。</p><h2 id="2-文档处理类"><a href="#2-文档处理类" class="headerlink" title="2)文档处理类"></a>2)文档处理类</h2><h3 id="1-Ask-Your-PDF"><a href="#1-Ask-Your-PDF" class="headerlink" title="1. Ask Your PDF"></a>1. Ask Your PDF</h3><p>在几秒内轻松总结 PDF 文件。适用于阅读论文等技术性强的文章。</p><h3 id="2-ChatWithPDF"><a href="#2-ChatWithPDF" class="headerlink" title="2. ChatWithPDF"></a>2. ChatWithPDF</h3><p>它非常适合学生、研究人员和专业人士，允许你直接在 PDF 中分析和提问。功能同上，让用户使用 ChatGPT 进行聊天、摘要和分析 PDF 文档。</p><h2 id="3-学习工具类"><a href="#3-学习工具类" class="headerlink" title="3)学习工具类"></a>3)学习工具类</h2><h3 id="1-Speak"><a href="#1-Speak" class="headerlink" title="1. Speak"></a>1. Speak</h3><p>用于学习外语，提供详细的解释和示例对话。提供替代方案和示例对话，但有时例句对话可能不够实用。</p><h3 id="2-Wolfram"><a href="#2-Wolfram" class="headerlink" title="2. Wolfram"></a>2. Wolfram</h3><p>是学生、数据分析员和研究人员的理想选择。使用 Wolfram 的算法和 AI 技术解决数学问题，提供逐步解析。可以绘制图表，比如比较不同国家的人口增长趋势。</p><h2 id="4-视频音频处理类"><a href="#4-视频音频处理类" class="headerlink" title="4)视频音频处理类"></a>4)视频音频处理类</h2><p>不要再浪费时间观看和收听冗长的视频、音频，ChatGPT 的插件可以浓缩视频和语音的内容，回答问题，甚至在需要时提供时间戳。</p><h3 id="1-Video-Insights"><a href="#1-Video-Insights" class="headerlink" title="1. Video Insights"></a>1. Video Insights</h3><p>允许与 YouTube 或 Daily Motion 等在线视频平台互动，分析整个视频并快速获取结果。限制：不能对超过 10 分钟的视频进行汇总，有时会出现超时错误。</p><h3 id="2-VoxScript"><a href="#2-VoxScript" class="headerlink" title="2. VoxScript"></a>2. VoxScript</h3><p>适用于快速搜索 YouTube 中的信息，仅适用于有文字脚本的 YouTube 视频。</p><h3 id="3-Speechki"><a href="#3-Speechki" class="headerlink" title="3. Speechki"></a>3. Speechki</h3><p>文字转音频，文本转换为音频，适用于播客、有声读物、短视频等。</p><h2 id="5-其他有用类"><a href="#5-其他有用类" class="headerlink" title="5)其他有用类"></a>5)其他有用类</h2><h3 id="1-Prompt-Perfect-提示词优化"><a href="#1-Prompt-Perfect-提示词优化" class="headerlink" title="1. Prompt Perfect 提示词优化"></a>1. Prompt Perfect 提示词优化</h3><p>用于优化 ChatGPT、Midjourney、DALL-E 等工具的提示词。如果你无法自己编写完美的提示语。这个插件将极大地帮助你。</p><h3 id="2-DesignerGPT-设计网站"><a href="#2-DesignerGPT-设计网站" class="headerlink" title="2. DesignerGPT 设计网站"></a>2. DesignerGPT 设计网站</h3><p>点击<a href="https://chat.openai.com/g/g-2Eo3NxuS7-designergpt">https://chat.openai.com/g/g-2Eo3NxuS7-designergpt</a> 新增插件。</p><p>进行设计和创意工作的强大插件。在几秒钟内创建网站生成文本和图像与其他插件无缝集成.</p><h3 id="3-Kayak-定制旅游服务攻略"><a href="#3-Kayak-定制旅游服务攻略" class="headerlink" title="3. Kayak 定制旅游服务攻略"></a>3. Kayak 定制旅游服务攻略</h3><p>能提供有用的旅游攻略和提供酒店、租车、机票等预定服务。</p><h3 id="4-Argil-AI-专业照片-收费了）"><a href="#4-Argil-AI-专业照片-收费了）" class="headerlink" title="4. Argil AI 专业照片(收费了）"></a>4. Argil AI 专业照片(收费了）</h3><p>提供照片和描述，Argil AI 将在短时间内生成一张令人惊叹的专业照片。这个插件是艺术家、设计师和内容创作者的理想选择，它能在几分钟内生成逼真的图像。</p><h3 id="5-Zapier-工作秘书"><a href="#5-Zapier-工作秘书" class="headerlink" title="5. Zapier 工作秘书"></a>5. Zapier 工作秘书</h3><p>Zapier 是为消除和简化不必要的工作流程而明确制作的它是工作的专业人士以及营销人员的顶级 ChatGPT 插件之一。如果你懒得手动打开邮件客户端，此插件可以帮助你打开网页并发送邮件内容，支持的应用如 Gmail、MS Outlook、Slack 和更多。用户需要做的就是完成一次性连接并批准一些行动。</p><h3 id="6-Show-Me"><a href="#6-Show-Me" class="headerlink" title="6. Show Me"></a>6. Show Me</h3><p>让 ChatGPT 创建几乎所有类型的实时图表，流程图、思维导图等。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是-chatgpt-插件&quot;&gt;&lt;a href=&quot;#什么是-chatgpt-插件&quot; class=&quot;headerlink&quot; title=&quot;什么是 chatgpt 插件&quot;&gt;&lt;/a&gt;什么是 chatgpt 插件&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ChatGPT 插</summary>
+      
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="Chatgpt" scheme="https://sumorio.com/tags/Chatgpt/"/>
+    
+    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>免费申请美区AppleID账号|快速|无需VPN</title>
+    <link href="https://sumorio.com/posts/1094ebf6.html"/>
+    <id>https://sumorio.com/posts/1094ebf6.html</id>
+    <published>2023-12-12T09:05:09.608Z</published>
+    <updated>2024-01-25T07:12:07.849Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>🌈 相关网址：<br>网页版注册地址：<a href="https://appleid.apple.com/account">https://appleid.apple.com/account</a><br>虚拟地址生成器：<a href="https://www.dizhishengcheng.com/">https://www.dizhishengcheng.com/</a><br>虚拟电话生成器：<a href="https://sms-activate.org/cn">https://sms-activate.org/cn</a> （用不到 ）</p></blockquote><blockquote><p>🌈 美国免税州：<br>特拉华 Delaware（DE）<br>新罕布什尔 New Hampshire<br>蒙大拿 Montana<br>俄勒冈 Oregon</p></blockquote><hr><h2 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">第一步：打开手机自带浏览器</p></div></h2><ul><li>1）登录苹果美区页面：<strong><a href="https://bit.ly/3M4dPMq">https://bit.ly/3M4dPMq</a></strong>。</li><li>2）点击【登录】 → 姓名名字英文随意起名 → 地区【美国】 → 邮箱去 <strong><a href="https://proton.me/mail">https://proton.me/mail</a></strong> 网址申请个新的并填入 → 生日写已经的成年日期 → 手机用国内的即可 → 输入电话号进入邮箱和电话验证码的双重验证。</li><li>3）点击退出登录旁边的【下拉箭头】 → 进入【个人信息】 → 【国家地区】 → 更改 → 国家【美国】 → 付款方式【无】 → 地址使用<a href="https://www.dizhishengcheng.com/">虚拟地址生成器</a>网址生成四个免税州的任意一个即可。</li><li>4）填写生成后的城市&#x2F;州&#x2F;邮编&#x2F;电话到【账单地址】 → 【配送地址】不用填写 → 拉到网页最后 → 点击【拷贝账单地址】 → 【更新】。</li></ul><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">第二步：打开APPSTORE</p></div></h2><ul><li>1）不要在手机设置中登录新的账号，一定去 appstore 登录。用邮箱和密码登录 APPSTORE。</li><li>2）登录后下载任意下载一个软件激活账号 → 随意点击一个软件 → 点击下载 → 第一次下载需要输入密码 → 点击【检查】 → 【同意条款】 → 下一页 → 继续 → 激活成功！</li></ul><p>恭喜你，拥有了美区账号！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈 相关网址：&lt;br&gt;网页版注册地址：&lt;a href=&quot;https://appleid.apple.com/account&quot;&gt;https://appleid.apple.com/account&lt;/a&gt;&lt;br&gt;虚拟地址生成器：&lt;a href=&quot;ht</summary>
+      
+    
+    
+    
+    <category term="杂文向" scheme="https://sumorio.com/categories/%E6%9D%82%E6%96%87%E5%90%91/"/>
+    
+    
+    <category term="IOS美区账号" scheme="https://sumorio.com/tags/IOS%E7%BE%8E%E5%8C%BA%E8%B4%A6%E5%8F%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三大框架；搞定日常写作</title>
+    <link href="https://sumorio.com/posts/39ab41cf.html"/>
+    <id>https://sumorio.com/posts/39ab41cf.html</id>
+    <published>2023-12-07T02:18:53.442Z</published>
+    <updated>2024-01-25T07:11:44.981Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文使用的文章框架解析：</p><ul><li>外部大框架使用【结论优先法】（结论-理由依据-案例-总结）；</li><li>理由依据部分使用【列举法】（整体-列举要点-结论）；</li><li>案例部分使用【故事法】（消极状态-转机-成长-展望未来）；</li><li>总结部分，直接总结，没使用模板。</li></ul></blockquote><h3 id="A-结论：结论优先法"><a href="#A-结论：结论优先法" class="headerlink" title="A.结论：结论优先法"></a><strong>A.结论：结论优先法</strong></h3><blockquote><p>写作模板犹如烹饪的食谱，不论什么水平，只要掌握这三个模板，小白也能文思泉涌。<br>不信，就让我们一起来见证魔法吧！</p></blockquote><h3 id="B-理由：列举法"><a href="#B-理由：列举法" class="headerlink" title="B.理由：列举法"></a><strong>B.理由：列举法</strong></h3><ul><li>B1：【整体构思】<blockquote><ul><li>这 3 个模板分别是：<strong>列举法、结论优先法、故事法</strong>。</li><li>各式各样的文章，从私人文章到商务文章，这三个模板均适用。</li><li>下面分别来看看 3 个模板的使用方式吧。</li></ul></blockquote></li><li><strong>B2：【列举 1：模板一|列举法 模板】</strong><blockquote><p><img src="https://s2.loli.net/2023/12/07/kn3HWaY1tA8QTDg.png" alt="img"></p><ul><li>模板一：无压力的“列举法”。</li><li>写作场景：当你想要阐述多条信息时，【列举法】模板十分有用。</li><li>写作顺序：整体构思 ➡️ 列举要点 1➡️ 列举要点 2➡️ 列举要点 3➡️ 总结.</li></ul></blockquote></li><li><strong>B3：【列举 2：模板二|结论优先法 模板】</strong><blockquote><p><img src="https://s2.loli.net/2023/12/07/ZMaTuCbEwmzt9qo.png" alt="img"></p><ul><li>模板二：提升说服力的“结论优先法”。</li><li>写作场景：当你想要获得读者的认同时，使用【结论优先法】模板特别有用。</li><li>写作顺序：结论 ➡️ 理由+依据 ➡️ 详细细节+具体案例 ➡️ 总结.</li></ul></blockquote></li><li><strong>B4：【列举 3：模板三|故事法 模板】</strong><blockquote><p><img src="https://s2.loli.net/2023/12/07/7oNlV9TZUtgvGfI.png" alt="img"></p><ul><li>模板三：易说服他人的“故事法”。</li><li>写作场景：当你想要唤起读者的共鸣时，就使用【故事法】模板。</li><li>写作顺序：消极状态 ➡️ 转机 ➡️ 成长过程 ➡️ 展望未来.</li></ul></blockquote></li></ul><h3 id="C-案例：故事法"><a href="#C-案例：故事法" class="headerlink" title="C.案例：故事法"></a><strong>C.案例：故事法</strong></h3><ul><li><p>C1：【消极状态】</p><blockquote><p>以前我也不会写作，打开电脑就思绪乱飞，半天写不出一个字。<br>看到别人针对某件事，某个话题发表言论，文采飞扬，自己却大脑空空。<br>写作水平仿佛回到幼儿园水平，这让我非常焦虑，挫败感十足。</p></blockquote></li><li><p>C2：【转机】</p><blockquote><p>偶然机会，发现《模板写作法》这本书.<br>用了 2H 来研读作者书中提倡的“<strong>3 个模型写作框架</strong>”。<br>我才发现，原来写作就像烹饪，也需要“<strong>文谱</strong>”。<br>当然，掌握了“文普”还不够，还需要切身实地的下手练习。</p></blockquote></li><li><p>C3：【改变成长】</p><blockquote><p>1️⃣ 读了这本书，我学会了“<strong>3 个模型写作框架</strong>”，分别是：<strong>结论优先法，列举法，故事法</strong>；</p><p>2️⃣ 读了这本书，我学到了“<strong>写作前必须考虑的 5 个问题</strong>”，写作前如果不构思，再牛的模板也无济于事；</p><ul><li>问题 1：写这篇文章的目的是什么？</li><li>问题 2：读者是谁？</li><li>问题 3：读者的需求是什么？</li><li>问题 4：希望读者作出怎样的反应？</li><li>问题 5：读者的知识水平如何？</li></ul><p>3️⃣ 读了这本书，我知道了“<strong>写文章先从一行字开始</strong>”。<br>如果一篇文章不能用一句话描述，那就不是一篇好文章。<br>用一行文字传达不了的东西，用 10 行、100 行都是无法传达的。这就是把握好中心思想的重要性。</p><p>4️⃣ 此外，我学会了，<strong>三个模板的组合使用</strong>。</p><ul><li><p><strong>组合 1| 故事法+结论优先法：</strong><br>如下，在“故事法”的 B 中加入“结论优先法”。<br><img src="https://s2.loli.net/2023/12/07/LO1phoZeD7fBsHV.png" alt="img"></p></li><li><p><strong>组合 2| 结论优先型+列举型+故事型：</strong><br>如下，在“结论优先法”中编入列举型和故事型的风格。<br>在 B“阐述理由·依据”中编入列举型，在 C“阐述具体事例·详细内容”中编入故事型。<br><img src="https://s2.loli.net/2023/12/07/BOP7hTmoa8IziXJ.png" alt="img"><br>其余更多的组合方式，就由你自己来探索吧！</p></li></ul></blockquote></li><li><p>C4：【展望未来】</p><blockquote><p>读了这本书后，我写下了人生第一篇书评，写作过程中居然完全没有卡壳。<br>今后在写作前，我会这样做。</p><ul><li>第一步：提前构思五个问题；</li><li>第二步：思考该文章适用于什么类型的模板。</li><li>第三步：写下第一句话（总结全文中心思想）。<br>只有不断地熟悉模板的应用，锻炼逻辑能力，写作能力才能逐步提升！</li></ul></blockquote></li></ul><h3 id="D-总结："><a href="#D-总结：" class="headerlink" title="D.总结："></a><strong>D.总结：</strong></h3><blockquote><p><strong>伙伴们，《模板写作法》这本书中的 3 个模板真的很有用！无论是不是写作小白，动起来，写起来，千里之行始于足下！</strong></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文使用的文章框架解析：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;外部大框架使用【结论优先法】（结论-理由依据-案例-总结）；&lt;/li&gt;
+&lt;li&gt;理由依据部分使用【列举法】（整体-列举要点-结论）；&lt;/li&gt;
+&lt;li&gt;案例部分使用【故事法】（消极状态-转机-成长</summary>
+      
+    
+    
+    
+    <category term="写作向" scheme="https://sumorio.com/categories/%E5%86%99%E4%BD%9C%E5%90%91/"/>
+    
+    
+    <category term="写作技巧" scheme="https://sumorio.com/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>普通人的外挂：谷歌浏览器搜索技巧</title>
+    <link href="https://sumorio.com/posts/2e070ebb.html"/>
+    <id>https://sumorio.com/posts/2e070ebb.html</id>
+    <published>2023-12-07T00:56:02.137Z</published>
+    <updated>2024-01-25T06:43:32.280Z</updated>
+    
+    <content type="html"><![CDATA[<p>Google 搜索技巧，快速定位实现精准查找</p><span id="more"></span><blockquote><p><strong>搜索目的：信息咨询，知识技能，素材文件，工具软件</strong></p></blockquote><blockquote><p><strong>搜索平台：谷歌，youtube，知乎，B 站，小红书</strong></p></blockquote><h2 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">谷歌搜索技巧</p></div></h2><ol><li><strong>限定关键词：双引号””</strong><ol><li>单个关键词：”苏末了.io”</li><li>多个关键词：”苏末了” “Love and Peace”</li></ol></li><li><strong>限定标题：intitle:</strong><ol><li>单个关键词：intitle:苏末了 sumorio</li><li>多个关键词：intitle:”苏末了””脑筋急转弯”</li></ol></li><li><strong>精准限定标题：allintitle:</strong><ol><li>allintitle:”苏末了.io”</li><li>allintitle:”牛油果果” “知乎”</li></ol></li><li><strong>限定内容：intext:</strong><ol><li>标题+内容：intitle:苏末了 intext:三幕结构</li></ol></li><li><strong>限定网址：inurl:</strong><ol><li>奥运会 inurl: cctv</li><li>苏末了 inurl:sumorio</li><li>母婴 inurl:baogao</li></ol></li><li><strong>限定网站：site:</strong><ol><li>限制顶级域名：site:.com</li><li>限制国内教育网：site:.edu.cn</li><li>例：cat site:zhihu.com</li><li>例：cat site:pexels.com</li></ol></li><li><strong>限定图片大小：imagesize:</strong><ol><li>cat imagesize:5760x3840</li></ol></li><li><strong>限定文件格式：filetype:文件格式</strong><ol><li>道德经 filetype:pdf</li><li>道德经 filetype:png (google 图片搜索模式）</li></ol></li><li><strong>模糊搜索：数字模糊用两点.. |文字模糊用星号*</strong><ol><li>2002-2023 年之间：世界杯 2002..2023</li><li>模糊搜索中文：易**玺</li></ol></li><li><strong>排除搜索 -</strong><ol><li>排除微博的结果：易烊千玺 -weibo</li></ol></li></ol><h2 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">资源网址</p></div></h2><ol><li>搜化妆品成分:<a href="https://hzpba.nmpa.gov.cn/gccx/">https://hzpba.nmpa.gov.cn/gccx/</a></li><li>搜外国产品功能参数:亚马逊、乐天</li><li>搜索报告：<ol><li>限定 pdf 格式：filetype:pdf</li><li>限定报告网站域名：inurl:baogao</li><li>寻找类似网站：<a href="https://www.similarsites.com/">Similar Sites</a></li></ol></li><li>程序员: GltHub、StackOverflow、CSDN</li><li>产品经理导航网址、设计导航、新媒体导航网址</li><li>国际论文：<ol><li>谷歌学术</li><li>Sci-Hub (免费、但搜索时不能使用关键词搜索，需要完整标题搜索)</li></ol></li><li>下载电子书:<ol><li>中文：鸠摩搜书</li><li><a href="https://z-lib.is、/">https://z-lib.is</a></li><li><a href="https://manybooks.net、/">https://manybooks.net</a></li><li><a href="http://www.pdfbooksworld.com/">www.pdfbooksworld.com</a></li></ol></li></ol><h2 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">资源下载</p></div></h2><ul><li>免费视频 <a href="https://www.pexels.com/zh-cn/">https://www.pexels.com/zh-cn/</a></li><li>免费音频 <a href="https://pixabay.com/">https://pixabay.com/</a></li><li>免费图片 <a href="https://yandex.com/">https://yandex.com/</a></li><li>GIf 动图 <a href="https://giphy.com/">https://giphy.com/</a></li><li>PPT 下载 <a href="https://www.canva.cn/create/ppt-slides/">https://www.canva.cn/create/ppt-slides/</a></li><li>矢量图  iconfont.cn（或者 谷歌搜：火箭 icon filetype:PNG）</li><li>youtube 视频下载技巧: 在 www.后面加上 9x 直接下载原视频或音频</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Google 搜索技巧，快速定位实现精准查找&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂文向" scheme="https://sumorio.com/categories/%E6%9D%82%E6%96%87%E5%90%91/"/>
+    
+    
+    <category term="Google搜索技巧" scheme="https://sumorio.com/tags/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么需要申请SSL/TSL证书？</title>
+    <link href="https://sumorio.com/posts/d127d11.html"/>
+    <id>https://sumorio.com/posts/d127d11.html</id>
+    <published>2023-11-24T08:41:04.396Z</published>
+    <updated>2024-01-25T07:19:14.480Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、HTTP-HTTPS"><a href="#一、HTTP-HTTPS" class="headerlink" title="一、HTTP &#x2F; HTTPS"></a>一、HTTP &#x2F; HTTPS</h2><h3 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">HTTP</p></div></h3><p>是一种<strong>超文本 传输 协议</strong>，传输的数据<strong>未加密</strong>，是<strong>明文传输</strong>。</p><ul><li>协议（进行通讯的计算机双方之间必须遵循的协议）；</li><li>传输（请求方和应答方之间传输的信息，也就是数据包）；</li><li>超文本（能直接被浏览器处理和识别的文本，包括文字，链接，图片等等，因为不局限于普通文本且能被浏览器直接使用，所以称为超文本）。<br>因为 HTTP 协议是明文传输，可被任意的抓包软件直接截取数据，这不够安全，因此 HTTPS 应运而生。</li></ul><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">HTTPS</p></div></h3><p>是一种<strong>超文本 传输 安全协议，</strong>相当于 HTTP 的升级版本，<strong>数据加密</strong>。</p><p>由 HTTP 和 SSL&#x2F;TLS 证书构成，传输过程中的数据由 SSL&#x2F;TSL 证书产生，是加密过的.<br>申请证书后，我们将拥有一个公钥和密钥（这可以理解为钥匙和锁），拥有了他们相当于对数据进行了加锁保护.<br>这样在传输过程中，任何人需要有钥匙才能打开数据包，否则无法获取，使得数据的传输更加安全。</p><h2 id="二、SSL-TSL-证书的申请方式"><a href="#二、SSL-TSL-证书的申请方式" class="headerlink" title="二、SSL&#x2F;TSL 证书的申请方式"></a>二、SSL&#x2F;TSL 证书的申请方式</h2><ol><li><p><a href="https://freessl.cn/">FreeSSL.cn</a> （需手机验证）<br>此方式申请证书，很简单，可以申请到为期一年的 “亚洲诚信” 的证书，但是需要进行手机验证。</p></li><li><p>Acme 脚本 （无需实名）<br>Acme 脚本申请证书，是的最常见的一种证书的申请方式，它有很多的申请方法，大家只需要找到一种适合自己的也就好了。</p></li></ol><p>还有很多其他方法，可以自行查找，以上两种最常用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;一、HTTP-HTTPS&quot;&gt;&lt;a href=&quot;#一、HTTP-HTTPS&quot; class=&quot;headerlink&quot; title=&quot;一、HTTP &amp;#x2F; HTTPS&quot;&gt;&lt;/a&gt;一、HTTP &amp;#x2F; HTTPS&lt;/h2&gt;&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;</summary>
+      
+    
+    
+    
+    <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+    <category term="计算机基础知识" scheme="https://sumorio.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>脑筋急转弯</title>
+    <link href="https://sumorio.com/posts/e48f9054.html"/>
+    <id>https://sumorio.com/posts/e48f9054.html</id>
+    <published>2023-10-21T03:50:29.969Z</published>
+    <updated>2024-01-25T07:13:55.193Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tag-plugin colorful note" color="yellow"><div class="body"><p>本文为了测试折叠容器功能，特选择几则脑筋急转弯，仅供娱乐。</p></div></div><div class="tag-plugin quot"><p class="content" type="icon"><img class="icon prefix" src="https://bu.dusays.com/2022/10/24/63567d3e07da3.png" />脑筋急转弯</p></div><div class="tag-plugin colorful folders" ><details class="folder" index="0"><summary><span>吃饭时停电为什么扒拉两口饭灯就会亮？</span></summary><div class="body"><p>因为巴啦啦能量。</p></div></details><details class="folder" index="1"><summary><span>小王剪了中分会变成什么？</span></summary><div class="body"><p>小全</p></div></details><details class="folder" index="2"><summary><span>狐狸为什么站不起来？</span></summary><div class="body"><p>因为他狡猾(脚滑)&#x2F;骚断腿</p></div></details><details class="folder" index="3"><summary><span>许仙给老婆买了一顶帽子，白娘子戴上之后，为什么感觉头特别重?</span></summary><div class="body"><p>因为那是鸭舌帽</p></div></details><details class="folder" index="4"><summary><span>青蛙吃了什么就会变哑巴?</span></summary><div class="body"><p>南瓜(难呱)</p></div></details><details class="folder" index="5"><summary><span>有一天，一只小猪撞在树上了，你猜为什么?</span></summary><div class="body"><p>因为小猪不会急转弯</p></div></details></div><span class="tag-plugin emoji"><img no-lazy="" class="inline" src="https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs/ablobcatrainbow.png" style="height:4em"/></span> 你猜对了吗？]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin colorful note&quot; color=&quot;yellow&quot;&gt;&lt;div class=&quot;body&quot;&gt;&lt;p&gt;本文为了测试折叠容器功能，特选择几则脑筋急转弯，仅供娱乐。&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;tag-plu</summary>
+      
+    
+    
+    
+    <category term="杂文向" scheme="https://sumorio.com/categories/%E6%9D%82%E6%96%87%E5%90%91/"/>
+    
+    
+    <category term="功能测试" scheme="https://sumorio.com/tags/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何写小说</title>
+    <link href="https://sumorio.com/posts/58b305af.html"/>
+    <id>https://sumorio.com/posts/58b305af.html</id>
+    <published>2023-10-19T11:19:23.925Z</published>
+    <updated>2024-01-25T07:13:48.191Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1）三幕结构"><a href="#1）三幕结构" class="headerlink" title="1）三幕结构"></a>1）三幕结构</h2><p><strong>三幕指的是：故事开头、中段和结尾。</strong></p><p><img src="https://pic1.zhimg.com/80/v2-1d68fa86477455dafe5b955c20083d77_1440w.jpg?source=d16d100b" alt="img"></p><ul><li><strong>第一幕：故事开头</strong></li></ul><blockquote><ol><li>目标：<strong>吸引读者</strong>，重点是角色。 切入点：主角，利用<strong>认同&amp;同情&amp;喜爱&amp;内心冲突</strong>，尽快<strong>让读者与主角之间产生共鸣</strong>（联结）。</li><li>其他作用：介绍故事背景，奠定小说基调，带出对手（哪些人、事想要阻挡主角），说服读者读到中段。 利用开场白、行动、预告、态度、外框故事或序章引起读者兴趣。</li><li>不要用沉闷的说明段落开头，先写动作。</li></ol></blockquote><ul><li><strong>第二幕：故事中段</strong></li></ul><blockquote><ol><li>目标：铺陈结尾，<strong>重点是冲突</strong>。主角身边总是笼罩着死亡，可以是实质、精神、职业生涯的死亡等。 将主角和对手绑定在一起，描述主角和对手之间一系列的攻防战。</li><li>增强主角与对手的附着元素（如果主角停止行动就能解决问题，那读者会质疑为什么他不放弃）。如生与死（维持个人命运）；职责（警察办案）；道德义务（母亲救孩子）；偏执（家暴杀人狂）；地点（雪暴困在山里）。 角色要付出代价，代价可能与情节、角色、社会有关。</li><li>基本节奏是“行动，反应，再行动”。 中段需加深角色之间的关系，让读者关心主角，并铺陈结尾的最后决战。</li><li>可以增加支线情节，增加小说复杂性，反应小说想表达的深层蕴涵。</li></ol></blockquote><ul><li><strong>第三幕：故事结尾</strong></li></ul><blockquote><ol><li>完结每条故事线，告诉读者最后决战的结果（目标），留下余韵。 三种基本结尾：<strong>主角达成目标；主角没完成目标；读者不知道主角是否完成目标</strong>。</li><li>主角可以达成目标，负面结尾收场；主角可以没达成目标，正面结尾收场。 牺牲是许多结尾常用的强力元素。</li><li>有些结尾主角参与最终决战，有些则专注于主角做出最终决策。</li></ol></blockquote><h2 id="2）扰乱事件-两扇门"><a href="#2）扰乱事件-两扇门" class="headerlink" title="2）扰乱事件&amp;两扇门"></a>2）扰乱事件&amp;两扇门</h2><h3 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">扰乱事件</p></div></h3><p>第一幕的开头，必须有事情打乱现状。你只要站在读者的角度思考就会懂了，一定要发生某件事，让我们觉得角色即将面临威胁或挑战。想想希区柯克的名言，如果事件不快点发生，你的开头就要无聊掉了。扰乱事件不一定要是严重的威胁，只要打乱主角平静的日常生活就好。</p><p>扰乱事件有无限多种，以下举几个例子：</p><blockquote><p>半夜打来的电话 ·信中提到一些奇妙的消息 ·老板把主角叫进他的办公室 ·小孩被送去医院 ·车子在沙漠中的小镇抛锚 ·主角中了彩票 ·主角目击一场意外或谋杀案 ·主角的太太（或先生）留下字条，告知她（他）要离开了</p></blockquote><p>从结构来看，第一个扰乱事件能引起读者的兴趣，暗示接下来要讲一个有趣的故事。然而这时还没来到情节的主要段落，因为冲突还没发生，对手和主角还没陷入不可避免的战斗。</p><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">两扇门</p></div></h3><blockquote><ol><li>该怎么从开头进入中段（从第一幕到第二幕），再从中段进到结尾（从第二幕到第三幕），重点就在于转变。与其称之为转折点，我觉得把这两次转变想象成“无法折返的门”，对你更有帮助。 无法折返代表了你想创造的感觉：将主角往前推的力量，一种无可避免的氛围。人类总是安于现状，追求安定。我们笔下的角色也一样，除非发生什么事将主角推进第二幕，否则他只会心满意足地待在第一幕！他只渴望留在自己平凡的世界里。</li><li>你必须想办法把他赶出平凡的世界，逼他面对冲突。你需要某样东西把他踢过那扇门，否则他只会赖在家里不走。 一旦穿过门，就可以产生冲突了。第二幕会持续描写主角的奋斗，但故事总得结束，因此第二扇无法折返的门必须将主角快速送往冲击结局。</li><li>这两扇门负责把三幕情节串联起来，就像联结火车车厢的螺栓。如果螺栓没拴紧，或根本不存在，你的火车就跑不动了。</li></ol></blockquote><h4 id="1、通过第一扇门（小说-1-5-处）"><a href="#1、通过第一扇门（小说-1-5-处）" class="headerlink" title="1、通过第一扇门（小说 1&#x2F;5 处）"></a>1、通过第一扇门（小说 1&#x2F;5 处）</h4><p>为了从开头通过第一扇门，你必须创造一个场景，把主角丢进主要冲突，而且无法离开。主角的一般世界，安全休闲的地方。这个世界也可能发生问题，但不会带来重大改变。</p><p>主角待在这儿很满足，因此必须有事把他推过门口(外在的世界，未知的领域，黑暗的森林)穿过了门后，主角必须探索自己内心，展现勇气，学习新的事物，结交新的盟友等等。</p><h4 id="2、通过第二扇门（小说-3-4-处）"><a href="#2、通过第二扇门（小说-3-4-处）" class="headerlink" title="2、通过第二扇门（小说 3&#x2F;4 处）"></a>2、通过第二扇门（小说 3&#x2F;4 处）</h4><p>想从中段进入第二扇无法折返的门——也必须发生一件事，导向最后的对峙。第二扇门通常是一条重要线索或信息，或是重大挫折和危机，借此将故事快速抛向结局。</p><p>主角面对一系列的挑战与冲突。除非碰上危机、挫折或新发现，因而打开第二扇门，露出通往高潮结尾的路，否则冲突只能持续下去。</p><p>过了门后，主角可以集结外在及内心的力量，面对最终之战或最后的选择，让故事结束。主角无法从这扇门折返，因为故事必须结束。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1）三幕结构&quot;&gt;&lt;a href=&quot;#1）三幕结构&quot; class=&quot;headerlink&quot; title=&quot;1）三幕结构&quot;&gt;&lt;/a&gt;1）三幕结构&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;三幕指的是：故事开头、中段和结尾。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;ht</summary>
+      
+    
+    
+    
+    <category term="写作向" scheme="https://sumorio.com/categories/%E5%86%99%E4%BD%9C%E5%90%91/"/>
+    
+    
+    <category term="写作技巧" scheme="https://sumorio.com/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>叔本华|十四行诗</title>
+    <link href="https://sumorio.com/posts/ed4d040e.html"/>
+    <id>https://sumorio.com/posts/ed4d040e.html</id>
+    <published>2023-10-19T07:48:27.030Z</published>
+    <updated>2024-01-25T07:06:58.890Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tag-plugin banner"><img class="bg" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/bf770844b41594ed2a67367f14bfd3a3.jpg"><div class="content"><div class="top">    <button class="back cap" onclick="window.history.back()">      <svg aria-hidden="true" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>    </button>    </div><div class="bottom"><img class="avatar" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240113180018.png"><div class="text-area"><div class="text title">叔本华</div><div class="text subtitle">叔本华（Arthur Schopenhauer ，1788—1860）是德国著名哲学家，唯意志主义和现代悲观主义创始人。主要著作《作为意志和表象的世界》。</div></div></div></div></div> <h2 id="主要著作"><a href="#主要著作" class="headerlink" title="主要著作"></a>主要著作</h2><ul><li>1813 年 《论充足理由律的四重根》（Über die vierfache Wurzel des Satzes vom zureichenden Grunde）</li><li>1816 年 《论视觉和颜色》（Über das Sehen und die Farben）</li><li>1819 年 《作为意志和表象的世界》（Die Welt als Wille und Vorstellung）</li><li>1836 年 《论大自然的意志》（Über den Willen in der Natur）</li><li>1839 年 《论意志的自由》（Über die Freiheit des menschlichen Willens）</li><li>1840 年 《论道德的基础》（Über die Grundlage der Moral）</li><li>1841 年 《伦理学的两个基本问题》（ Die beiden Grundprobleme der Ethik ）</li><li>1851 年 《附录与补遗》（Parerga und Paralipomena）</li></ul><h2 id="作品节选"><a href="#作品节选" class="headerlink" title="作品节选"></a>作品节选</h2><div class="tag-plugin tabs" align="left"id="tab_1"><div class="nav-tabs"><div class="tab"><a href="#tab_1-1">中文</a></div><div class="tab active"><a href="#tab_1-2">英文</a></div></div><div class="tab-content"><div class="tab-pane" id="tab_1-1"><div class="tag-plugin poetry"><div class="content"><div class="title">十四行诗</div><div class="meta"><span>叔本华</span></div><div class="body"><p>漫长的冬夜永无尽头，<br>太阳磨蹭着始终不到，<br>风暴与猫头鹰竞相怒吼，<br>干戈鸣响在脆弱的墙头。<br>坟墓尽开遣出了精灵:<br>围着我团转飞舞，<br>想要吓我个魂飞魄散，<br>但我不会向他们看上一眼。<br>白天，白天，我要高声地宣布即将到来!<br>黑夜和鬼怪都会逃之夭夭:<br>晨星已在报告白天的到来。<br>很快，就算是最深暗之处都会被照亮:<br>光芒和色彩会覆盖着世界，<br>无边的远空是一片深蓝。</p></div><div class="footer">魏玛/1813年/诗词节选</div></div></div></div><div class="tab-pane active" id="tab_1-2"><div class="tag-plugin poetry"><div class="content"><div class="title">十四行诗</div><div class="meta"><span>叔本华</span></div><div class="body"><p>Perpetual winter’s night will never end;<br>And tarries the sun as though he ne’er would come;<br>The tempest emulates the hooting owls;<br>And weapons clank on crumbling walls.<br>And open tombs their ghosts dispatch:<br>And spread around, they try to scare my soul,<br>That it may never be redeemed;-<br>yet to them I will not turn my gaze.<br>The day, the day I will with strident voice proclaim!<br>Night and ghosts from it will flee:<br>The morning star is ushering it in.<br>Soon it is light e’en in the darkest depths:<br>Radiant colour will the world suffuse,<br>And boundless space is bathed in brightest blue.</p></div><div class="footer">魏玛/1813年/诗词节选</div></div></div></div></div></div><div class="tag-plugin grid" bg="card" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));grid-gap:10px;"><div class="cell" style="">    <div class="tag-plugin poetry"><div class="content"><div class="title">十四行诗</div><div class="meta"><span>叔本华</span></div><div class="body"><p>漫长的冬夜永无尽头，<br>太阳磨蹭着始终不到，</p><p>风暴与猫头鹰竞相怒吼，<br>干戈鸣响在脆弱的墙头。<br>坟墓尽开遣出了精灵:<br>围着我团转飞舞，<br>想要吓我个魂飞魄散，<br>但我不会向他们看上一眼。<br>白天，白天，我要高声地宣布即将到来!<br>黑夜和鬼怪都会逃之夭夭:<br>晨星已在报告白天的到来。<br>很快，就算是最深暗之处都会被照亮:<br>光芒和色彩会覆盖着世界，<br>无边的远空是一片深蓝。</p></div><div class="footer">魏玛/1813年/诗词节选</div></div></div>    </div>    <div class="cell" style="">    <div class="tag-plugin poetry"><div class="content"><div class="title">十四行诗</div><div class="meta"><span>叔本华</span></div><div class="body"><p>Perpetual winter’s night will never end;<br>And tarries the sun as though he ne’er would come;<br>The tempest emulates the hooting owls;<br>And weapons clank on crumbling walls.<br>And open tombs their ghosts dispatch:<br>And spread around, they try to scare my soul,<br>That it may never be redeemed;-<br>yet to them I will not turn my gaze.<br>The day, the day I will with strident voice proclaim!<br>Night and ghosts from it will flee:<br>The morning star is ushering it in.<br>Soon it is light e’en in the darkest depths:<br>Radiant colour will the world suffuse,<br>And boundless space is bathed in brightest blue.</p></div><div class="footer">魏玛/1813年/诗词节选</div></div></div>    </div>    </div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin banner&quot;&gt;&lt;img class=&quot;bg&quot; src=&quot;https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/bf770844b41594ed2a67367f14bfd3a3.jpg&quot;&gt;&lt;div c</summary>
+      
+    
+    
+    
+    <category term="诗歌向" scheme="https://sumorio.com/categories/%E8%AF%97%E6%AD%8C%E5%90%91/"/>
+    
+    
+    <category term="诗歌" scheme="https://sumorio.com/tags/%E8%AF%97%E6%AD%8C/"/>
+    
+    <category term="叔本华" scheme="https://sumorio.com/tags/%E5%8F%94%E6%9C%AC%E5%8D%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何写小说提纲</title>
+    <link href="https://sumorio.com/posts/25037f5b.html"/>
+    <id>https://sumorio.com/posts/25037f5b.html</id>
+    <published>2023-10-18T08:46:42.657Z</published>
+    <updated>2024-01-25T07:07:39.417Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tag-plugin quot"><p class="content" type="text">如何写小说提纲</p></div><p>为每个场景建立相应的文档或便签。每个场景都有不少问题亟需解决：</p><ul><li>主人公的目标、</li><li>路途上的障碍（包括其来源）、</li><li>她应对障碍的对策、</li><li>她是否克服了障碍（结果经常是否定的）、</li><li>如果她失败了后果是什么，等。<br>同时，标明场景的发生地、涉及的人物以及他们的目标和障碍（不用抠得过细）</li></ul><p>写提纲时，随时记录灵感。</p><p>一般情况下先对每个场景有个大致的了解，才会动笔写初稿。</p><p>通过写提纲来思考和确认小说中的重要节点。</p><p>构思小说时，我会首先基于小说主旨，设计出具有里程碑意义的事件。我有时会以流程图的形式将提纲画在纸上，或者干脆用便利贴，这样小说的重要情节点就依次浮出水面了。我将这样的表格称作“动点进度表”。当你按顺序浏览重要节点时，你就知道小说是否行得通，小说节奏、小说轨迹、人物轨迹是否合适也一目了然。有问题的部分，你大可以通过调整提纲来解决，而不用大费周章重写初稿。</p><div class="tag-plugin quot"><p class="content" type="text">写提纲的好处？</p></div><p>知道我要写什么，了解主人公在意什么。</p><p>不写提纲，甚至打乱场景的写作顺序，结果会导致，飘忽不定、眼睁睁地看着人物漫无目的地游荡在各个角落，所说的也尽是些漫无边际的话。</p><p>写提纲时，可以逐渐察觉到场景的联系。如果我知道下一步要发生什么，我就可以让主人公自然地靠拢过去，当然，有时是让她自掘坟墓；我可以制造她与其他人物的矛盾；我还可以在章节末尾留下悬念（这太有趣了）。提纲让我了解小说的框架，等到创作时，我就可以丰富小说层次，让情节变得更有趣。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tag-plugin quot&quot;&gt;&lt;p class=&quot;content&quot; type=&quot;text&quot;&gt;如何写小说提纲&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;为每个场景建立相应的文档或便签。每个场景都有不少问题亟需解决：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主人公的目标、&lt;/li&gt;
+</summary>
+      
+    
+    
+    
+    <category term="写作向" scheme="https://sumorio.com/categories/%E5%86%99%E4%BD%9C%E5%90%91/"/>
+    
+    
+    <category term="写作技巧" scheme="https://sumorio.com/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+</feed>
