@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.3" theme-name="Stellar" theme-version="1.26.3">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.4" theme-name="Stellar" theme-version="1.26.4">
   
   <meta name="generator" content="Hexo 7.1.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -27,7 +27,7 @@
 <meta property="og:description" content="3 个方法，优化 prompt，让 Copilot 提升效率。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-18T07:00:07.663Z">
-<meta property="article:modified_time" content="2024-01-25T04:56:47.871Z">
+<meta property="article:modified_time" content="2024-02-02T07:30:32.786Z">
 <meta property="article:author" content="Sumor|苏末了">
 <meta property="article:tag" content="AIGC">
 <meta property="article:tag" content="Copilot">
@@ -42,7 +42,7 @@
     <link rel="alternate" href="/atom.xml" title="苏末了" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.3">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.4">
 
   
     <link rel="shortcut icon" href="https://s2.loli.net/2023/10/20/rfLIRXdAplxjGyU.png">
@@ -56,16 +56,9 @@
 
 
 
-  <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><script>
-  if (window.localStorage.getItem('ZYI_Theme_Mode')==='dark' || (window.localStorage.getItem('ZYI_Theme_Mode')==='Moss' && window.matchMedia('(prefers-color-scheme: dark)').matches)){
-      document.querySelector("html").id = "ZYDark";
-  }
-</script>
-
+  <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" />
 </head>
 <body>
-
-
 
 <div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
 
@@ -80,7 +73,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">🌍 本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">微软 Copilot 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text">Copilot 提示词怎么写？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-text">Copilot 效率提升 3 个技巧</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">🌍 本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E8%BD%AFCopilot%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">微软Copilot是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Copilot%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%80%8E%E4%B9%88%E5%86%99%EF%BC%9F"><span class="toc-text">Copilot提示词怎么写？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Copilot%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%873%E4%B8%AA%E6%8A%80%E5%B7%A7"><span class="toc-text">Copilot效率提升3个技巧</span></a></li></ol></div></div></widget>
 
 
 </div>
@@ -91,21 +84,39 @@
 
 
 
-<div class="bread-nav fs12"><div class="left"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/">技术向</a></div>
-<div id="post-meta"><span class="author">本文由 <a href="/author/Sumor/index.html">苏末了</a> 发布于：</span><span class="created"><time datetime="2023-12-18T07:00:07.663Z">2023-12-18</time></span><span class="updated">，更新于：<time datetime="2024-01-25T04:56:47.871Z">2024-01-25</time></span></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/Sumor/index.html">苏末了</a><span class="sep"></span><span class="text created"><time datetime="2023-12-18T07:00:07.663Z">2023-12-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-02T07:30:32.786Z">2024-02-02</time></span></div></div>
 </div>
-<article class="md-text content"><h1 class="article-title"><span>让微软Copilot变聪明的3个指令</span></h1><p>3 个方法，优化 prompt，让 Copilot 提升效率。</p>
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>让微软Copilot变聪明的3个指令</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>3 个方法，优化 prompt，让 Copilot 提升效率。</p>
 <span id="more"></span>
 
-<h2 id=""><a href="#" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">微软 Copilot 是什么？</p></div></h2><blockquote>
+<div class="tag-plugin quot"><h2 class="content" id="微软Copilot是什么？" type="text"><a href="#微软Copilot是什么？" class="headerlink" title="微软Copilot是什么？"></a>微软Copilot是什么？</h2></div>
+
+<blockquote>
 <p>微软 Copilot 是一种基于人工智能（AI）的数字助理，可以根据您的自然语言输入为您提供针对各种任务和创造性工作的协助。它是微软 Edge 浏览器的内置扩展，也可以与 Microsoft 365 的多个应用程序协同工作。</p>
 </blockquote>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">Copilot 提示词怎么写？</p></div></h2><ul>
+<div class="tag-plugin quot"><h2 class="content" id="Copilot提示词怎么写？" type="text"><a href="#Copilot提示词怎么写？" class="headerlink" title="Copilot提示词怎么写？"></a>Copilot提示词怎么写？</h2></div>
+
+<ul>
 <li>微软 Copilot 的提示词是您用来告诉 Copilot 您想要什么的指令或问题。</li>
 <li>提示词可以包括四个部分：目标、背景、期望和来源。</li>
 </ul>
-<h2 id="-2"><a href="#-2" class="headerlink" title=""></a><div class="tag-plugin quot"><p class="content" type="text">Copilot 效率提升 3 个技巧</p></div></h2><p>只要通过下面三个技巧，你的 Copilot 完全是可用的：</p>
+<div class="tag-plugin quot"><h2 class="content" id="Copilot效率提升3个技巧" type="text"><a href="#Copilot效率提升3个技巧" class="headerlink" title="Copilot效率提升3个技巧"></a>Copilot效率提升3个技巧</h2></div>
+
+<p>只要通过下面三个技巧，你的 Copilot 完全是可用的：</p>
 <ul>
 <li><p>技巧一：选择「创作力」模式。</p>
 </li>
@@ -132,9 +143,9 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://sumorio.com/posts/90d32f8e.html" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/posts/90d32f8e.html&title=让微软Copilot变聪明的3个指令 - 苏末了&summary=3 个方法，优化 prompt，让 Copilot 提升效率。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/posts/90d32f8e.html&title=让微软Copilot变聪明的3个指令 - 苏末了&summary=3 个方法，优化 prompt，让 Copilot 提升效率。"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a></div>
         
-        <div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0">
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://sumorio.com/posts/90d32f8e.html"/>
         </div>
         
@@ -154,7 +165,7 @@
 
   <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
-      快来参与讨论吧
+      参与讨论
     </section>
     <section class='body cmt-body twikoo'>
       
@@ -165,7 +176,7 @@
 
 
 
-<footer class="page-footer fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs14">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言板</a></div></div><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言板</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
 使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
@@ -334,7 +345,7 @@ show_runtime();
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
   }
   if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js","distance":"16px","duration":500,"interval":100,"scale":1});
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js","distance":"16px","duration":800,"interval":100,"scale":1});
   }
   if ('true' == 'true') {
     stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"});
@@ -351,7 +362,7 @@ show_runtime();
 </script>
 
 <!-- required -->
-<script src="/js/main.js# Use cdn links instead of /js/main.js?v=1.26.3" async></script>
+<script src="/js/main.js?v=1.26.4" async></script>
 
 <!-- optional -->
 
