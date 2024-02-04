@@ -16,30 +16,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>前端：（一）前置基础知识 - 苏末了</title>
+  <title>苏末了</title>
 
   
-    <meta name="description" content="认识两位先驱 计算机基础知识 计算机俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算、逻辑计算，还 具有存储记忆功能。  计算机由 硬件 + 软件 构成： 硬件：看得见摸得着的物理部件。  软件：可以指挥硬件工作的指令。  软件的分类：系统软件（必装）+应用软件（需求）。  系统软件：Windows、Linux、Android、Harmony 等。  应用软件：美图，抖音等。">
+    <meta name="description" content="个人技术博客，个人生活记录，个人所见，所感，所言，所想。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="（一）前置基础知识">
-<meta property="og:url" content="https://sumorio.com/wiki/FrontEnd/HTML0.html">
+<meta property="og:title" content="苏末了">
+<meta property="og:url" content="https://sumorio.com/topic/index.html">
 <meta property="og:site_name" content="苏末了">
-<meta property="og:description" content="认识两位先驱 计算机基础知识 计算机俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算、逻辑计算，还 具有存储记忆功能。  计算机由 硬件 + 软件 构成： 硬件：看得见摸得着的物理部件。  软件：可以指挥硬件工作的指令。  软件的分类：系统软件（必装）+应用软件（需求）。  系统软件：Windows、Linux、Android、Harmony 等。  应用软件：美图，抖音等。">
+<meta property="og:description" content="个人技术博客，个人生活记录，个人所见，所感，所言，所想。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117115354.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117115515.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117120430.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117121342.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117121108.png">
-<meta property="article:published_time" content="2024-02-01T07:36:04.380Z">
-<meta property="article:modified_time" content="2024-02-01T07:36:04.380Z">
 <meta property="article:author" content="Sumor|苏末了">
 <meta property="article:tag" content="个人博客">
 <meta property="article:tag" content="技术博客">
 <meta property="article:tag" content="苏末了">
 <meta property="article:tag" content="sumor">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117115354.png">
   
   
   
@@ -68,104 +60,43 @@
 </head>
 <body>
 
-<div class="l_cover wiki"><article class="cover-wrap md-text"><div class="preview cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/Doris.png"/></div><div class="cover-title"><span>前端养成术</span></div><div class="description">Hi，我是Sumorio。欢迎来到 FrontEnd Dream Box —— 你的前端学习起点！</div><div class="start-wrap"><a class="button start gradient" href="#start">开始使用</a></div></article></div><hr>
-
-<div class="l_body content tech" id="start" layout="wiki" ><aside class="l_left"><div class="sidebar-container">
+<div class="l_body index tech" id="start" layout="index_topic" ><aside class="l_left"><div class="sidebar-container">
 
 
-<header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/Doris.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><a class="title" href="/wiki/FrontEnd/HTML0.html"><div class="main" ff="title">前端</div><div class="sub normal cap">🪐 掌握前端，开启数字创造之旅！</div><div class="sub hover cap" style="opacity:0"> 🚀 Designed by Sumorio。</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/01d44c8e1aa35513951cffcac10b12f9.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">苏末了</div><div class="sub normal cap">⭐ 穿戴整齐面对疯狂的世界。</div><div class="sub hover cap" style="opacity:0"> 🧡 Love and Peace.</div></a></div></header>
 
 <div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" data-filter="/wiki/FrontEnd/" placeholder="在 前端 中搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
 
 
-<nav class="menu dis-select"><a class="nav-item" title="博客" href="/" style="color:#1e6150"><span>博客</span></a><a class="nav-item active" title="项目" href="/wiki/" style="color:#1e6150"><span>项目</span></a><a class="nav-item" title="专栏" href="/topic/" style="color:#1e6150"><span>专栏</span></a><a class="nav-item" title="工具" href="/explore/" style="color:#1e6150"><span>工具</span></a><a class="nav-item" title="更多" href="/about/" style="color:#1e6150"><svg t="1707034590650" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8325" width="200" height="200"><path d="M166.4 102.4c12.8 0 25.6 4.266667 34.133333 12.8l362.666667 362.666667c21.333333 21.333333 21.333333 51.2 0 68.266666l-362.666667 362.666667c-21.333333 21.333333-51.2 21.333333-68.266666 0-21.333333-21.333333-21.333333-51.2 0-68.266667l328.533333-328.533333-328.533333-328.533333c-21.333333-21.333333-21.333333-51.2 0-68.266667 12.8-8.533333 25.6-12.8 34.133333-12.8z" fill="" p-id="8326"></path><path d="M494.933333 102.4c12.8 0 25.6 4.266667 34.133334 12.8l362.666666 362.666667c21.333333 21.333333 21.333333 51.2 0 68.266666l-362.666666 362.666667c-21.333333 21.333333-51.2 21.333333-68.266667 0-21.333333-21.333333-21.333333-51.2 0-68.266667l328.533333-328.533333-328.533333-328.533333c-21.333333-21.333333-21.333333-51.2 0-68.266667 8.533333-8.533333 21.333333-12.8 34.133333-12.8z" fill="" p-id="8327"></path></svg></a></nav>
+<nav class="menu dis-select"><a class="nav-item" title="博客" href="/" style="color:#1e6150"><span>博客</span></a><a class="nav-item" title="项目" href="/wiki/" style="color:#1e6150"><span>项目</span></a><a class="nav-item active" title="专栏" href="/topic/" style="color:#1e6150"><span>专栏</span></a><a class="nav-item" title="工具" href="/explore/" style="color:#1e6150"><span>工具</span></a><a class="nav-item" title="更多" href="/about/" style="color:#1e6150"><svg t="1707034590650" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8325" width="200" height="200"><path d="M166.4 102.4c12.8 0 25.6 4.266667 34.133333 12.8l362.666667 362.666667c21.333333 21.333333 21.333333 51.2 0 68.266666l-362.666667 362.666667c-21.333333 21.333333-51.2 21.333333-68.266666 0-21.333333-21.333333-21.333333-51.2 0-68.266667l328.533333-328.533333-328.533333-328.533333c-21.333333-21.333333-21.333333-51.2 0-68.266667 12.8-8.533333 25.6-12.8 34.133333-12.8z" fill="" p-id="8326"></path><path d="M494.933333 102.4c12.8 0 25.6 4.266667 34.133334 12.8l362.666666 362.666667c21.333333 21.333333 21.333333 51.2 0 68.266666l-362.666666 362.666667c-21.333333 21.333333-51.2 21.333333-68.266667 0-21.333333-21.333333-21.333333-51.2 0-68.266667l328.533333-328.533333-328.533333-328.533333c-21.333333-21.333333-21.333333-51.2 0-68.266667 8.533333-8.533333 21.333333-12.8 34.133333-12.8z" fill="" p-id="8327"></path></svg></a></nav>
 </div>
 <div class="widgets">
+<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">Welcome My Bro ！ </span></div><div class="widget-body fs14"><p><span id="jinrishici-sentence"></span></p>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<blockquote>
+</blockquote>
+<p>永远是这样，风后面是风,<br>天空上面是天空<br>道路前面还是道路。<br>每一个相遇,<br>都是命中注定的离别之后的重逢。</p>
+</div></widget>
 
-<widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">🌸 HTML基础入门</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/FrontEnd/HTML0.html#start"><span class="toc-text">（一）前置基础知识</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E4%B8%A4%E4%BD%8D%E5%85%88%E9%A9%B1"><span class="toc-text">认识两位先驱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">计算机基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-S%E6%9E%B6%E6%9E%84%E4%B8%8EB-S%E6%9E%B6%E6%9E%84"><span class="toc-text">C&#x2F;S架构与B&#x2F;S架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A1%B5%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text">网页相关概念</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML4.html"><span class="toc-text">（二）HTML4基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML5.html"><span class="toc-text">（三）HTML5基础</span></a></div></div><div class="widget-header dis-select"><span class="name">🌸 CSS入门到精通</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/CSS2.html"><span class="toc-text">（一）CSS2基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/CSS3.html"><span class="toc-text">（二）CSS3基础</span></a></div></div><div class="widget-header dis-select"><span class="name">🌸 JavaScript实践</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></div></widget>
 
 
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">🌍 最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/posts/e39f3cee.html"><span class="title">物质与意识|自由意志真的存在吗</span></a><a class="item title" href="/posts/2e070ebb.html"><span class="title">普通人的外挂：谷歌浏览器搜索技巧</span></a><a class="item title" href="/posts/bfc388e3.html"><span class="title">苹果AppStore|支付宝购买ChatGPT-4</span></a><a class="item title" href="/posts/e48f9054.html"><span class="title">脑筋急转弯</span></a><a class="item title" href="/posts/25037f5b.html"><span class="title">如何写小说提纲</span></a><a class="item title" href="/posts/d127d11.html"><span class="title">为什么需要申请SSL/TSL证书？</span></a><a class="item title" href="/posts/90d32f8e.html"><span class="title">让微软Copilot变聪明的3个指令</span></a><a class="item title" href="/posts/1094ebf6.html"><span class="title">免费申请美区AppleID账号|快速|无需VPN</span></a><a class="item title" href="/posts/bc3711bf.html"><span class="title">逻辑学|小知识</span></a><a class="item title" href="/posts/e4bf97d7.html"><span class="title">ChatGPTPlugin|精选插件推荐</span></a><a class="item title" href="/posts/ed4d040e.html"><span class="title">叔本华|十四行诗</span></a><a class="item title" href="/posts/58b305af.html"><span class="title">如何写小说</span></a></div></widget>
+
+
+<widget class="widget-wrapper tagcloud"><div class="widget-header dis-select"><span class="name">🌍 标签索引</span></div><div class="widget-body fs14"><a href="/tags/AIGC/" style="font-size: 18px;" class="tag -5">AIGC</a> <a href="/tags/Chatgpt/" style="font-size: 18px;" class="tag -5">Chatgpt</a> <a href="/tags/CloudFlare/" style="font-size: 12px;" class="tag -0">CloudFlare</a> <a href="/tags/Copilot/" style="font-size: 12px;" class="tag -0">Copilot</a> <a href="/tags/Github/" style="font-size: 24px;" class="tag -10">Github</a> <a href="/tags/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" style="font-size: 12px;" class="tag -0">Google搜索技巧</a> <a href="/tags/IOS%E7%BE%8E%E5%8C%BA%E8%B4%A6%E5%8F%B7/" style="font-size: 12px;" class="tag -0">IOS美区账号</a> <a href="/tags/NameSilo/" style="font-size: 12px;" class="tag -0">NameSilo</a> <a href="/tags/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" style="font-size: 24px;" class="tag -10">写作技巧</a> <a href="/tags/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 12px;" class="tag -0">功能测试</a> <a href="/tags/%E5%8F%94%E6%9C%AC%E5%8D%8E/" style="font-size: 12px;" class="tag -0">叔本华</a> <a href="/tags/%E5%93%B2%E5%AD%A6/" style="font-size: 12px;" class="tag -0">哲学</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 12px;" class="tag -0">图床</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" style="font-size: 12px;" class="tag -0">计算机基础知识</a> <a href="/tags/%E8%AF%97%E6%AD%8C/" style="font-size: 12px;" class="tag -0">诗歌</a> <a href="/tags/%E9%80%BB%E8%BE%91%E5%AD%A6/" style="font-size: 12px;" class="tag -0">逻辑学</a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" title="Github" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" title="网易云" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" title="B站" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" title="留言板" href="/friends/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" title="夜间模式" href="javaScript:void('永夜');" rel="noopener noreferrer"><img class="lazy" id="ThemeM" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Moon.png"/></a><a class="social" title="白天模式" href="javaScript:void('永昼');" rel="noopener noreferrer"><img class="lazy" id="ThemeL" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/Sun.png"/></a><a class="social" title="回顶部" href="#start" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/gaoyanliang/cdn@main/blog/img/social/top.svg"/></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/01d44c8e1aa35513951cffcac10b12f9.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">苏末了</div><div class="sub normal cap">⭐ 穿戴整齐面对疯狂的世界。</div><div class="sub hover cap" style="opacity:0"> 🧡 Love and Peace.</div></a></div></header>
 
 
 
 
-<div class="article banner top">
-  <div class="content">
-    
-
-
-    
-    <div class="bottom">
-      <div class="text-area">
-        <h1 class="text title"><span>（一）前置基础知识</span></h1>
-      </div>
-    </div>
-    
-  </div>
-  </div><article class="md-text content"><h2 id="认识两位先驱"><a href="#认识两位先驱" class="headerlink" title="认识两位先驱"></a>认识两位先驱</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117115354.png" alt="img"></p>
-<h2 id="计算机基础知识"><a href="#计算机基础知识" class="headerlink" title="计算机基础知识"></a>计算机基础知识</h2><ol>
-<li><p>计算机俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算、逻辑计算，还<br> 具有存储记忆功能。</p>
-</li>
-<li><p>计算机由 硬件 + 软件 构成：<br> 硬件：看得见摸得着的物理部件。</p>
-<p> 软件：可以指挥硬件工作的指令。</p>
-</li>
-<li><p>软件的分类：系统软件（必装）+应用软件（需求）。</p>
-<ul>
-<li><p>系统软件：Windows、Linux、Android、Harmony 等。</p>
-</li>
-<li><p>应用软件：美图，抖音等。</p>
-</li>
-</ul>
-</li>
-</ol>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117115515.png" alt="image-20240117115514975"></p>
-<h2 id="C-S架构与B-S架构"><a href="#C-S架构与B-S架构" class="headerlink" title="C&#x2F;S架构与B&#x2F;S架构"></a>C&#x2F;S架构与B&#x2F;S架构</h2><p>上面提到的应用软件，又分为两大类：</p>
-<ul>
-<li>C&#x2F;S架构，特点：需要安装、偶尔更新、不跨平台、开发更具针对性。</li>
-<li>B&#x2F;S架构，特点：无需安装、无需更新、可跨平台、开发更具通用性。</li>
-</ul>
-<p><strong>名词解释</strong>：C ：client（客户端）、B ：browser（浏览器）、S ：server（服务器） 为软件提供数据的设备。</p>
-<p>前端工程师，主要负责编写 B&#x2F;S架构中的网页（呈现界面、实现交互）。大前端时代，我们可以用前端的技术栈，做出一个C&#x2F;S架构的应用、搭建一个服务器、微信小程序、客户端开发、数据可视化等。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117120430.png" alt="img"></p>
-<h2 id="网页相关概念"><a href="#网页相关概念" class="headerlink" title="网页相关概念"></a>网页相关概念</h2><ol>
-<li><p>网址：在浏览器中输入的地址。</p>
-</li>
-<li><p>网页：浏览器所呈现的每一个页面。</p>
-</li>
-<li><p>网站：多个网页构成了一个网站。</p>
-</li>
-<li><p>网页标准：结构（HTML）+表现（CSS）+行为（JavaScript)</p>
-</li>
-<li><p>浏览器内核：内核是浏览器的核心，用于处理浏览器所得到的各种资源。</p>
-<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117121342.png" alt="img"></p>
-</li>
-</ol>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240117121108.png" alt="img"></p>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/HTML4.html">（二）HTML4基础</a></div></section></div>
-
-
-  <div class="related-wrap md-text" id="comments">
-    <section class='header cmt-title cap theme'>
-      参与讨论
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" src="https://giscus.xaox.cc/client.js" data-repo="Sumorio/gicus-comment-xaoxuu" data-repo-id="R_kgDOLNtOCg" data-category="Announcements" data-category-id="DIC_kwDOLNtOCs4Cc7i" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
-
-
-
+<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a class="active" href="/topic">专栏</a><a href="/archives">归档</a><a href="/friends/#comments">留言</a></nav></div><div class="post-list wiki topic"><a class="post-card wiki topic" href="/posts/e39f3cee.html">
+<article class="md-text"><div class="preview"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/10433048.png"/></div><div class="excerpt"><h2 class="post-title">苏哲思 - 我之生活洞见。</h2><p>旨在捕捉生活的微妙瞬间与深邃思索，这是一个记录我对生活的深度洞察和内心世界探索的私人空间。</p></div></article>
+</a></div>
 <footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言板</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
@@ -357,33 +288,6 @@ show_runtime();
 <script src="/js/main.js?v=1.26.6" async></script>
 
 <!-- optional -->
-
-  <script>
-  function loadJS() {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
-      }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-    loadJS();
-  });
-</script>
-
 
 
 
