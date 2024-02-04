@@ -142,9 +142,9 @@
     <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
-    
     <category term="Copilot" scheme="https://sumorio.com/tags/Copilot/"/>
+    
+    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
     
   </entry>
   
@@ -207,9 +207,9 @@
     <category term="技术向" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-    <category term="Chatgpt" scheme="https://sumorio.com/tags/Chatgpt/"/>
-    
     <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
+    
+    <category term="Chatgpt" scheme="https://sumorio.com/tags/Chatgpt/"/>
     
   </entry>
   

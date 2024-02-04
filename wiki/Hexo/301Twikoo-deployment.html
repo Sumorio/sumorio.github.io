@@ -195,7 +195,7 @@
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/jnBfEVOxcyeYzlH.png" alt="image-20231218185833536"></p>
 <p>【配置管理】-邮件通知：大部分不用填写，使用默认即可。下面几个必填。</p>
 <blockquote>
-<p>SENDER_EMAIL: <a href="mailto:&#115;&#117;&#109;&#x6f;&#114;&#105;&#111;&#64;&#x31;&#x32;&#54;&#46;&#99;&#111;&#109;">&#115;&#117;&#109;&#x6f;&#114;&#105;&#111;&#64;&#x31;&#x32;&#54;&#46;&#99;&#111;&#109;</a><br>SMTP_SERVICE: 126<br>SMTP_PORT: 465<br>SMTP_SECURE: true<br>SMTP_USER: &lt;邮件通知邮箱用户名&gt;(需与 SENDER_EMAIL 一致)<br>SMTP_PASS: (pop 授权码)</p>
+<p>SENDER_EMAIL: <a href="mailto:&#115;&#117;&#109;&#x6f;&#114;&#105;&#111;&#64;&#49;&#50;&#x36;&#46;&#99;&#x6f;&#x6d;">&#115;&#117;&#109;&#x6f;&#114;&#105;&#111;&#64;&#49;&#50;&#x36;&#46;&#99;&#x6f;&#x6d;</a><br>SMTP_SERVICE: 126<br>SMTP_PORT: 465<br>SMTP_SECURE: true<br>SMTP_USER: &lt;邮件通知邮箱用户名&gt;(需与 SENDER_EMAIL 一致)<br>SMTP_PASS: (pop 授权码)</p>
 </blockquote>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/sQtg1DMxuF53jK9.png" alt="image-20231218192456192"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/RK15ysP2WBtzawY.png" alt="image-20231218192508114"><br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2023/12/19/wXECHos7ku9W5NF.png" alt="image-20231218192548463"></p>
 <p>其中<code>DEFAULT_GRAVATAR</code>参数可以设置评论默认使用的头像类型，头像区别如下：</p>
@@ -276,10 +276,12 @@
     <section class='header cmt-title cap theme'>
       参与讨论
     </section>
-    <section class='body cmt-body waline'>
+    <section class='body cmt-body giscus'>
       
 
-<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="Sumorio/giscus-comments" data-repo-id="R_kgDOLNp-xg" data-category="Announcements" data-category-id="DIC_kwDOLNp-xs4Cc7V5" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
 
     </section>
   </div>
@@ -479,27 +481,29 @@ show_runtime();
 <!-- optional -->
 
   <script>
-  function load_comment(){
-    if(!document.getElementById("waline_container"))return;
-    stellar.loadCSS('https://unpkg.com/@waline/client@2.14.1/dist/waline.css');
-    stellar.loadScript('https://unpkg.com/@waline/client@2.14.1/dist/waline.js', {defer:true}).then(function () {
-      const el = document.getElementById("waline_container");
-      var path = el.getAttribute('comment_id');
-      if (!path) {
-        path = decodeURI(window.location.pathname);
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
       }
-      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@2.14.1/dist/waline.js","css":"https://unpkg.com/@waline/client@2.14.1/dist/waline.css","serverURL":"waline.sumorio.com","commentCount":true,"pageview":false,"locale":{"placeholder":"评论时填写邮箱，或者注册并登录后评论，即可在第一时间收到消息提醒。"}}, {
-        el: '#waline_container',
-        path: path,
-        
-      }));
+      var script = document.createElement('script');
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
     });
   }
   window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    load_comment();
+    loadJS();
   });
-
 </script>
 
 
