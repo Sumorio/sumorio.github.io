@@ -3296,7 +3296,6 @@ span.tag-plugin.icon img {
   position: relative;
   border-radius: 9px;
   background: var(--theme-block);
-  border: 1px solid var(--theme-border);
   overflow: hidden;
   color: var(--text-p1);
   line-height: 1.5;
@@ -4488,7 +4487,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_left {
   background-size: cover;
-  background: linear-gradient(45deg, #f1f2f4 0 25%, #f1f2f4 25% 70%, #f1f2f4 70% 100%);
+  background: linear-gradient(45deg, #f1f2f4 0 48%, #f1f2f4 48% 52%, #f1f2f4 52% 100%);
 }
 .l_left .sidebar-container {
   height: 100%;
@@ -5660,8 +5659,8 @@ body>.sitebg .siteblur {
   width: 100%;
   height: 100%;
   background: var(--blur-bg);
-  --blur-px: 100px;
-  --blur-bg: var(--alpha75);
+  --blur-px: 1px;
+  --blur-bg: var(--alpha0);
 }
 @supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
   body>.sitebg .siteblur {
