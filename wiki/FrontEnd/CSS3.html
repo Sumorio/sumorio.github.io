@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.6" theme-name="Stellar" theme-version="1.26.6">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8" theme-name="Stellar" theme-version="1.26.8">
   
   <meta name="generator" content="Hexo 7.1.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -16,12 +16,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>前端：（二）CSS3基础 - 苏末了</title>
+  <title>前端：CSS3基础 - 苏末了</title>
 
   
     <meta name="description" content="一、CSS3 简介1.CSS3 概述 CSS3 是CSS2 的升级版本，它在CSS2 的基础上，新增了很多强大的新功能，从而解决一些实际  面临的问题。  CSS3 在未来会按照模块化的方式去发展： https:&#x2F;&#x2F;www.w3.org&#x2F;Style&#x2F;CSS&#x2F;current-work.html  CSS3 的新特性如下：  新增了更加实用的选择器，例如：动态伪类选择器、目标伪类选择器、伪元素选择器等">
 <meta property="og:type" content="website">
-<meta property="og:title" content="（二）CSS3基础">
+<meta property="og:title" content="CSS3基础">
 <meta property="og:url" content="https://sumorio.com/wiki/FrontEnd/CSS3.html">
 <meta property="og:site_name" content="苏末了">
 <meta property="og:description" content="一、CSS3 简介1.CSS3 概述 CSS3 是CSS2 的升级版本，它在CSS2 的基础上，新增了很多强大的新功能，从而解决一些实际  面临的问题。  CSS3 在未来会按照模块化的方式去发展： https:&#x2F;&#x2F;www.w3.org&#x2F;Style&#x2F;CSS&#x2F;current-work.html  CSS3 的新特性如下：  新增了更加实用的选择器，例如：动态伪类选择器、目标伪类选择器、伪元素选择器等">
@@ -41,8 +41,8 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240201124239.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240201124345.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240201165249.png">
-<meta property="article:published_time" content="2024-02-20T10:13:20.208Z">
-<meta property="article:modified_time" content="2024-02-20T10:13:20.208Z">
+<meta property="article:published_time" content="2024-02-26T02:58:38.777Z">
+<meta property="article:modified_time" content="2024-02-26T02:58:38.777Z">
 <meta property="article:author" content="Sumor|苏末了">
 <meta property="article:tag" content="个人博客">
 <meta property="article:tag" content="技术博客">
@@ -60,7 +60,7 @@
     <link rel="alternate" href="/atom.xml" title="苏末了" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.26.6">
+  <link rel="stylesheet" href="/css/main.css?v=1.26.8">
 
   
     <link rel="shortcut icon" href="https://s2.loli.net/2023/10/20/rfLIRXdAplxjGyU.png">
@@ -68,19 +68,13 @@
 
   
 
-  
-  
-  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-
-
-
   <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="/custom/css/darkmode.css">
 </head>
 <body>
 
 
 
-<div class="l_body content tech" id="start" layout="wiki" ><aside class="l_left"><div class="sidebar-container">
+<div class="l_body s:aa content tech" id="start" layout="wiki" ><aside class="l_left"><div class="leftbar-container leftbar-blur">
 
 
 <header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/Doris.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><a class="title" href="/wiki/FrontEnd/HTML0.html"><div class="main" ff="title">前端</div><div class="sub normal cap">🪐 掌握前端，开启数字创造之旅！</div><div class="sub hover cap" style="opacity:0"> 🚀 Designed by Sumorio。</div></a></div></header>
@@ -93,11 +87,11 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc multi" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">🌸 HTML基础入门</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML0.html#start"><span class="toc-text">（一）前置基础知识</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML4.html"><span class="toc-text">（二）HTML4基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/HTML5.html"><span class="toc-text">（三）HTML5基础</span></a></div></div><div class="widget-header dis-select"><span class="name">🌸 CSS入门到精通</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/CSS2.html"><span class="toc-text">（一）CSS2基础</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/FrontEnd/CSS3.html"><span class="toc-text">（二）CSS3基础</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81CSS3-%E7%AE%80%E4%BB%8B"><span class="toc-text">一、CSS3 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS3-%E6%A6%82%E8%BF%B0"><span class="toc-text">1.CSS3 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS3%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.CSS3私有前缀</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.1 什么是私有前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.2 为什么要有私有前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E5%B8%B8%E8%A7%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.3 常见浏览器私有前缀</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81CSS3-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">二、CSS3 基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS3-%E6%96%B0%E5%A2%9E%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D"><span class="toc-text">1.CSS3 新增长度单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS3-%E6%96%B0%E5%A2%9E%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">2.CSS3 新增颜色设置方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-CSS3-%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.CSS3 新增选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-CSS3-%E6%96%B0%E5%A2%9E%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7"><span class="toc-text">4.CSS3 新增盒模型相关属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-box-sizing-%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">4.1. box-sizing 怪异盒模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-resize-%E8%B0%83%E6%95%B4%E7%9B%92%E5%AD%90%E5%A4%A7%E5%B0%8F"><span class="toc-text">4.2. resize 调整盒子大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-box-shadow-%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1"><span class="toc-text">4.3. box-shadow 盒子阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-opacity-%E4%B8%8D%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-text">4.4. opacity 不透明度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CSS3-%E6%96%B0%E5%A2%9E%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7"><span class="toc-text">5.CSS3 新增背景属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-background-origin"><span class="toc-text">5.1. background-origin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-background-clip"><span class="toc-text">5.2. background-clip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-background-size"><span class="toc-text">5.3. background-size</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-backgorund-%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-text">5.4. backgorund 复合属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-%E5%A4%9A%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-text">5.5. 多背景图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-CSS3%E6%96%B0%E5%A2%9E%E8%BE%B9%E6%A1%86%E5%B1%9E%E6%80%A7"><span class="toc-text">6. CSS3新增边框属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-%E8%BE%B9%E6%A1%86%E5%9C%86%E8%A7%92"><span class="toc-text">6.1 边框圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-%E8%BE%B9%E6%A1%86%E5%A4%96%E8%BD%AE%E5%BB%93%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">6.2 边框外轮廓（了解）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-CSS3%E6%96%B0%E5%A2%9E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">7. CSS3新增文本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-%E6%96%87%E6%9C%AC%E9%98%B4%E5%BD%B1"><span class="toc-text">7.1 文本阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C"><span class="toc-text">7.2 文本换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA"><span class="toc-text">7.3 文本溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-4-%E6%96%87%E6%9C%AC%E4%BF%AE%E9%A5%B0"><span class="toc-text">7.4 文本修饰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-5-%E6%96%87%E6%9C%AC%E6%8F%8F%E8%BE%B9"><span class="toc-text">7.5 文本描边</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-CSS3-%E6%96%B0%E5%A2%9E%E6%B8%90%E5%8F%98"><span class="toc-text">8. CSS3 新增渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98"><span class="toc-text">8.1 线性渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-%E5%BE%84%E5%90%91%E6%B8%90%E5%8F%98"><span class="toc-text">8.2 径向渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-3-%E9%87%8D%E5%A4%8D%E6%B8%90%E5%8F%98"><span class="toc-text">8.3 重复渐变</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%BC%B8%E7%BC%A9%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">9. 伸缩盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BC%B8%E7%BC%A9%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">1.伸缩盒模型简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BC%B8%E7%BC%A9%E5%AE%B9%E5%99%A8%E3%80%81%E4%BC%B8%E7%BC%A9%E9%A1%B9%E7%9B%AE"><span class="toc-text">2.伸缩容器、伸缩项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%B8%BB%E8%BD%B4%E4%B8%8E%E4%BE%A7%E8%BD%B4"><span class="toc-text">3.主轴与侧轴</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%B8%BB%E8%BD%B4%E6%96%B9%E5%90%91"><span class="toc-text">4.主轴方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%B8%BB%E8%BD%B4%E6%8D%A2%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-text">5.主轴换行方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-flex-flow"><span class="toc-text">6.flex-flow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E4%B8%BB%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="toc-text">7.主轴对齐方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E4%BE%A7%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="toc-text">8.侧轴对齐方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E4%B8%80%E8%A1%8C%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">8.1 一行的情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-%E5%A4%9A%E8%A1%8C%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">8.2 多行的情况</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-flex-%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="toc-text">9.flex 实现水平垂直居中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E4%BC%B8%E7%BC%A9%E6%80%A7"><span class="toc-text">10.伸缩性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-flex%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-text">11.flex复合属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E9%A1%B9%E7%9B%AE%E6%8E%92%E5%BA%8F"><span class="toc-text">12.项目排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E5%8D%95%E7%8B%AC%E5%AF%B9%E9%BD%90"><span class="toc-text">13.单独对齐</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-BFC"><span class="toc-text">10.BFC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFBFC"><span class="toc-text">1.什么是BFC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%BC%80%E5%90%AF%E4%BA%86BFC%E8%83%BD%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98"><span class="toc-text">2.开启了BFC能解决什么问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFBFC"><span class="toc-text">3.如何开启BFC</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84"><span class="toc-text">接下来的学习路径</span></a></li></ol></li></ol></div></div><div class="widget-header dis-select"><span class="name">🌸 JavaScript实践</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">🔖 HTML基础入门</span></div><div class="widget-body fs14"><a class="link" href="/wiki/FrontEnd/HTML0.html#start"><span class="toc-text">前置基础知识</span></a><a class="link" href="/wiki/FrontEnd/HTML4.html"><span class="toc-text">HTML4基础</span></a><a class="link" href="/wiki/FrontEnd/HTML5.html"><span class="toc-text">HTML5基础</span></a></div><div class="widget-header dis-select"><span class="name">🔖 CSS入门到精通</span></div><div class="widget-body fs14"><a class="link" href="/wiki/FrontEnd/CSS2.html"><span class="toc-text">CSS2基础</span></a><a class="link active" href="/wiki/FrontEnd/CSS3.html"><span class="toc-text">CSS3基础</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div><div class="widget-header dis-select"><span class="name">🔖 JavaScript实践</span></div><div class="widget-body fs14"><a class="link" href="/wiki/FrontEnd/JavaScript.html"><span class="toc-text">JavaScript基础教学</span></a></div></widget>
 
 
 </div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="Github" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" title="网易云" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" title="B站" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" title="留言板" href="/friends/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" title="rss订阅" href="/atom.xml" rel="noopener noreferrer"><i class="fa-solid fa-rss fa-shake"></i></a><a class="social" title="白天/黑夜" href="javaScript:void(0);" rel="noopener noreferrer"><i class="fa-solid fa-circle-half-stroke fa-flip"></i></a><a class="social" title="回顶部" href="#start" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/gaoyanliang/cdn@main/blog/img/social/top.svg"/></a></div></footer>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="Github" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" title="网易云" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/neteasemusic-icon.png"/></a><a class="social" title="B站" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://upyun.thatcdn.cn/public/img/icon/bilibili-icon.png"/></a><a class="social" title="留言板" href="/friends/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/942ebbf1a4b91.svg"/></a><a class="social" title="rss订阅" href="/atom.xml" rel="noopener noreferrer"><i class="fa-solid fa-rss fa-shake"></i></a><a class="social" title="白天/黑夜" href="javaScript:void(0);" rel="noopener noreferrer"><i class="fa-solid fa-circle-half-stroke fa-flip"></i></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
 
@@ -106,13 +100,15 @@
 
 <div class="article banner top">
   <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">文档</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/FrontEnd/HTML0.html">前端</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">更新于：<time datetime="2024-02-26T02:58:38.777Z">2024-02-26</time></span></div></div></div>
     
-
-
-    
-    <div class="bottom">
+    <div class="bottom only-title">
+      
       <div class="text-area">
-        <h1 class="text title"><span>（二）CSS3基础</span></h1>
+        <h1 class="text title"><span>CSS3基础</span></h1>
+        
       </div>
     </div>
     
@@ -466,12 +462,13 @@
 </ul>
 <h3 id="接下来的学习路径"><a href="#接下来的学习路径" class="headerlink" title="接下来的学习路径"></a>接下来的学习路径</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/20240201165249.png" alt="image-20240201165248259"></p>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/CSS2.html">（一）CSS2基础</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/JavaScript.html">JavaScript基础教学</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/CSS2.html">CSS2基础</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/FrontEnd/JavaScript.html">JavaScript基础教学</a></div></section></div>
 
 
   <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
-      参与讨论
+      <p>快来参与讨论吧~</p>
+
     </section>
     <section class='body cmt-body giscus'>
       
@@ -485,7 +482,7 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">文章</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">博客搭建</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/wiki/">汇总</a><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言板</a></div></div><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">文章</a><a href="/wiki/">专栏</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15">探索</span><a href="/explore/movie">电影</a><a href="/explore/tool">工具</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言区</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
 使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
@@ -493,6 +490,8 @@
 </span>
 </br>
 邮箱地址：<a style="font-weight: bold;" target="_blank" rel="noopener" href="mailto:sumorio@yeah.net">sumorio@yeah.net</a>
+</br>
+Telegram账号：<a style="font-weight: bold;" target="_blank" rel="noopener" href="https://t.me/Sumorio">@Sumorio</a>
 </br>
 <script type="text/javascript">
 function show_runtime() {
@@ -516,16 +515,57 @@ show_runtime();
 </br>
 </center>
 </div></footer>
-<div class='float-panel mobile-only blur' style='display:none'>
-  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81CSS3-%E7%AE%80%E4%BB%8B"><span class="toc-text">一、CSS3 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS3-%E6%A6%82%E8%BF%B0"><span class="toc-text">1.CSS3 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS3%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.CSS3私有前缀</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E4%BB%80%E4%B9%88%E6%98%AF%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.1 什么是私有前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.2 为什么要有私有前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E5%B8%B8%E8%A7%81%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A7%81%E6%9C%89%E5%89%8D%E7%BC%80"><span class="toc-text">2.3 常见浏览器私有前缀</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81CSS3-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">二、CSS3 基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-CSS3-%E6%96%B0%E5%A2%9E%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D"><span class="toc-text">1.CSS3 新增长度单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS3-%E6%96%B0%E5%A2%9E%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-text">2.CSS3 新增颜色设置方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-CSS3-%E6%96%B0%E5%A2%9E%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.CSS3 新增选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-CSS3-%E6%96%B0%E5%A2%9E%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7"><span class="toc-text">4.CSS3 新增盒模型相关属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-box-sizing-%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">4.1. box-sizing 怪异盒模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-resize-%E8%B0%83%E6%95%B4%E7%9B%92%E5%AD%90%E5%A4%A7%E5%B0%8F"><span class="toc-text">4.2. resize 调整盒子大小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-box-shadow-%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1"><span class="toc-text">4.3. box-shadow 盒子阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-opacity-%E4%B8%8D%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="toc-text">4.4. opacity 不透明度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-CSS3-%E6%96%B0%E5%A2%9E%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7"><span class="toc-text">5.CSS3 新增背景属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-background-origin"><span class="toc-text">5.1. background-origin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-background-clip"><span class="toc-text">5.2. background-clip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-background-size"><span class="toc-text">5.3. background-size</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-4-backgorund-%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-text">5.4. backgorund 复合属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-%E5%A4%9A%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-text">5.5. 多背景图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-CSS3%E6%96%B0%E5%A2%9E%E8%BE%B9%E6%A1%86%E5%B1%9E%E6%80%A7"><span class="toc-text">6. CSS3新增边框属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-%E8%BE%B9%E6%A1%86%E5%9C%86%E8%A7%92"><span class="toc-text">6.1 边框圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-%E8%BE%B9%E6%A1%86%E5%A4%96%E8%BD%AE%E5%BB%93%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">6.2 边框外轮廓（了解）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-CSS3%E6%96%B0%E5%A2%9E%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">7. CSS3新增文本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-%E6%96%87%E6%9C%AC%E9%98%B4%E5%BD%B1"><span class="toc-text">7.1 文本阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-%E6%96%87%E6%9C%AC%E6%8D%A2%E8%A1%8C"><span class="toc-text">7.2 文本换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA"><span class="toc-text">7.3 文本溢出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-4-%E6%96%87%E6%9C%AC%E4%BF%AE%E9%A5%B0"><span class="toc-text">7.4 文本修饰</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-5-%E6%96%87%E6%9C%AC%E6%8F%8F%E8%BE%B9"><span class="toc-text">7.5 文本描边</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-CSS3-%E6%96%B0%E5%A2%9E%E6%B8%90%E5%8F%98"><span class="toc-text">8. CSS3 新增渐变</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98"><span class="toc-text">8.1 线性渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-%E5%BE%84%E5%90%91%E6%B8%90%E5%8F%98"><span class="toc-text">8.2 径向渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-3-%E9%87%8D%E5%A4%8D%E6%B8%90%E5%8F%98"><span class="toc-text">8.3 重复渐变</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%BC%B8%E7%BC%A9%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">9. 伸缩盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BC%B8%E7%BC%A9%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">1.伸缩盒模型简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BC%B8%E7%BC%A9%E5%AE%B9%E5%99%A8%E3%80%81%E4%BC%B8%E7%BC%A9%E9%A1%B9%E7%9B%AE"><span class="toc-text">2.伸缩容器、伸缩项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%B8%BB%E8%BD%B4%E4%B8%8E%E4%BE%A7%E8%BD%B4"><span class="toc-text">3.主轴与侧轴</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%B8%BB%E8%BD%B4%E6%96%B9%E5%90%91"><span class="toc-text">4.主轴方向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%B8%BB%E8%BD%B4%E6%8D%A2%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-text">5.主轴换行方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-flex-flow"><span class="toc-text">6.flex-flow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E4%B8%BB%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="toc-text">7.主轴对齐方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E4%BE%A7%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="toc-text">8.侧轴对齐方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E4%B8%80%E8%A1%8C%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">8.1 一行的情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-%E5%A4%9A%E8%A1%8C%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">8.2 多行的情况</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-flex-%E5%AE%9E%E7%8E%B0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="toc-text">9.flex 实现水平垂直居中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E4%BC%B8%E7%BC%A9%E6%80%A7"><span class="toc-text">10.伸缩性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-flex%E5%A4%8D%E5%90%88%E5%B1%9E%E6%80%A7"><span class="toc-text">11.flex复合属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E9%A1%B9%E7%9B%AE%E6%8E%92%E5%BA%8F"><span class="toc-text">12.项目排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-%E5%8D%95%E7%8B%AC%E5%AF%B9%E9%BD%90"><span class="toc-text">13.单独对齐</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-BFC"><span class="toc-text">10.BFC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFBFC"><span class="toc-text">1.什么是BFC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%BC%80%E5%90%AF%E4%BA%86BFC%E8%83%BD%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98"><span class="toc-text">2.开启了BFC能解决什么问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFBFC"><span class="toc-text">3.如何开启BFC</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84"><span class="toc-text">接下来的学习路径</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
   </button>
 </div>
-<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
+</div><div class="scripts">
 <script type="text/javascript">
-  const stellar = {
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
     // 懒加载 css https://github.com/filamentgroup/loadCSS
-    loadCSS: (href, before, media, attributes) => {
+    css: (href, before, media, attributes) => {
       var doc = window.document;
       var ss = doc.createElement("link");
       var ref;
@@ -583,11 +623,10 @@ show_runtime();
       return ss;
     },
 
-    // 从 butterfly 和 volantis 获得灵感
-    loadScript: (src, opt) => new Promise((resolve, reject) => {
+    js: (src, opt) => new Promise((resolve, reject) => {
       var script = document.createElement('script');
       if (src.startsWith('/')){
-        src = stellar.config.root + src.substring(1);
+        src = ctx.root + src.substring(1);
       }
       script.src = src;
       if (opt) {
@@ -608,77 +647,113 @@ show_runtime();
       document.head.appendChild(script)
     }),
 
-    // https://github.com/jerryc127/hexo-theme-butterfly
-    jQuery: (fn) => {
+    jq: (fn) => {
       if (typeof jQuery === 'undefined') {
-        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+        utils.js(deps.jquery).then(fn)
       } else {
         fn()
       }
-    }
-  };
-  stellar.version = '1.26.6';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.6';
-  stellar.config = {
-    date_suffix: {
-      just: '刚刚',
-      min: '分钟前',
-      hour: '小时前',
-      day: '天前',
-      month: '个月前',
     },
-    root : '/',
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
   };
+</script>
 
-  // required plugins (only load if needs)
-  stellar.plugins = {
-    jQuery: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js'
-  };
-
-  if ('local_search') {
-    stellar.search = {};
-    stellar.search.service = 'local_search';
-    if (stellar.search.service == 'local_search') {
-      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
-      stellar.search[stellar.search.service] = service_obj;
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
     }
-  }
-
-  // stellar js
-  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js","marked":"/js/plugins/marked.js"});
-
-  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
-  // optional plugins
-  if ('true' == 'true') {
-    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js","transition":"fade"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
-  }
-  if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js","distance":"16px","duration":800,"interval":100,"scale":1});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":null});
-  }
-  if ('false' == 'true') {
-    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied","toast":"复制成功"});
   }
 </script>
 
 <!-- required -->
-<script src="/js/main.js?v=1.26.6" async></script>
+<script src="/js/main.js?v=1.26.8" async></script>
 
 <!-- optional -->
 
   <script>
-  function loadJS() {
+  window.addEventListener('DOMContentLoaded', (event) => {
     const els = document.querySelectorAll("#comments #giscus");
     if (els.length === 0) return;
     els.forEach((el, i) => {
@@ -697,22 +772,146 @@ show_runtime();
       }
       el.appendChild(script);
     });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-    loadJS();
   });
 </script>
 
 
 
 
-  
-  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
-  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
 
-
-
-
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
 
 
 <!-- inject -->
