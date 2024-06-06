@@ -17,11 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
 
-// script.js
+// 获取所有可点击的元素
+var clickableElements = document.querySelectorAll('a, button, input[type="button"], input[type="submit"], input[type="reset"], select');
 
-window.addEventListener('load', function() {
-    var elements = document.querySelectorAll('*');
-    elements.forEach(function(element) {
-        element.style.cursor = 'url(https://cur.cursors-4u.net/cursors/cur-2/cur226.cur), auto';
-    });
+// 设置鼠标样式
+clickableElements.forEach(function(element) {
+    element.style.cursor = 'url(https://cur.cursors-4u.net/food/foo-6/foo507.ani), url(https://cur.cursors-4u.net/food/foo-6/foo507.png), auto';
 });

@@ -287,21 +287,6 @@ table a:not([class]) {
 
 /* 默认鼠标样式 */
 * {
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur226.cur), auto;
+  cursor: url(https://cur.cursors-4u.net/food/foo-6/foo507.ani), url(https://cur.cursors-4u.net/food/foo-6/foo507.png), auto;
 }
 
-/* 公告&欢迎页 */
-.card-announcement {
-    line-height:30px;
-    font-size:16px;
-}
-
-.card-announcement .item-headline span{
-    margin-left:0!important;
-}
-
-.card-announcement span{
-    font-weight:bold;
-    font-size:20px!important;
-    color:var(--ichika-color);
-}
