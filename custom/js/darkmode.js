@@ -90,13 +90,13 @@ try {
     "#start > aside > div > footer > div  > a:nth-of-type(6)"
   ).onclick = () => {
     if (window.localStorage.getItem("Theme_Mode") === "auto") {
-      hud.toast("😎白天模式");
+      hud.toast("🔆日");
       ThemeChange("light");
     } else if (window.localStorage.getItem("Theme_Mode") === "light") {
-      hud.toast("🌚夜间模式");
+      hud.toast("🌙夜");
       ThemeChange("dark");
     } else {
-      hud.toast("🦉自动模式");
+      hud.toast("❤️Random");
       ThemeChange("auto");
     }
   };

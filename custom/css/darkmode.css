@@ -249,3 +249,59 @@
 #Dark #notbyai {
     content: url("/assets/website/Written-By-Human-black.png");
   }
+
+
+/* 文章内链接-202465 */
+li:not([class]) a:not([class]),
+p:not([class]) a:not([class]),
+table a:not([class]) {
+  /*color: var(--theme-link);*/
+  padding-bottom: 3px; /* 增加底部padding */
+  padding-right: 1px;
+  margin-right: 2px;
+  background: linear-gradient(0, var(--theme-link), var(--theme-link)) no-repeat center bottom / 100% 2px;
+}
+
+
+/* 字数统计-202465 */
+/* .post-count {
+    scrollbar-width: none;
+    color: var(--text-p4);
+  } */
+
+/* .totalcount {
+    color: var(--text-p4);
+  } */
+
+/* 选中文本：使用超链接高亮的背景色 */
+::selection {
+  background: var(--theme-link-opa);
+}
+
+/* 字数统计样式 */
+#post-meta {
+  font-size: 12px; 
+  color: var(--text-p4); /* 或 --text-p2，设置为灰色 */
+}
+
+
+/* 默认鼠标样式 */
+* {
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur226.cur), auto;
+}
+
+/* 公告&欢迎页 */
+.card-announcement {
+    line-height:30px;
+    font-size:16px;
+}
+
+.card-announcement .item-headline span{
+    margin-left:0!important;
+}
+
+.card-announcement span{
+    font-weight:bold;
+    font-size:20px!important;
+    color:var(--ichika-color);
+}
