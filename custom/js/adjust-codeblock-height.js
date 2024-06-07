@@ -17,10 +17,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
 
-// 获取所有可点击的元素
-var clickableElements = document.querySelectorAll('a, button, input[type="button"], input[type="submit"], input[type="reset"], select');
-
-// 设置鼠标样式
-clickableElements.forEach(function(element) {
-    element.style.cursor = 'url(https://cur.cursors-4u.net/food/foo-6/foo507.ani), url(https://cur.cursors-4u.net/food/foo-6/foo507.png), auto';
-});

@@ -472,28 +472,25 @@ show_runtime();
 <!-- optional -->
 
   <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
-      }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        utils.js('https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
@@ -708,4 +705,4 @@ show_runtime();
     }
   </script>
   <!-- hexo injector body_end end --></body></html>
-<script>var posts=["posts/6c2469a4.html","posts/e4bf97d7.html","posts/90d32f8e.html","posts/dc6b3388.html","posts/304dddc6.html","posts/80489cb4.html","posts/e48f9054.html","posts/edeb1358.html","posts/39ab41cf.html","posts/d127d11.html","posts/ed4d040e.html","posts/b4ebde15.html","posts/58b305af.html","posts/25037f5b.html","posts/e995d344.html","posts/1094ebf6.html","posts/e39f3cee.html","posts/bfc388e3.html","posts/2e070ebb.html","posts/fd968aff.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>var posts=["posts/6c2469a4.html","posts/e4bf97d7.html","posts/90d32f8e.html","posts/80489cb4.html","posts/dc6b3388.html","posts/304dddc6.html","posts/e48f9054.html","posts/d127d11.html","posts/edeb1358.html","posts/ed4d040e.html","posts/39ab41cf.html","posts/b4ebde15.html","posts/58b305af.html","posts/25037f5b.html","posts/e995d344.html","posts/e39f3cee.html","posts/1094ebf6.html","posts/bfc388e3.html","posts/2e070ebb.html","posts/fd968aff.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
