@@ -6295,10 +6295,10 @@ a[data-fancybox] {
   -o-transition: all 0.2s ease-out;
   width: 6.25rem;
   position: absolute;
-  top: -41px;
+  top: -40px;
   right: 0;
   margin-left: 0.5rem !important;
-  height: 33px;
+  height: 32px;
 }
 .twikoo .tk-comments .el-loading-spinner .path {
   stroke: #24755f;
@@ -6326,23 +6326,24 @@ a[data-fancybox] {
 }
 .twikoo .tk-comments .el-input__inner {
   background: var(--block) !important;
-  border: none !important;
+  border: 1px solid var(--block-border);
+  border-radius: 0 9px 9px 0;
+  border-left-width: 0 !important;
   color: var(--text-p1) !important;
   padding-left: 8px;
 }
+.twikoo .tk-comments .el-input__inner:hover,
 .twikoo .tk-comments .el-input__inner:focus {
-  border: none;
+  border: 1px solid var(--block-border);
 }
 .twikoo .tk-comments .el-input-group__append,
 .twikoo .tk-comments .el-input-group__prepend {
   background-color: var(--card);
+  background-clip: border-box;
   color: var(--text-p1);
-  border: none;
-}
-.twikoo .tk-comments .el-input-group--prepend .el-input__inner,
-.twikoo .tk-comments .el-input-group__append {
-  border-radius: 9px;
-  border-left-width: 0 !important;
+  border: 1px solid var(--block-border);
+  border-right: none;
+  border-radius: 9px 0 0 9px;
 }
 .twikoo .tk-comments .el-input--small .el-input__inner {
   padding: 8px;
@@ -6353,14 +6354,8 @@ a[data-fancybox] {
   margin-top: 8px;
   width: calc(100% - 6.875rem);
 }
-.twikoo .tk-comments .tk-meta-input .el-input.el-input--small.el-input-group.el-input-group--prepend {
-  border-radius: 9px;
-  background: var(--block);
-  border: 1px solid var(--block-border);
-}
 .twikoo .tk-comments .tk-meta-input .el-input .el-input-group__prepend {
   user-select: none;
-  border-radius: 9px 0 0 9px;
 }
 .twikoo .tk-comments .tk-action-link {
   color: var(--text-p2);
@@ -6556,11 +6551,11 @@ a
     min-width: 260px;
   }
   .tk-comments .tk-row-actions-start {
-    top: -167px;
+    top: -164px;
   }
   .twikoo .tk-comments .tk-submit .el-button--primary {
-    height: 116px;
-    top: -124px;
+    height: 112px;
+    top: -120px;
   }
   .twikoo .el-textarea__inner {
     background: var(--block) !important;
