@@ -16,4 +16,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
+// 给超长代码增加滚动条，代码框高度超过 800px，则开启折叠，折叠框最大高度为 300px。
 

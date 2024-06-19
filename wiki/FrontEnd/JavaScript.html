@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.28.1" theme-name="Stellar" theme-version="1.28.1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
   
   <meta name="generator" content="Hexo 7.1.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -14,8 +14,8 @@
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
   
   <title>前端：JavaScript基础教学 - 苏末了</title>
 
@@ -48,7 +48,7 @@
     <link rel="alternate" href="/atom.xml" title="苏末了" type="application/atom+xml">
   
 
-  <link rel="stylesheet" href="/css/main.css?v=1.28.1">
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
 
   
     <link rel="shortcut icon" href="https://s2.loli.net/2023/10/20/rfLIRXdAplxjGyU.png">
@@ -79,7 +79,7 @@
 
 
 </div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="Github" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-github fa-brands fa-bounce"></i></a><a class="social" title="网易云" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-music fa-flip"></i></a><a class="social" title="B站" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-bilibili  fa-brands fa-bounce"></i></a><a class="social" title="留言板" href="/friends/#comments" rel="noopener noreferrer"><i class="fa-solid fa-commenting fa-shake"></i></a><a class="social" title="Rss订阅" href="/atom.xml" rel="noopener noreferrer"><i class="fa-solid fa-rss fa-shake"></i></a><a class="social" title="日/夜" href="javaScript:void(0);" rel="noopener noreferrer"><i class="fa-solid fa-moon fa-flip"></i></a></div></footer>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="Github" href="https://github.com/Sumorio" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-github fa-brands fa-bounce"></i></a><a class="social" title="网易云" href="https://music.163.com/#/user/home?id=74806809" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-music fa-flip"></i></a><a class="social" title="B站" href="https://space.bilibili.com/72972753/" target="_blank" rel="external nofollow noopener noreferrer"><i class="fa-solid fa-bilibili  fa-brands fa-bounce"></i></a><a class="social" title="留言板" href="/friends/#comments" rel="noopener noreferrer"><i class="fa-solid fa-commenting fa-shake"></i></a><a class="social" title="Rss订阅" href="/atom.xml" rel="noopener noreferrer"><i class="fa-solid fa-rss fa-shake"></i></a><a class="social" title="日/夜" onclick="switchTheme()"><i class="fa-solid fa-moon fa-flip"></i></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
 
@@ -102,13 +102,35 @@
     
   </div>
   </div><article class="md-text content"><p>😊 开发中，请等待。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文遵循<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">非商业性使用-国际署名</a> 许可协议，转载请说明。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://sumorio.com/wiki/FrontEnd/JavaScript.html" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://sumorio.com/wiki/FrontEnd/JavaScript.html&title=JavaScript基础教学 - 苏末了&summary=😊 开发中，请等待。
+"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://sumorio.com/wiki/FrontEnd/JavaScript.html"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
 </article>
 <div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/FrontEnd/CSS3.html">CSS3基础</a></div><div class="item" id="next"></div></section></div>
 
 
   <div class="related-wrap md-text" id="comments">
     <section class='header cmt-title cap theme'>
-      <p><strong>😺 期待你的评论 ~ </strong></p>
+      <p>快来参与讨论吧~</p>
 
     </section>
     <section class='body cmt-body twikoo'>
@@ -120,7 +142,7 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15"><strong>Blog</strong></span><a href="/">文章</a><a href="/wiki/">专栏</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15"><strong>WiKi</strong></span><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15"><strong>Tool</strong></span><a href="/douban/movie/index.html">电影List</a><a href="/douban/book/index.html">书籍List</a><a target="_blank" rel="noopener" href="https://sumorio.top/">工具宝箱</a></div><div class="sitemap-group"><span class="fs15"><strong>More</strong></span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言区</a></div></div><div class="text"><center>
+<footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15"><strong>Blog</strong></span><a href="/">往期文章</a><a href="/wiki/">话题专栏</a><a target="_blank" rel="noopener" href="https://github.com/Sumorio">GitHub</a></div><div class="sitemap-group"><span class="fs15"><strong>WiKi</strong></span><a href="/wiki/Hexo/1.Hexo%E4%B9%8B%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2.html">Hexo-Stellar</a><a href="/wiki/ChatGPT/1ChatGPT%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">ChatGPT</a></div><div class="sitemap-group"><span class="fs15"><strong>Tool</strong></span><a href="/douban/movie/index.html">电影List</a><a href="/douban/book/index.html">书籍List</a><a target="_blank" rel="noopener" href="https://sumorio.top/">工具宝箱</a></div><div class="sitemap-group"><span class="fs15"><strong>More</strong></span><a href="/about">关于我</a><a href="/friends/">朋友圈</a><a href="/friends/#comments">留言区</a></div></div><div class="text"><center>
 <span>
 本站由 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/Sumorio">Sumorio</a>
 使用 <a style="font-weight: bold;" target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a>
@@ -153,41 +175,6 @@ show_runtime();
 </br>
 </center>
 </div></footer>
-
-<!-- 网易云iframe -->
-<div id="musicMouseDrag" style="position:fixed; z-index: 9999; bottom: 0; right: 0;">
-  <div id="musicDragArea" style="position: absolute; top: 0; left: 0; width: 100%;height: 10px;cursor: move; z-index: 10;"></div>
-  <iframe id="musicFrame" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=10167474931&auto=1&height=32&loop=1"></iframe>
-</div>
-
-<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
-<script>
-    var $DOC = $(document)
-    $('#musicMouseDrag').on('mousedown', function (e) {
-      // 阻止文本选中
-      $DOC.bind("selectstart", function () {
-        return false;
-      });
-      $('#musicDragArea').css('height', '100%');
-      var $moveTarget = $('#musicMouseDrag');
-      $moveTarget.css('border', '1px dashed grey')
-      var div_x = e.pageX - $moveTarget.offset().left;
-      var div_y = e.pageY - $moveTarget.offset().top;
-      $DOC.on('mousemove', function (e) {
-        var targetX = e.pageX - div_x;
-        var targetY = e.pageY - div_y;
-        targetX = targetX < 0 ? 0 : (targetX + $moveTarget.outerWidth() >= window.innerWidth) ? window.innerWidth - $moveTarget.outerWidth() : targetX;
-        targetY = targetY < 0 ? 0 : (targetY + $moveTarget.outerHeight() >= window.innerHeight) ? window.innerHeight - $moveTarget.outerHeight() : targetY;
-        $moveTarget.css({'left': targetX + 'px', 'top': targetY + 'px', 'bottom': 'inherit', 'right': 'inherit'})
-      }).on('mouseup', function () {
-        $DOC.unbind("selectstart");
-        $DOC.off('mousemove')
-        $DOC.off('mouseup')
-        $moveTarget.css('border', 'none')
-        $('#musicDragArea').css('height', '10px');
-      })
-    })
-</script>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 </aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
@@ -414,31 +401,118 @@ show_runtime();
     }
   }
 </script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
 
 <!-- required -->
-<script src="/js/main.js?v=1.28.1" async></script>
+<script src="/js/main.js?v=1.29.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `🔆Sun`,
+      dark: `🌙Dark`,
+      auto: `❤️Random`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
 
 <!-- optional -->
 
-  <script>
-    function load_twikoo() {
-        if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        utils.js('https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
-            const el = document.getElementById("twikoo_container");
-            var path = el.getAttribute('comment_id');
-            if (!path) {
-                path = decodeURI(window.location.pathname);
-            }
-            twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
-                el: '#twikoo_container',
-                path: path,
-            }));
-        });
-    }
+  <script type="module">
+  const el = document.getElementById('twikoo_container');
+  util.viewportLazyload(el, load_twikoo, false);
 
-    window.addEventListener('DOMContentLoaded', (event) => {
-        load_twikoo();
+  function load_twikoo() {
+    if (!el) return;
+    utils.js('https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js', {defer: true}).then(function () {
+      const path = el.getAttribute('comment_id') ?? decodeURI(window.location.pathname);
+      twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js","envId":"https://twikoo.sumorio.com/"}, {
+        el: '#twikoo_container',
+        path: path,
+      }));
     });
+  }
 </script>
 
 
@@ -582,7 +656,7 @@ show_runtime();
 
 
 <!-- inject -->
-<script type="text/javascript" src="/custom/js/darkmode.js"></script><script type="text/javascript" src="/custom/js/adjust-codeblock-height.js"></script><script type="text/javascript" src="/custom/js/cursor-effects.js"></script><script src="/js/random.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="/custom/js/adjust-codeblock-height.js"></script><script type="text/javascript" src="/custom/js/cursor-effects.js"></script><script src="/js/random.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
 </div><!-- hexo injector body_end start -->
   <style>
     .highlight {
@@ -654,4 +728,4 @@ show_runtime();
     }
   </script>
   <!-- hexo injector body_end end --></body></html>
-<script>var posts=["posts/6c2469a4.html","posts/5e927dfc.html","posts/e4bf97d7.html","posts/90d32f8e.html","posts/80489cb4.html","posts/dc6b3388.html","posts/304dddc6.html","posts/e48f9054.html","posts/d127d11.html","posts/edeb1358.html","posts/ed4d040e.html","posts/39ab41cf.html","posts/b4ebde15.html","posts/58b305af.html","posts/25037f5b.html","posts/e995d344.html","posts/1094ebf6.html","posts/e39f3cee.html","posts/bfc388e3.html","posts/2e070ebb.html","posts/fd968aff.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>var posts=["posts/6c2469a4.html","posts/5e927dfc.html","posts/e4bf97d7.html","posts/dc6b3388.html","posts/90d32f8e.html","posts/80489cb4.html","posts/304dddc6.html","posts/d127d11.html","posts/e48f9054.html","posts/39ab41cf.html","posts/edeb1358.html","posts/ed4d040e.html","posts/b4ebde15.html","posts/58b305af.html","posts/25037f5b.html","posts/e995d344.html","posts/1094ebf6.html","posts/bfc388e3.html","posts/e39f3cee.html","posts/2e070ebb.html","posts/fd968aff.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
