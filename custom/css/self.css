@@ -1,0 +1,24 @@
+.post-count {
+    scrollbar-width: none;
+    color: var(--text-p4);
+  }
+
+.totalcount {
+    color: var(--text-p4);
+  }
+
+.page-footer {
+    text-align: center; /* 让内容居中显示 */
+    margin: 0 auto; /* 可选：如果需要在页面上水平居中显示 */
+    width: 100%; /* 可选：设置宽度为100%，使其占满整个宽度 */
+}
+
+.bread-nav div#page-words span.sep:before {
+  content: '|';
+}
+.bread-nav div#page-words span.updated {
+  visibility: hidden;
+}
+.bread-nav:hover div#page-words span.updated {
+  visibility: visible;
+}

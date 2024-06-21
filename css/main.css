@@ -267,7 +267,7 @@ a.button.start.gradient {
 :root[data-theme="dark"] a.button.start.gradient {
   transition: 0.38s ease-out;
   z-index: 0;
-  background: linear-gradient(to right, #4c95fa, #38c9fa, #24f9c4, #24f9c4, #38c9fa, #4c95fa);
+  background: background-image;
   background-size: 1000%;
   color: #fff;
   text-shadow: 0 0 1px rgba(0,0,0,0.12);
@@ -327,7 +327,7 @@ a.button.start.gradient {
   :root:not([data-theme]) a.button.start.gradient {
     transition: 0.38s ease-out;
     z-index: 0;
-    background: linear-gradient(to right, #4c95fa, #38c9fa, #24f9c4, #24f9c4, #38c9fa, #4c95fa);
+    background: background-image;
     background-size: 1000%;
     color: #fff;
     text-shadow: 0 0 1px rgba(0,0,0,0.12);
@@ -5032,7 +5032,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .l_left {
   background-size: cover;
-  background: url("https://cdn.jsdelivr.net/gh/Sumorio/BlogPic/358d8f84849ec867fcb09ef63c9aa7ef.jpg");
+  background-image: url("https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.13/image/sidebar-bg1@small.jpg");
 }
 .l_left .leftbar-container {
   height: 100%;
