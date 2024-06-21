@@ -18,3 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 // 给超长代码增加滚动条，代码框高度超过 800px，则开启折叠，折叠框最大高度为 300px。
 
+//复制弹出
+document.addEventListener("copy", function () {
+  hud.toast("复制成功，转载请注明出处", 2500);
+});
