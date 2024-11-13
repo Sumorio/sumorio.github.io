@@ -252,9 +252,9 @@
     <category term="Copilot" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/Copilot/"/>
     
     
-    <category term="Copilot" scheme="https://sumorio.com/tags/Copilot/"/>
-    
     <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
+    
+    <category term="Copilot" scheme="https://sumorio.com/tags/Copilot/"/>
     
   </entry>
   
@@ -323,9 +323,9 @@
     <category term="ChatGPT" scheme="https://sumorio.com/categories/%E6%8A%80%E6%9C%AF%E5%90%91/ChatGPT/"/>
     
     
-    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
-    
     <category term="ChatGPT" scheme="https://sumorio.com/tags/ChatGPT/"/>
+    
+    <category term="AIGC" scheme="https://sumorio.com/tags/AIGC/"/>
     
   </entry>
   
