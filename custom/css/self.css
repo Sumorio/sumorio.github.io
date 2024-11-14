@@ -22,3 +22,12 @@
 .bread-nav:hover div#page-words span.updated {
   visibility: visible;
 }
+
+
+/* 给博客最后一句话加颜色 */
+.runtime
+{
+    font-weight: bold;
+    color: #7F84A7;
+}
+
